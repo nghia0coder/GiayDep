@@ -9,13 +9,13 @@ namespace GiayDep.Controllers
 	//change
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger1;
+        private readonly ILogger<HomeController> _logger;
         private readonly GiaydepContext _context;
        
 
         public HomeController(ILogger<HomeController> logger, GiaydepContext context)
         {
-            _logger1 = logger;
+            _logger = logger;
             _context = context;
         }
 
