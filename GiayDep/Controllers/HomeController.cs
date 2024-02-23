@@ -7,6 +7,7 @@ using System.Diagnostics;
 namespace GiayDep.Controllers
 {	
 	//change
+    //nghia
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
