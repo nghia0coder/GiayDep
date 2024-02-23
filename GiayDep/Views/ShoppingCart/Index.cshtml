@@ -1,0 +1,118 @@
+﻿@using GiayDep.ViewModels
+@model Item
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    var httpContext = HttpContextAccessor.HttpContext;
+}
+@{
+    ViewData["Title"] = "XemGioHang";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+@Html.Partial("_NotificationPartial")
+@if (Model == null) // Check if the list is null or empty
+{
+    <h1 style="color:crimson">Giỏ hàng rỗng</h1>
+}
+else
+{
+    <script src="~/Contents/Scripts/jquery-3.4.1.min.js"></script>
+    <div class="container" style="text-align:left;">
+        <form id="myform" asp-controller="GioHang" asp-action="DatHang" method="post">
+            <div class="check">
+                <h1 style="color:#000000">Giỏ hàng (@ViewBag.TongSoLuong)</h1>
+                <div class="col-md-9 cart-items">
+                    @foreach (var item in Model.CartItems)
+                    {
+                        <div class="cart-header">
+                            <div class="cart-sec simpleCart_shelfItem">
+                                <div class="cart-item cyc">
+                                    <img src="~/Contents/img/@item.HinhAnh" class="img-responsive" alt="" />
+                                </div>
+                                <div class="cart-item-info">
+                                    <h3><a href="#">@item.TenSP</a></h3>
+                                    <ul class="qty">
+                                        <a class="btn btn-primary btn-sm" asp-controller="ShoppingCart" asp-action="Decrease" asp-route-id="@item.MaSP"> - </a>
+                                        <input class="cart_quanity_input" type="text" name="Quantity" value="@item.SoLuong" autocomplete="off" size="2">
+                                        <a class="btn btn-success btn-sm" asp-controller="ShoppingCart" asp-action="Increase" asp-route-id="@item.MaSP"> + </a>
+                                        <a class="btn btn-danger btn-sm" asp-controller="ShoppingCart" asp-action="Removed" asp-route-id="@item.MaSP"> Remove </a>
+                                        <li><p>Đơn giá: @item.DonGia VNĐ</p></li>
+                                    </ul>
+                                    <div class="delivery">
+                                        <p style="font-weight:bold;">Thành Tiền: @item.ThanhTien VNĐ</p>
+                                        <span>Giao hàng trong 2-3 ngày làm việc.</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    }
+                    <a class="btn btn-danger btn-sm" asp-controller="ShoppingCart" asp-action="Clear"> Clear </a>
+                </div>
+                
+                <div class="col-md-3 cart-total">
+                    <a class="continue" href="@Url.Action("Index", "Home")">Tiếp tục mua hàng</a>
+                    <div class="price-details">
+                        <h3>Đơn giá chi tiết</h3>
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <p>@item.TenSP : @item.DonGia</p>
+                        }
+                        <span class="total1">@ViewBag.TongTien?.ToString("#,##")</span>
+                        <span>Giảm giá</span>
+                        <span class="total1">---</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <ul class="total_price">
+                        <li class="last_price"> <h4>Tổng cộng</h4></li>
+                        <li class="last_price"><span>@Model.Total VNĐ</span></li>
+                        <div class="clearfix"></div>
+                    </ul>
+                    @if (ViewBag.TongSoLuong > 0)
+                    {
+                        @if (httpContext.Session.GetString("TaiKhoan") != null && httpContext.Session.GetString("TaiKhoan") != "")
+                        {
+                            Membership tv = Newtonsoft.Json.JsonConvert.DeserializeObject<Membership>(httpContext.Session.GetString("TaiKhoan"));
+                            <a class="order" asp-action="DatHang" asp-controller="ShoppingCart" asp-route-id="@tv.MaLoaiTv" >Đặt hàng</a>
+                        }
+                    }
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+}
+
+
+<style>
+    /* CSS styles remain the same */
+</style>
+
+<script type="text/javascript">
+    document.getElementById("btnDangNhap").addEventListener("click", function () {
+        document.getElementById("popup_login").style.display = "block";
+    });
+
+    document.getElementById("close-form").addEventListener("click", function () {
+        document.getElementById("popup_login").style.display = "none";
+    });
+
+    // Handle form submission using JavaScript fetch
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+        var formData = new FormData(this);
+
+        fetch('/Home/DangNhap', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("ThongBao").innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    });
+</script>
+
