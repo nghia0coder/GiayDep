@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace GiayDep.Controllers
-{
+{	
+	//change
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
