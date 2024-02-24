@@ -4,6 +4,8 @@ using GiayDep.ViewModels;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
 using GiayDep.Repository;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace GiayDep.Controllers
 {
@@ -105,110 +107,11 @@ namespace GiayDep.Controllers
         {
             return View();
         }
-        //public IActionResult SuaGioHang(int MaSP)
-        //{
-        //    // Check if the shopping cart session exists
-        //    if (HttpContext.Session.GetJson<List<Item>>("GioHang") == null)
-        //    {
-        //        return RedirectToAction("Index", "Home");   // Redirect to the home page
-        //    }
-
-        //    // Check if the product exists in the database
-        //    var sp = _context.SanPhams.SingleOrDefault(n => n.Idsp == MaSP);
-
-        //    if (sp == null)
-        //    {
-        //        // Return 404 if the product does not exist
-        //        return NotFound();
-        //    }
-
-        //    // Get the shopping cart from the session
-        //    List<Item> lstGioHang = LayGioHang();
-
-        //    // Check if the product exists in the shopping cart
-        //    Item spCheck = lstGioHang.SingleOrDefault(n => n.MaSP == MaSP);
-
-        //    if (spCheck == null)
-        //    {
-        //        return RedirectToAction("Index", "Home");
-        //    }
-
-        //    // Pass the shopping cart list to the view
-        //    ViewBag.GioHang = lstGioHang;
-
-        //    // If the product exists, return the view with the product details
-        //    return View(spCheck);
-        //}
-
-        //[HttpPost]
-        //public ActionResult CapNhatGioHang(Item itemGH)
-        //{
-        //    //ktra số lượng tồn sau khi sửa
-        //    SanPham spCheck = _context.SanPhams.Single(n => n.Idsp == itemGH.MaSP);
-        //    if (spCheck.Soluong < itemGH.SoLuong)
-        //    {
-        //        return View("ThongBao");
-        //    }
-        //    //update số lg trong session giỏ hàng
-        //    //bc1: Lấy list giỏ hàng từ sesssion giỏ hàng
-        //    List<Item> lstGH = LayGioHang();
-        //    //bc2: lấy sp cần update từ trong list giỏ hàng
-        //    Item itemGHUpdate = lstGH.Find(n => n.MaSP == itemGH.MaSP);  //pt find dùng để tìm các trường mong muốn
-        //    //bc3: update lại số lg và thành tiền
-        //    itemGHUpdate.SoLuong = itemGH.SoLuong;
-        //    itemGHUpdate.ThanhTien = itemGHUpdate.SoLuong * itemGHUpdate.DonGia;
-
-        //    return RedirectToAction("XemGioHang");
-        //}
-        //public IActionResult XoaGioHang(int MaSP)
-        //{
-        //    // Check if the shopping cart session exists
-        //    if (HttpContext.Session.GetJson<List<Item>>("GioHang") == null)
-        //    {
-        //        return RedirectToAction("Index", "Home");
-        //    }
-
-        //    // Check if the product exists in the database
-        //    var sp = _context.SanPhams.SingleOrDefault(n => n.Idsp == MaSP);
-        //    if (sp == null)
-        //    {
-        //        // Return 404 if the product does not exist
-        //        return NotFound();
-        //    }
-
-        //    // Get the shopping cart from the session
-        //    List<Item> lstGioHang = LayGioHang();
-
-        //    // Check if the product exists in the shopping cart
-        //    Item spCheck = lstGioHang.SingleOrDefault(n => n.MaSP == MaSP);
-        //    if (spCheck == null)
-        //    {
-        //        return RedirectToAction("Index", "Home");
-        //    }
-
-        //    // Remove the item from the shopping cart
-        //    lstGioHang.Remove(spCheck);
-
-        //    return RedirectToAction("XemGioHang");
-        //}
-        public IActionResult DatHang(int IDtv)
+        public IActionResult DatHang()
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             // Check if the shopping cart session exists
-            if (HttpContext.Session.GetJson<List<Item>>("Cart") == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            Membership tv = HttpContext.Session.GetJson<Membership>("TaiKhoan");
-            // Create a new customer
-            KhachHang khach = new KhachHang();
-            khach.Tenkh = tv.HoTen;
-            khach.Diachi = tv.DiaChi;
-            khach.Email = tv.Email;
-            khach.Sđt = tv.Sđt;
-            khach.Gioitinh = tv.Gioitinh;
-            khach.Idtv = tv.Idtv;
-            _context.KhachHangs.Add(khach);
-            _context.SaveChanges();
+
             // Add a new order
             HoaDon ddh = new HoaDon();
             ddh.Ngaythanhtoan = DateTime.Now;
@@ -217,7 +120,7 @@ namespace GiayDep.Controllers
             ddh.Khuyenmai = 0;
             ddh.Dahuy = false;
             ddh.Daxoa = false;
-            ddh.Makh = khach.Idkhachhang;
+            ddh.Makh = userId;
             _context.HoaDons.Add(ddh);
             _context.SaveChanges();
 
