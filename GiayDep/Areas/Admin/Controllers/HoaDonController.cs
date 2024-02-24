@@ -68,7 +68,7 @@ namespace GiayDep.Areas.Admin.Controllers
                 .ToList();
 
             ViewBag.ListChiTietDH = lstChiTietDH;
-            ViewBag.TenKH = model.MakhNavigation.Tenkh;
+            ViewBag.TenKH = model.MakhNavigation.UserName;
 
             return View(model);
         }
