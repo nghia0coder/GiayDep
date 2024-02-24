@@ -21,7 +21,6 @@ namespace GiayDep
 
             });
             builder.Services.AddIdentity<AppUserModel,IdentityRole>()
-
     .AddEntityFrameworkStores<GiaydepContext>().AddDefaultTokenProviders();
             builder.Services.Configure<IdentityOptions>(options =>
             {

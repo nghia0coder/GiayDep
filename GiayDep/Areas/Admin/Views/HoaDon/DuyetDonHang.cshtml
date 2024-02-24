@@ -8,7 +8,7 @@
 <h1>DuyetDonHang</h1>
 <div class="card">
     <div class="card-body">
-        <h2 class="col-md-8">Thông tin đơn hàng @Model.MakhNavigation.Tenkh</h2>
+        <h2 class="col-md-8">Thông tin đơn hàng @Model.MakhNavigation.UserName</h2>
         <form asp-action="" method="post">
             <div class="ChiTietDonHang table">
                 @{
@@ -21,8 +21,8 @@
                             <table style="100%" class="table-borderless">
                                 <tr>
                                     <td>Mã đơn hàng: <b>@Model.Idhoadon <input type="hidden" name="MaDDH" value="@Model.Idhoadon" /></b></td>
-                                    <td>Mã đơn hàng: <b>@Model.MakhNavigation.Idkhachhang </b></td>
-                                    <td>Mã đơn hàng: <b>@Model.MakhNavigation.Tenkh </b></td>
+                                    <td>Mã đơn hàng: <b>@Model.MakhNavigation.Id </b></td>
+                                    <td>Mã đơn hàng: <b>@Model.MakhNavigation.UserName </b></td>
                                     <td>Ngày đặt: <b>@Model.Ngaythanhtoan.Value.ToString("dd/MM/yyyy")</b></td>
                                     <td>Đã thanh toán: <input asp-for="Dathanhtoan" /></td>
                                     <td>Đã giao: <input asp-for="Tinhtranggiaohang" /></td>

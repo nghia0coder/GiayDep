@@ -1,9 +1,10 @@
 ﻿@model SanPham
-@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Extensions
 @{
-	string url = Context.Request.Path;
+	string currentUrl = Context.Request.GetDisplayUrl();
 	IEnumerable<SanPham> ListSP = ViewBag.ListSP ;
 }
+
 @{
     ViewData["Title"] = "Chi Tiết Sản Phẩm";
     Layout = "~/Views/Layout/ProductLayout.cshtml";
@@ -100,7 +101,11 @@
 								<span class="qty-down">-</span>
 							</div>
 						</div>
-						<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+						<div class="add-to-cart">
+							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.Idsp" asp-route-strURL="@currentUrl">
+								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+							</a>
+						</div>
 					</div>
 
 					<ul class="product-btns">
