@@ -19,7 +19,7 @@ namespace GiayDep.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhaSX
-        [Authorize(Roles = "Staff")]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Index()
         {
             var nhaSanXuats = await _nhaSXRepository.GetAll();
