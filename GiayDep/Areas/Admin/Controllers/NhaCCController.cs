@@ -20,7 +20,7 @@ namespace GiayDep.Areas.Admin.Controllers
             _nhaCCRepository = nhaCCRepository;
             this.nhaSXRepository = nhaSXRepository;
         }
-        [Authorize(Roles = "Staff")]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Index()
         {
             var nhaCungCaps = await _nhaCCRepository.GetAll();
