@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GiayDep.Models;
-
-public partial class LoaiSp
+namespace GiayDep.Models
 {
-    public int Idloai { get; set; }
+    public partial class LoaiSp
+    {
+        public LoaiSp()
+        {
+            SanPhams = new HashSet<SanPham>();
+        }
 
-    public string? Tenloai { get; set; }
+        public int Idloai { get; set; }
+        public string? Tenloai { get; set; }
 
-    public virtual ICollection<SanPham> SanPhams { get; } = new List<SanPham>();
+        public virtual ICollection<SanPham> SanPhams { get; set; }
+    }
 }
