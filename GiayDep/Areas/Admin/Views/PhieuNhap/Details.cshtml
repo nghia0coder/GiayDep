@@ -5,14 +5,14 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Chi tiết</h1>
 
 <div>
-    <h4>PhieuNhap</h4>
+    <h4>Phiếu nhập</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ngaynhap)
+            Ngày nhập
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Ngaynhap)
@@ -26,6 +26,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Idphieunhap">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Idphieunhap">Chỉnh sửa</a> |
+    <a asp-action="Index">Trở về</a>
 </div>

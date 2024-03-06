@@ -5,22 +5,22 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Chi tiết nhà cung cấp </h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm mới </a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Tennhacc)
+                Tên nhà cung cấp 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Diachi)
+               Địa chỉ 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Sdt)
+                Số điện thoại 
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
@@ -50,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.IdnhasxNavigation.Idnhasx)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Idnhacc">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idnhacc">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idnhacc">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Idnhacc">Chỉnh sửa </a> |
+                <a asp-action="Details" asp-route-id="@item.Idnhacc">Chi tiết </a> |
+                <a asp-action="Delete" asp-route-id="@item.Idnhacc">Xóa </a>
             </td>
         </tr>
 }
