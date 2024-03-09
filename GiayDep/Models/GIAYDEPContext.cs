@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using GiayDep.Models;
 
 namespace GiayDep.Models
 {
@@ -20,31 +21,37 @@ namespace GiayDep.Models
         public virtual DbSet<CtHoaDon> CtHoaDons { get; set; } = null!;
         public virtual DbSet<CtPhieuNhap> CtPhieuNhaps { get; set; } = null!;
         public virtual DbSet<HoaDon> HoaDons { get; set; } = null!;
-
         public virtual DbSet<LoaiSp> LoaiSps { get; set; } = null!;
-
-
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; } = null!;
         public virtual DbSet<NhaSanXuat> NhaSanXuats { get; set; } = null!;
-        public virtual DbSet<NhanVien> NhanViens { get; set; } = null!;
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; } = null!;
- 
         public virtual DbSet<SanPham> SanPhams { get; set; } = null!;
+        public virtual DbSet<Size> Sizes { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=TQS20052004\\SQLEXPRESS;Initial Catalog=GIAYDEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source=NGHIANGHIA\\SQLSEVER2020EV;Initial Catalog=GIAYDEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
 
-       
+            modelBuilder.Entity<Color>(entity =>
+            {
+                entity.ToTable("Color");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Color1)
+                    .HasMaxLength(50)
+                    .HasColumnName("Color");
+
+                entity.Property(e => e.ColorHex).HasMaxLength(50);
+            });
 
             modelBuilder.Entity<CtHoaDon>(entity =>
             {
@@ -121,8 +128,6 @@ namespace GiayDep.Models
                     .HasConstraintName("FK_HOA_DON_AspNetUsers");
             });
 
-       
-
             modelBuilder.Entity<LoaiSp>(entity =>
             {
                 entity.HasKey(e => e.Idloai);
@@ -131,10 +136,6 @@ namespace GiayDep.Models
 
                 entity.Property(e => e.Tenloai).HasMaxLength(50);
             });
-
-         
-
-         
 
             modelBuilder.Entity<NhaCungCap>(entity =>
             {
@@ -178,29 +179,6 @@ namespace GiayDep.Models
                 entity.Property(e => e.Tennhasx).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<NhanVien>(entity =>
-            {
-                entity.HasKey(e => e.Idnhanvien);
-
-                entity.ToTable("NHAN_VIEN");
-
-                entity.Property(e => e.Idnhanvien)
-                    .HasMaxLength(50)
-                    .HasColumnName("IDnhanvien");
-
-                entity.Property(e => e.Diachi).HasMaxLength(50);
-
-                entity.Property(e => e.Email).HasMaxLength(50);
-
-                entity.Property(e => e.Gioitinh).HasMaxLength(50);
-
-                entity.Property(e => e.Ngaysinh).HasColumnType("datetime");
-
-                entity.Property(e => e.Sdt).HasMaxLength(30);
-
-                entity.Property(e => e.Tennv).HasMaxLength(50);
-            });
-
             modelBuilder.Entity<PhieuNhap>(entity =>
             {
                 entity.HasKey(e => e.Idphieunhap);
@@ -218,7 +196,6 @@ namespace GiayDep.Models
                     .HasConstraintName("FK_PHIEU_NHAP_NHA_CUNG_CAP");
             });
 
-
             modelBuilder.Entity<SanPham>(entity =>
             {
                 entity.HasKey(e => e.Idsp);
@@ -235,21 +212,49 @@ namespace GiayDep.Models
 
                 entity.Property(e => e.Tensp).HasMaxLength(50);
 
+                entity.HasOne(d => d.ColorNavigation)
+                    .WithMany(p => p.SanPhams)
+                    .HasForeignKey(d => d.Color)
+                    .HasConstraintName("FK_SAN_PHAM_Color");
+
                 entity.HasOne(d => d.MaloaispNavigation)
                     .WithMany(p => p.SanPhams)
                     .HasForeignKey(d => d.Maloaisp)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_SAN_PHAM_LoaiSp");
 
                 entity.HasOne(d => d.ManhaccNavigation)
                     .WithMany(p => p.SanPhams)
                     .HasForeignKey(d => d.Manhacc)
                     .HasConstraintName("FK_SAN_PHAM_NHA_CUNG_CAP");
+
+                entity.HasOne(d => d.ManhasxNavigation)
+                    .WithMany(p => p.SanPhams)
+                    .HasForeignKey(d => d.Manhasx)
+                    .HasConstraintName("FK_SAN_PHAM_NHA_SAN_XUAT");
+
+                entity.HasOne(d => d.SizeNavigation)
+                    .WithMany(p => p.SanPhams)
+                    .HasForeignKey(d => d.Size)
+                    .HasConstraintName("FK_SAN_PHAM_Size");
+            });
+
+            modelBuilder.Entity<Size>(entity =>
+            {
+                entity.ToTable("Size");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Size1)
+                    .HasMaxLength(10)
+                    .HasColumnName("Size")
+                    .IsFixedLength();
             });
 
             base.OnModelCreating(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<GiayDep.Models.Color>? Color { get; set; }
     }
 }

@@ -80,7 +80,7 @@ namespace GiayDep.Areas.Admin.Controllers
         // POST: Admin/LoaiSP/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id, Tenloai")] LoaiSp loaiSp)
+        public async Task<IActionResult> Edit(int id, LoaiSp loaiSp)
         {
             if (id != loaiSp.Idloai)
             {

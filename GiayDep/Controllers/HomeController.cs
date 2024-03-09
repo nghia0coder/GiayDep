@@ -20,19 +20,19 @@ namespace GiayDep.Controllers
             _context = context;
         }
 
-        public ActionResult Index()
-        {
-            //Lần lượt tạo các viewbag để lấy list sp từ csdl
-            //List maloaisp bằng 1
-            var lstLTM = _context.SanPhams
-                .Where(n => n.Maloaisp == 1 )
-                .Include(n => n.MaloaispNavigation)
-                .ToList();
-            //Gán vào viewbag
-            ViewBag.ListLTM = lstLTM;
+		public ActionResult Index()
+		{
+			//Lần lượt tạo các viewbag để lấy list sp từ csdl
+			//List maloaisp bằng 1
+			var lstLTM = _context.SanPhams
+				.Where(n => n.Manhasx == 6)
+				.Include(n => n.MaloaispNavigation)
+				.ToList();
+			//Gán vào viewbag
+			ViewBag.ListLTM = lstLTM;
 
 			var lstSelling = _context.SanPhams
-				.Where(n => n.Maloaisp == 3)
+				.Where(n => n.Manhasx == 7)
 				.Include(n => n.MaloaispNavigation)
 				.ToList();
 			//Gán vào viewbag
@@ -40,16 +40,16 @@ namespace GiayDep.Controllers
 
 			//List maloaisp bằng 3
 			var lstDTM = _context.SanPhams
-                .Where(n => n.Maloaisp == 3)
-                .Include(n => n.MaloaispNavigation)
-                .ToList();
-            //Gán vào viewbag
-            ViewBag.ListDTM = lstDTM;
+				.Where(n => n.Manhasx == 8)
+				.Include(n => n.MaloaispNavigation)
+				.ToList();
+			//Gán vào viewbag
+			ViewBag.ListDTM = lstDTM;
 
 
-            return View();
-        }
-        public IActionResult Privacy()
+			return View();
+		}
+		public IActionResult Privacy()
         {
             return View();
         }

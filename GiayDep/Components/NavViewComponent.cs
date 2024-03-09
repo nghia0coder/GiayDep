@@ -11,11 +11,11 @@ namespace GiayDep.Components
         {
             _context = context;
         }
-        public IViewComponentResult Invoke()
-        {
-            var listCategory = _context.LoaiSps
-                .ToList();
-            return View(listCategory);
-        }
-    }
+		public IViewComponentResult Invoke()
+		{
+			var listCategory = _context.NhaSanXuats
+				.ToList();
+			return View(listCategory);
+		}
+	}
 }

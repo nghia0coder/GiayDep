@@ -11,12 +11,12 @@ namespace GiayDep.Components
         {
             _context = context;
         }
-        public IViewComponentResult Invoke()
-        {
-            var lstSP = _context.SanPhams
-               .Include(n => n.ManhaccNavigation)
-               .Include(n => n.MaloaispNavigation);
-            return View(lstSP);
-        }
-    }
+		public IViewComponentResult Invoke()
+		{
+			var lstSP = _context.SanPhams
+			   .Include(n => n.ManhaccNavigation)
+			   .Include(n => n.MaloaispNavigation);
+			return View(lstSP);
+		}
+	}
 }

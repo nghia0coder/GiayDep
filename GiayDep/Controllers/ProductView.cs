@@ -26,6 +26,7 @@ namespace GiayDep.Controllers
         {
             return PartialView();
         }
+        [Route("post/{slug}-{id:int}")]
         public async Task<IActionResult> XemChiTiet(int? id)
         {
             if (id == null)
@@ -70,28 +71,29 @@ namespace GiayDep.Controllers
             return View(lstSP);
         }
 
-        public IActionResult ProductCate(int? Id)
-        {
-            // Check if the parameter is null
-            if (Id == null)
-            {
-                return BadRequest();
-            }
+		[Route("sanpham/{slug}-{id:int}")]
+		public IActionResult ProductCate(int? Id)
+		{
+			// Check if the parameter is null
+			if (Id == null)
+			{
+				return BadRequest();
+			}
 
-            // Load products based on the specified criteria
-            var lstSP = _context.SanPhams
-                .Where(n => n.Maloaisp == Id)
-                .Include(n => n.MaloaispNavigation);
+			// Load products based on the specified criteria
+			var lstSP = _context.SanPhams
+				.Where(n => n.Manhasx == Id)
+				.Include(n => n.MaloaispNavigation);
 
-            // Check if there are any products
-            if (lstSP.Count() == 0)
-            {
-                return NotFound();
-            }
-            ViewBag.MaLoaiSP = Id;
+			// Check if there are any products
+			if (lstSP.Count() == 0)
+			{
+				return NotFound();
+			}
+			ViewBag.MaLoaiSP = Id;
 
-            // Return the view with paginated products
-            return View(lstSP.OrderBy(n => n.Idsp));
-        }
-    }
+			// Return the view with paginated products
+			return View(lstSP.OrderBy(n => n.Idsp));
+		}
+	}
 }

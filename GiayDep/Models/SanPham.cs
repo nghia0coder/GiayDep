@@ -18,16 +18,22 @@ namespace GiayDep.Models
         public int? Soluong { get; set; }
         public string? Baohanh { get; set; }
         public string? Khuyenmai { get; set; }
-        public int Maloaisp { get; set; }
+        public int? Maloaisp { get; set; }
         public int? Manhacc { get; set; }
         public string? Hinhanh1 { get; set; }
-        public string? Hinhanh2 { get; set; }
-        public string? Hinhanh3 {get; set; }
-        public string? Hinhanh4 { get; set; }
         public string? Description { get; set; }
+        public string? Hinhanh2 { get; set; }
+        public string? Hinhanh3 { get; set; }
+        public string? Hinhanh4 { get; set; }
+        public int? Manhasx { get; set; }
+        public int? Size { get; set; }
+        public int? Color { get; set; }
 
-        public virtual LoaiSp MaloaispNavigation { get; set; } = null!;
+        public virtual Color? ColorNavigation { get; set; }
+        public virtual LoaiSp? MaloaispNavigation { get; set; }
         public virtual NhaCungCap? ManhaccNavigation { get; set; }
+        public virtual NhaSanXuat? ManhasxNavigation { get; set; }
+        public virtual Size? SizeNavigation { get; set; }
         public virtual ICollection<CtHoaDon> CtHoaDons { get; set; }
         public virtual ICollection<CtPhieuNhap> CtPhieuNhaps { get; set; }
 

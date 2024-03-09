@@ -54,6 +54,9 @@ namespace GiayDep.Areas.Admin.Controllers
         {
             ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai");
             ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc");
+            ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx");
+            ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Size1");
+            ViewData["Color"] = new SelectList(_context.Color, "Id", "Color1");
             SanPham sanPham = new SanPham();
             return View(sanPham);
         }
@@ -99,7 +102,10 @@ namespace GiayDep.Areas.Admin.Controllers
             ViewData["Mahinhanh"] = sanPham.Hinhanh1;
             ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
             ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
-            return View(sanPham);
+			ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx",sanPham.Manhasx);
+			ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Size1",sanPham.Size);
+			ViewData["Color"] = new SelectList(_context.Color, "Id", "Color1",sanPham.Color);
+			return View(sanPham);
         }
 
         // POST: Admin/Products/Edit/5
@@ -113,9 +119,14 @@ namespace GiayDep.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-                string uniqueFileName = GetProfilePhotoFileName1(sanPham);
-                sanPham.Hinhanh1 = uniqueFileName;
-                
+            string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
+            string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
+            string uniqueFileName3 = GetProfilePhotoFileName3(sanPham);
+            string uniqueFileName4 = GetProfilePhotoFileName4(sanPham);
+            sanPham.Hinhanh1 = uniqueFileName1;
+            sanPham.Hinhanh2 = uniqueFileName2;
+            sanPham.Hinhanh3 = uniqueFileName3;
+            sanPham.Hinhanh4 = uniqueFileName4;
             _context.Update(sanPham);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -179,14 +190,14 @@ namespace GiayDep.Areas.Admin.Controllers
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image1 != null)
+            if (sanPham.Image2 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image2.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image1.CopyTo(fileStream);
+                    sanPham.Image2.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
@@ -195,14 +206,14 @@ namespace GiayDep.Areas.Admin.Controllers
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image1 != null)
+            if (sanPham.Image3 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image3.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image1.CopyTo(fileStream);
+                    sanPham.Image3.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
@@ -211,14 +222,14 @@ namespace GiayDep.Areas.Admin.Controllers
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image1 != null)
+            if (sanPham.Image4 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image4.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image1.CopyTo(fileStream);
+                    sanPham.Image4.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
