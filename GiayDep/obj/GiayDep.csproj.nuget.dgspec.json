@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj": {}
+    "E:\\KIENTRUCPHANMEM\\GiayDep\\GiayDep.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj": {
+    "E:\\KIENTRUCPHANMEM\\GiayDep\\GiayDep.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj",
+        "projectUniqueName": "E:\\KIENTRUCPHANMEM\\GiayDep\\GiayDep.csproj",
         "projectName": "GiayDep",
-        "projectPath": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj",
-        "packagesPath": "C:\\Users\\nghia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\obj\\",
+        "projectPath": "E:\\KIENTRUCPHANMEM\\GiayDep\\GiayDep.csproj",
+        "packagesPath": "C:\\Users\\TGDD-ASUS\\.nuget\\packages\\",
+        "outputPath": "E:\\KIENTRUCPHANMEM\\GiayDep\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nghia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TGDD-ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -112,7 +117,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,7 +9,8 @@ using GiayDep.Models;
 using Microsoft.AspNetCore.Authorization;
 
 namespace GiayDep.Areas.Admin.Controllers
-{
+{   
+    
     [Area("Admin")]
     public class PhieuNhapController : Controller
     {

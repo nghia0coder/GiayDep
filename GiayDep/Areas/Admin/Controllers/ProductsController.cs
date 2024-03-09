@@ -66,8 +66,15 @@ namespace GiayDep.Areas.Admin.Controllers
         public IActionResult Create(SanPham sanPham)
         {
             
-                string uniqueFileName = GetProfilePhotoFileName(sanPham);
-                sanPham.Hinhanh1 = uniqueFileName;
+                string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
+                sanPham.Hinhanh1 = uniqueFileName1;
+                string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
+                sanPham.Hinhanh2 = uniqueFileName2;
+                string uniqueFileName3 = GetProfilePhotoFileName3(sanPham);
+                sanPham.Hinhanh3 = uniqueFileName3;
+                string uniqueFileName4 = GetProfilePhotoFileName4(sanPham);
+                sanPham.Hinhanh4 = uniqueFileName4;
+
                 _context.SanPhams.Add(sanPham);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
@@ -106,7 +113,7 @@ namespace GiayDep.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-                string uniqueFileName = GetProfilePhotoFileName(sanPham);
+                string uniqueFileName = GetProfilePhotoFileName1(sanPham);
                 sanPham.Hinhanh1 = uniqueFileName;
                 
             _context.Update(sanPham);
@@ -152,22 +159,71 @@ namespace GiayDep.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        private string GetProfilePhotoFileName(SanPham sanPham)
+        private string GetProfilePhotoFileName1(SanPham sanPham)
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image != null)
+            if (sanPham.Image1 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image.CopyTo(fileStream);
+                    sanPham.Image1.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
         }
+        private string GetProfilePhotoFileName2(SanPham sanPham)
+        {
+            string uniqueFileName = null;
+
+            if (sanPham.Image1 != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    sanPham.Image1.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+        private string GetProfilePhotoFileName3(SanPham sanPham)
+        {
+            string uniqueFileName = null;
+
+            if (sanPham.Image1 != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    sanPham.Image1.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+        private string GetProfilePhotoFileName4(SanPham sanPham)
+        {
+            string uniqueFileName = null;
+
+            if (sanPham.Image1 != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    sanPham.Image1.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+
 
         private bool SanPhamExists(int id)
         {

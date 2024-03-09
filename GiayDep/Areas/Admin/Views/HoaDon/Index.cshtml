@@ -5,34 +5,34 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Danh sách hóa đơn </h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm mới</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Ngaythanhtoan)
+                Ngày thanh toán 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tinhtranggiaohang)
+               Tình trạng giao hàng 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Ngaygiao)
+               Ngày giao 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Dathanhtoan)
+                Đã thanh toán 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Dahuy)
+                Đã hủy 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Daxoa)
+                Đã xóa
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Khuyenmai)
+              Khuyến mãi 
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.MakhNavigation)
@@ -68,9 +68,9 @@
                 @Html.DisplayFor(modelItem => item.MakhNavigation.Id)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Idhoadon">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idhoadon">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idhoadon">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Idhoadon">Chỉnh sửa </a> |
+                <a asp-action="Details" asp-route-id="@item.Idhoadon">Chi tiết </a> |
+                <a asp-action="Delete" asp-route-id="@item.Idhoadon">Xóa</a>
             </td>
         </tr>
 }
