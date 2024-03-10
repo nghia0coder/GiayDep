@@ -19,7 +19,9 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.27",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.26",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.27",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16"
+          "Microsoft.TypeScript.MSBuild": "5.4.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
+          "SlugGenerator": "2.0.2"
         },
         "runtime": {
           "GiayDep.dll": {}
@@ -1845,6 +1847,7 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.TypeScript.MSBuild/5.4.2": {},
       "Microsoft.VisualStudio.Debugger.Contracts/17.2.0": {
         "dependencies": {
           "MessagePack": "2.1.152",
@@ -2194,6 +2197,14 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "SlugGenerator/2.0.2": {
+        "runtime": {
+          "lib/netcoreapp2.0/SlugGenerator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.2": {
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.2",
@@ -4254,6 +4265,13 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
+    "Microsoft.TypeScript.MSBuild/5.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3A+EztIH2M+apzH58/Oqa5LWAzrgGHApXnzKt5Bat4Z3q6JRbfbjj2Y9p/NWjhO+p6R3vacM95bQU6WM/7rKbA==",
+      "path": "microsoft.typescript.msbuild/5.4.2",
+      "hashPath": "microsoft.typescript.msbuild.5.4.2.nupkg.sha512"
+    },
     "Microsoft.VisualStudio.Debugger.Contracts/17.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4526,6 +4544,13 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "SlugGenerator/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YnZfqVSdEaD+Ulif5GihlnrQjhSKpA4iDxC+S8i344w90IkBWjGDqYBRbl4aO47kXIDoFyUvWJWzvWNO6LLhXw==",
+      "path": "sluggenerator/2.0.2",
+      "hashPath": "sluggenerator.2.0.2.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.2": {
       "type": "package",

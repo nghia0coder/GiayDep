@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iZ4hoKAvo8utl1RFsKcudzozmFl/8RLdaBXpusFohYmUsUqCEjPyyowMQ0hicKUGNKb0m0OjX/z1s8/LgleNrw==",
+  "dgSpecHash": "1mfJTsNS+le/z5k+Wn+Zp8eUUvbD2jX8pc8h3KrvlZy6CO9FUzb592EkUMJkyKh6QClCdJzQhXWU5OioUrvs5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj",
+  "projectFilePath": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nghia\\.nuget\\packages\\aspnetcore.iservicecollection.addiurlhelper\\1.1.0\\aspnetcore.iservicecollection.addiurlhelper.1.1.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\grpc.core\\2.46.6\\grpc.core.2.46.6.nupkg.sha512",
@@ -161,6 +161,7 @@
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.net.stringtools\\17.3.2\\microsoft.net.stringtools.17.3.2.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\nghia\\.nuget\\packages\\microsoft.typescript.msbuild\\5.4.2\\microsoft.typescript.msbuild.5.4.2.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.16\\microsoft.visualstudio.web.codegeneration.6.0.16.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.16\\microsoft.visualstudio.web.codegeneration.core.6.0.16.nupkg.sha512",
@@ -200,6 +201,7 @@
     "C:\\Users\\nghia\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\nghia\\.nuget\\packages\\sluggenerator\\2.0.2\\sluggenerator.2.0.2.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
