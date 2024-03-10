@@ -1,0 +1,23 @@
+﻿@model IEnumerable<NhaSanXuat>
+
+<!-- NAVIGATION -->
+<nav id="navigation">
+	<!-- container -->
+	<div class="container">
+		<!-- responsive-nav -->
+		<div id="responsive-nav">
+			<!-- NAV -->
+			<ul class="main-nav nav navbar-nav">
+				<li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
+				@foreach (var item in Model)
+				{
+					<li><a href="/sanpham/@SlugGenerator.SlugGenerator.GenerateSlug(item.Tennhasx)-@item.Idnhasx">@item.Tennhasx.ToUpper()</a></li>
+				}
+			</ul>
+			<!-- /NAV -->
+		</div>
+		<!-- /responsive-nav -->
+	</div>
+	<!-- /container -->
+</nav>
+<!-- /NAVIGATION -->
