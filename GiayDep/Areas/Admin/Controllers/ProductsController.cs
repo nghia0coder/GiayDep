@@ -40,6 +40,9 @@ namespace GiayDep.Areas.Admin.Controllers
             var sanPham = await _context.SanPhams
                 .Include(s => s.MaloaispNavigation)
                 .Include(s => s.ManhaccNavigation)
+                .Include(s => s.ManhasxNavigation)
+                .Include(s => s.ColorNavigation)
+                .Include(s => s.SizeNavigation)
                 .FirstOrDefaultAsync(m => m.Idsp == id);
             if (sanPham == null)
             {
@@ -98,8 +101,12 @@ namespace GiayDep.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-          
-            ViewData["Mahinhanh"] = sanPham.Hinhanh1;
+
+            TempData["img1"] = sanPham.Hinhanh1;
+            TempData["img2"] = sanPham.Hinhanh2;
+            TempData["img3"] = sanPham.Hinhanh3;
+            TempData["img4"] = sanPham.Hinhanh4;
+
             ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
             ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
 			ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx",sanPham.Manhasx);
@@ -119,14 +126,43 @@ namespace GiayDep.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
-            string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
-            string uniqueFileName3 = GetProfilePhotoFileName3(sanPham);
-            string uniqueFileName4 = GetProfilePhotoFileName4(sanPham);
-            sanPham.Hinhanh1 = uniqueFileName1;
-            sanPham.Hinhanh2 = uniqueFileName2;
-            sanPham.Hinhanh3 = uniqueFileName3;
-            sanPham.Hinhanh4 = uniqueFileName4;
+            if (sanPham.Hinhanh1 == null) 
+            {
+                sanPham.Hinhanh1 = TempData["img1"]?.ToString();
+            }
+            else
+            {
+                string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
+                sanPham.Hinhanh1 = uniqueFileName1;
+            }
+            if (sanPham.Hinhanh2 == null)
+            {
+                sanPham.Hinhanh2 = TempData["img2"]?.ToString();
+            }
+            else
+            {
+                string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
+                sanPham.Hinhanh2 = uniqueFileName2;
+            }
+            if (sanPham.Hinhanh3 == null)
+            {
+                sanPham.Hinhanh3 = TempData["img3"]?.ToString();
+            }
+            else
+            {
+                string uniqueFileName3 = GetProfilePhotoFileName1(sanPham);
+                sanPham.Hinhanh3 = uniqueFileName3;
+            }
+            if (sanPham.Hinhanh4 == null)
+            {
+                sanPham.Hinhanh4 = TempData["img4"]?.ToString();
+            }
+            else
+            {
+                string uniqueFileName4 = GetProfilePhotoFileName1(sanPham);
+                sanPham.Hinhanh4 = uniqueFileName4;
+            }
+         
             _context.Update(sanPham);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

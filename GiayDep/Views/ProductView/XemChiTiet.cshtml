@@ -3,6 +3,7 @@
 @{
 	string currentUrl = Context.Request.GetDisplayUrl();
 	IEnumerable<SanPham> ListSP = ViewBag.ListSP;
+	IEnumerable<SanPham> ListSize = ViewBag.ListSizes;
 }
 
 @{
@@ -80,9 +81,14 @@
 					<div class="product-options">
 						<label>
 							Size
-							<select class="input-select">
-								<option value="0">X</option>
+							<select class="input-select" onchange="redirectToSelectedOption(this)">
+								<option >@Model.SizeNavigation.Size1</option>
+								@foreach (var item in ViewBag.ListSizes)
+								{
+									<option value="@item.SizeNavigation.Size1" data-url="/post/@(SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)) - @(item.Idsp)">@item.SizeNavigation.Size1</option>
+								}
 							</select>
+
 						</label>
 						<label>
 							Color
@@ -396,3 +402,14 @@
 	<!-- /container -->
 </div>
 <!-- /Section -->
+
+<script>
+	function redirectToSelectedOption(selectElement) {
+		var selectedOption = selectElement.options[selectElement.selectedIndex];
+		var url = selectedOption.getAttribute('data-url');
+		if (url) {
+			window.location.href = url;
+		}
+	}
+</script>
+

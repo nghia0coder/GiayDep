@@ -207,10 +207,10 @@ namespace GiayDep.Models
                 entity.Property(e => e.Baohanh).HasMaxLength(50);
 
                 entity.Property(e => e.Description).HasMaxLength(100);
-
+                          
                 entity.Property(e => e.Khuyenmai).HasMaxLength(50);
 
-                entity.Property(e => e.Tensp).HasMaxLength(50);
+                entity.Property(e => e.Tensp).HasMaxLength(450);
 
                 entity.HasOne(d => d.ColorNavigation)
                     .WithMany(p => p.SanPhams)

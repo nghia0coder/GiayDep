@@ -10,8 +10,10 @@
         {
             get { return DonGia * SoLuong; }
         }
-        
+        public string Size { get; set; }
         public string HinhAnh { get; set; }
+
+        public string Hang { get; set; }
 
         public CartItemsModel() { }
 
@@ -24,6 +26,8 @@
             DonGia = sanPham.Dongia;
             SoLuong = 1;
             HinhAnh = sanPham.Hinhanh1;
+            Size = sanPham.SizeNavigation.Size1;
+            Hang = sanPham.ManhasxNavigation.Tennhasx;
         }
     }
 }

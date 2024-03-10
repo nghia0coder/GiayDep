@@ -6,6 +6,7 @@ using System.Text.Json;
 using GiayDep.Repository;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace GiayDep.Controllers
 {
@@ -35,7 +36,10 @@ namespace GiayDep.Controllers
         }
         public async Task<IActionResult> ThemGioHang(int MaSP, string strURL)
         {
-            SanPham sanPham =  await _context.SanPhams.FindAsync(MaSP);
+            SanPham sanPham =  await _context.SanPhams
+                .Include(n => n.SizeNavigation)
+                .Include(n => n.ManhasxNavigation)
+                .FirstOrDefaultAsync(s => s.Idsp == MaSP);
             List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
             CartItemsModel cartItems = cart.Where(c => c.MaSP == MaSP).FirstOrDefault();
             if (cartItems == null)

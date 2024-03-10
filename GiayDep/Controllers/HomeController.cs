@@ -27,6 +27,8 @@ namespace GiayDep.Controllers
 			var lstLTM = _context.SanPhams
 				.Where(n => n.Manhasx == 6)
 				.Include(n => n.MaloaispNavigation)
+				.GroupBy(n => n.Tensp)	
+				.Select(n => n.FirstOrDefault())
 				.ToList();
 			//Gán vào viewbag
 			ViewBag.ListLTM = lstLTM;

@@ -35,40 +35,23 @@ namespace GiayDep.Controllers
             }
             var sp = await _context.SanPhams
                 .Include(n => n.MaloaispNavigation)
+                .Include(n => n.SizeNavigation)
+                .Include(n => n.ManhasxNavigation)
                 .SingleOrDefaultAsync(n => n.Idsp == id);
             ViewBag.ListSP = _context.SanPhams
                 .Where(n => n.Maloaisp == sp.Maloaisp);
+
+
+            var sizes = _context.SanPhams.Where(n => n.Tensp == sp.Tensp).Include(s => s.SizeNavigation).ToList();
+                
+            ViewBag.ListSizes = sizes;
+
             if (sp == null)
             {
                 return NotFound();
             }
 
             return View(sp);
-        }
-        public IActionResult ThuongHieu(int? MaLoaiSP, int? MaNSX)
-        {
-            // Check if the parameters are null
-            if (MaLoaiSP == null || MaNSX == null)
-            {
-                return BadRequest();
-            }
-
-            // Load products based on the specified criteria
-            var lstSP = _context.SanPhams.Where(n => n.Maloaisp == MaLoaiSP && n.Manhacc == MaNSX)
-                .Include(n => n.MaloaispNavigation)
-                .Include(n => n.ManhaccNavigation);
-
-            // Check if there are any products
-            if (lstSP.Count() == 0)
-            {
-                return NotFound();
-            }
-
-            ViewBag.MaLoaiSP = MaLoaiSP;
-            ViewBag.MaNSX = MaNSX;
-
-            // Return the view with paginated products
-            return View(lstSP);
         }
 
 		[Route("sanpham/{slug}-{id:int}")]
@@ -83,7 +66,10 @@ namespace GiayDep.Controllers
 			// Load products based on the specified criteria
 			var lstSP = _context.SanPhams
 				.Where(n => n.Manhasx == Id)
-				.Include(n => n.MaloaispNavigation);
+				.Include(n => n.MaloaispNavigation)
+                .GroupBy(n => n.Tensp)
+                .Select(n => n.FirstOrDefault())
+                .ToList();
 
 			// Check if there are any products
 			if (lstSP.Count() == 0)
