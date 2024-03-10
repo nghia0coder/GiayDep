@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj": {}
+    "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj": {
+    "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj",
+        "projectUniqueName": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj",
         "projectName": "GiayDep",
-        "projectPath": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\GiayDep.csproj",
+        "projectPath": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj",
         "packagesPath": "C:\\Users\\nghia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nghia\\OneDrive\\Documents\\New folder (4)\\GiayDep\\GiayDep\\obj\\",
+        "outputPath": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nghia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -88,9 +88,19 @@
               "target": "Package",
               "version": "[6.0.27, )"
             },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.4.2, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "SlugGenerator": {
+              "target": "Package",
+              "version": "[2.0.2, )"
             }
           },
           "imports": [
