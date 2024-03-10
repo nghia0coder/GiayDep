@@ -1,3 +1,10 @@
 *.mdf
 .ldf
 .vsidx
+.exe
+.cache
+.dll
+.pdb
+.bin
+.json
+.props
