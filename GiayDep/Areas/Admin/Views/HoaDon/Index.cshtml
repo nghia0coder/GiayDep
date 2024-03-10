@@ -1,0 +1,78 @@
+﻿@model IEnumerable<GiayDep.Models.HoaDon>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Danh sách hóa đơn </h1>
+
+<p>
+    <a asp-action="Create">Thêm mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ngày thanh toán 
+            </th>
+            <th>
+               Tình trạng giao hàng 
+            </th>
+            <th>
+               Ngày giao 
+            </th>
+            <th>
+                Đã thanh toán 
+            </th>
+            <th>
+                Đã hủy 
+            </th>
+            <th>
+                Đã xóa
+            </th>
+            <th>
+              Khuyến mãi 
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MakhNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaythanhtoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tinhtranggiaohang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaygiao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dathanhtoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dahuy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Daxoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Khuyenmai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MakhNavigation.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idhoadon">Chỉnh sửa </a> |
+                <a asp-action="Details" asp-route-id="@item.Idhoadon">Chi tiết </a> |
+                <a asp-action="Delete" asp-route-id="@item.Idhoadon">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
