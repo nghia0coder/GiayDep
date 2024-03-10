@@ -120,51 +120,31 @@ namespace GiayDep.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, SanPham sanPham)
+        public IActionResult Edit(int id, SanPham sanPham)
         {
             if (id != sanPham.Idsp)
             {
                 return NotFound();
             }
-            if (sanPham.Hinhanh1 == null) 
-            {
-                sanPham.Hinhanh1 = TempData["img1"]?.ToString();
-            }
-            else
-            {
-                string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
-                sanPham.Hinhanh1 = uniqueFileName1;
-            }
-            if (sanPham.Hinhanh2 == null)
-            {
-                sanPham.Hinhanh2 = TempData["img2"]?.ToString();
-            }
-            else
-            {
-                string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
-                sanPham.Hinhanh2 = uniqueFileName2;
-            }
-            if (sanPham.Hinhanh3 == null)
-            {
-                sanPham.Hinhanh3 = TempData["img3"]?.ToString();
-            }
-            else
-            {
-                string uniqueFileName3 = GetProfilePhotoFileName1(sanPham);
-                sanPham.Hinhanh3 = uniqueFileName3;
-            }
-            if (sanPham.Hinhanh4 == null)
-            {
-                sanPham.Hinhanh4 = TempData["img4"]?.ToString();
-            }
-            else
-            {
-                string uniqueFileName4 = GetProfilePhotoFileName1(sanPham);
-                sanPham.Hinhanh4 = uniqueFileName4;
-            }
-         
-            _context.Update(sanPham);
-            await _context.SaveChangesAsync();
+
+           
+             string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
+             sanPham.Hinhanh1 = uniqueFileName1;
+             string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
+             sanPham.Hinhanh2 = uniqueFileName2;
+             string uniqueFileName3 = GetProfilePhotoFileName3(sanPham);
+             sanPham.Hinhanh3 = uniqueFileName3;
+             string uniqueFileName4 = GetProfilePhotoFileName4(sanPham);
+             sanPham.Hinhanh4 = uniqueFileName4;
+
+             _context.Update(sanPham);
+             _context.SaveChanges();
+            ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
+            ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
+            ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx", sanPham.Manhasx);
+            ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Size1", sanPham.Size);
+            ViewData["Color"] = new SelectList(_context.Color, "Id", "Color1", sanPham.Color);
+
             return RedirectToAction(nameof(Index));
         }
 

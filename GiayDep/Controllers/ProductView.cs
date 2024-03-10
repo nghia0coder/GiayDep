@@ -42,7 +42,12 @@ namespace GiayDep.Controllers
                 .Where(n => n.Maloaisp == sp.Maloaisp);
 
 
-            var sizes = _context.SanPhams.Where(n => n.Tensp == sp.Tensp).Include(s => s.SizeNavigation).ToList();
+            var sizes = _context.SanPhams.Where(n => n.Tensp == sp.Tensp)
+                .Include(s => s.SizeNavigation)
+    
+                .GroupBy(n=>n.SizeNavigation.Size1)
+                .Select(n => n.FirstOrDefault())
+                .ToList();
                 
             ViewBag.ListSizes = sizes;
 

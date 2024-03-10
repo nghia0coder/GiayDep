@@ -85,15 +85,27 @@
 								<option >@Model.SizeNavigation.Size1</option>
 								@foreach (var item in ViewBag.ListSizes)
 								{
-									<option value="@item.SizeNavigation.Size1" data-url="/post/@(SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)) - @(item.Idsp)">@item.SizeNavigation.Size1</option>
+									if (item.SizeNavigation.Size1 != Model.SizeNavigation.Size1)
+									{
+										<option  data-url="/post/@(SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)) - @(item.Idsp)">@item.SizeNavigation.Size1</option>
+									}
+									
 								}
 							</select>
 
 						</label>
 						<label>
 							Color
-							<select class="input-select">
-								<option value="0">Red</option>
+							<select class="input-select" onchange="redirectToSelectedOption(this)">
+								<option value="0">@Model.ColorNavigation.Color1</option>
+								@foreach (var item in ViewBag.ListSizes)
+								{
+									if (item.ColorNavigation.Color1 != Model.ColorNavigation.Color1)
+									{
+										<option data-url="/post/@(SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)) - @(item.Idsp)">@item.ColorNavigation.Color1</option>
+									}
+
+								}
 							</select>
 						</label>
 					</div>
