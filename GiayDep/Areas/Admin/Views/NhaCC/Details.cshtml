@@ -5,26 +5,26 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Chi tiết</h1>
 
 <div>
-    <h4>NhaCungCap</h4>
+    <h4>Nhà cung cấp </h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tennhacc)
+            Tên nhà cung cấp
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Tennhacc)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Diachi)
+          Địa chỉ 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Diachi)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Sdt)
+            Số điện thoại
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Sdt)
@@ -44,6 +44,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Idnhacc">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Idnhacc">Chỉnh sửa </a> |
+    <a asp-action="Index">Trở về</a>
 </div>

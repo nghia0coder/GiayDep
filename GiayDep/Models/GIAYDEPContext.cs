@@ -20,16 +20,15 @@ namespace GiayDep.Models
         public virtual DbSet<CtHoaDon> CtHoaDons { get; set; } = null!;
         public virtual DbSet<CtPhieuNhap> CtPhieuNhaps { get; set; } = null!;
         public virtual DbSet<HoaDon> HoaDons { get; set; } = null!;
-        public virtual DbSet<KhachHang> KhachHangs { get; set; } = null!;
+
         public virtual DbSet<LoaiSp> LoaiSps { get; set; } = null!;
-        public virtual DbSet<Membership> Memberships { get; set; } = null!;
-        public virtual DbSet<MembershipRight> MembershipRights { get; set; } = null!;
-        public virtual DbSet<MembershipType> MembershipTypes { get; set; } = null!;
+
+
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; } = null!;
         public virtual DbSet<NhaSanXuat> NhaSanXuats { get; set; } = null!;
         public virtual DbSet<NhanVien> NhanViens { get; set; } = null!;
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; } = null!;
-        public virtual DbSet<Right> Rights { get; set; } = null!;
+ 
         public virtual DbSet<SanPham> SanPhams { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -37,7 +36,7 @@ namespace GiayDep.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=NGHIANGHIA\\SQLSEVER2020EV;Initial Catalog=GIAYDEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source=MYHANH\\MYHANH;Initial Catalog=GIAYDEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
 
@@ -122,31 +121,7 @@ namespace GiayDep.Models
                     .HasConstraintName("FK_HOA_DON_AspNetUsers");
             });
 
-            modelBuilder.Entity<KhachHang>(entity =>
-            {
-                entity.HasKey(e => e.Idkhachhang);
-
-                entity.ToTable("KHACH_HANG");
-
-                entity.Property(e => e.Idkhachhang).HasColumnName("IDkhachhang");
-
-                entity.Property(e => e.Diachi).HasMaxLength(50);
-
-                entity.Property(e => e.Email).HasMaxLength(50);
-
-                entity.Property(e => e.Gioitinh).HasMaxLength(50);
-
-                entity.Property(e => e.Idtv).HasColumnName("IDTV");
-
-                entity.Property(e => e.Sđt).HasMaxLength(30);
-
-                entity.Property(e => e.Tenkh).HasMaxLength(50);
-
-                entity.HasOne(d => d.IdtvNavigation)
-                    .WithMany(p => p.KhachHangs)
-                    .HasForeignKey(d => d.Idtv)
-                    .HasConstraintName("FK_KHACH_HANG_Membership");
-            });
+       
 
             modelBuilder.Entity<LoaiSp>(entity =>
             {
@@ -157,78 +132,9 @@ namespace GiayDep.Models
                 entity.Property(e => e.Tenloai).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Membership>(entity =>
-            {
-                entity.HasKey(e => e.Idtv);
+         
 
-                entity.ToTable("Membership");
-
-                entity.Property(e => e.Idtv).HasColumnName("IDTV");
-
-                entity.Property(e => e.DiaChi).HasMaxLength(150);
-
-                entity.Property(e => e.Email).HasMaxLength(50);
-
-                entity.Property(e => e.Gioitinh).HasMaxLength(50);
-
-                entity.Property(e => e.HoTen).HasMaxLength(50);
-
-                entity.Property(e => e.MaLoaiTv).HasColumnName("MaLoaiTV");
-
-                entity.Property(e => e.Mk).HasMaxLength(100);
-
-                entity.Property(e => e.Sđt)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Tk).HasMaxLength(100);
-
-                entity.HasOne(d => d.MaLoaiTvNavigation)
-                    .WithMany(p => p.Memberships)
-                    .HasForeignKey(d => d.MaLoaiTv)
-                    .HasConstraintName("FK_Membership_Membership_Type");
-            });
-
-            modelBuilder.Entity<MembershipRight>(entity =>
-            {
-                entity.HasKey(e => new { e.MaLoaiTv, e.Idright })
-                    .HasName("PK_Membership_right_1");
-
-                entity.ToTable("Membership_right");
-
-                entity.Property(e => e.MaLoaiTv).HasColumnName("MaLoaiTV");
-
-                entity.Property(e => e.Idright)
-                    .HasMaxLength(50)
-                    .HasColumnName("IDright");
-
-                entity.Property(e => e.Note).HasMaxLength(255);
-
-                entity.HasOne(d => d.IdrightNavigation)
-                    .WithMany(p => p.MembershipRights)
-                    .HasForeignKey(d => d.Idright)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Membership_right_Right");
-
-                entity.HasOne(d => d.MaLoaiTvNavigation)
-                    .WithMany(p => p.MembershipRights)
-                    .HasForeignKey(d => d.MaLoaiTv)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Membership_right_Membership_Type");
-            });
-
-            modelBuilder.Entity<MembershipType>(entity =>
-            {
-                entity.HasKey(e => e.MaLoaiTv);
-
-                entity.ToTable("Membership_Type");
-
-                entity.Property(e => e.MaLoaiTv)
-                    .ValueGeneratedNever()
-                    .HasColumnName("MaLoaiTV");
-
-                entity.Property(e => e.TenLoai).HasMaxLength(50);
-            });
+         
 
             modelBuilder.Entity<NhaCungCap>(entity =>
             {
@@ -312,18 +218,6 @@ namespace GiayDep.Models
                     .HasConstraintName("FK_PHIEU_NHAP_NHA_CUNG_CAP");
             });
 
-            modelBuilder.Entity<Right>(entity =>
-            {
-                entity.HasKey(e => e.Idright);
-
-                entity.ToTable("Right");
-
-                entity.Property(e => e.Idright)
-                    .HasMaxLength(50)
-                    .HasColumnName("IDright");
-
-                entity.Property(e => e.NameRight).HasMaxLength(50);
-            });
 
             modelBuilder.Entity<SanPham>(entity =>
             {

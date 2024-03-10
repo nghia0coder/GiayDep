@@ -5,9 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Chỉnh sủa</h1>
 
-<h4>LoaiSp</h4>
+<h4>Loại sản phẩm</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,7 +15,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Idloai" />
             <div class="form-group">
-                <label asp-for="Tenloai" class="control-label"></label>
+                <label asp-for="Tenloai" class="control-label">Tên loại sản phẩm</label>
                 <input asp-for="Tenloai" class="form-control" />
                 <span asp-validation-for="Tenloai" class="text-danger"></span>
             </div>
@@ -27,6 +27,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Trở về</a>
 </div>
 
