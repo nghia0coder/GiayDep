@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.config
+*.v2
+*.vsidx
+*.suo
+*.wsuo
+*.bin
+*.json
+/GiayDep/obj/Debug/net6.0/GiayDep.AssemblyInfo.cs
+/GiayDep/obj/Debug/net6.0/GiayDep.AssemblyInfoInputs.cache
+/GiayDep/obj/Debug/net6.0/GiayDep.GeneratedMSBuildEditorConfig.editorconfig
+/GiayDep/wwwroot/Contents/img
