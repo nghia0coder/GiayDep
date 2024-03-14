@@ -42,17 +42,6 @@ namespace GiayDep.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<Color>(entity =>
-            {
-                entity.ToTable("Color");
-
-                entity.Property(e => e.Id).HasColumnName("Id");
-
-                entity.Property(e => e.Color1)
-                    .HasMaxLength(50)
-                    .HasColumnName("Name");
-            });
-
             modelBuilder.Entity<CtHoaDon>(entity =>
             {
                 entity.HasKey(e => e.IdchitietDdh)
@@ -225,17 +214,7 @@ namespace GiayDep.Models
 
             });
 
-            modelBuilder.Entity<Size>(entity =>
-            {
-                entity.ToTable("Size");
-
-                entity.Property(e => e.Id).HasColumnName("Id");
-
-                entity.Property(e => e.Size1)
-                    .HasMaxLength(10)
-                    .HasColumnName("Name")
-                    .IsFixedLength();
-            });
+        
           
 
             base.OnModelCreating(modelBuilder);
