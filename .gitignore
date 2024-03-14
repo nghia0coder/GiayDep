@@ -6,3 +6,5 @@
 /.vs/GiayDep/v17/.suo
 /.vs/ProjectEvaluation/giaydep.metadata.v7.bin
 /.vs/ProjectEvaluation/giaydep.projects.v7.bin
+/GiayDep/obj/Debug/net6.0/GiayDep.AssemblyInfo.cs
+/GiayDep/obj/Debug/net6.0/GiayDep.AssemblyInfoInputs.cache
