@@ -28,6 +28,8 @@ namespace GiayDep.Models
         public virtual DbSet<SanPham> SanPhams { get; set; } = null!;
         public virtual DbSet<Size> Sizes { get; set; } = null!;
 
+        public virtual DbSet<Color> Color { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -241,6 +243,6 @@ namespace GiayDep.Models
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-        public DbSet<GiayDep.Models.Color>? Color { get; set; }
+       
     }
 }

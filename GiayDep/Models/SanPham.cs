@@ -25,8 +25,8 @@ namespace GiayDep.Models
         public string? Hinhanh2 { get; set; }
         public string? Hinhanh3 { get; set; }
         public string? Hinhanh4 { get; set; }
- 
 
+  
         public virtual LoaiSp? MaloaispNavigation { get; set; }
         public virtual NhaCungCap? ManhaccNavigation { get; set; }
 
