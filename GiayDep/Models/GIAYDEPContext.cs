@@ -113,33 +113,29 @@ namespace GiayDep.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CT_HOA_DON_SAN_PHAM");
             });
-
             modelBuilder.Entity<CtPhieuNhap>(entity =>
             {
-                entity.HasKey(e => e.IdchitietPn)
-                    .HasName("PK_CT_PHIEU_NHAP_1");
+                entity.HasKey(e => new { e.Idsp, e.Idphieunhap });
 
                 entity.ToTable("CT_PHIEU_NHAP");
 
-                entity.Property(e => e.IdchitietPn).HasColumnName("IDChitietPN");
-
-                entity.Property(e => e.Gia).HasColumnType("decimal(18, 0)");
+                entity.Property(e => e.Idsp).HasColumnName("IDSP");
 
                 entity.Property(e => e.Idphieunhap).HasColumnName("IDphieunhap");
 
-                entity.Property(e => e.Idsp).HasColumnName("IDSP");
+                entity.Property(e => e.Gia).HasColumnType("decimal(18, 0)");
 
                 entity.HasOne(d => d.IdphieunhapNavigation)
                     .WithMany(p => p.CtPhieuNhaps)
                     .HasForeignKey(d => d.Idphieunhap)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CT_PHIEU_NHAP_PHIEU_NHAP");
+                    .HasConstraintName("FK_CT_PHIEU_NHAP_PHIEU_NHAP1");
 
                 entity.HasOne(d => d.IdspNavigation)
                     .WithMany(p => p.CtPhieuNhaps)
                     .HasForeignKey(d => d.Idsp)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CT_PHIEU_NHAP_SAN_PHAM1");
+                    .HasConstraintName("FK_CT_PHIEU_NHAP_SAN_PHAM");
             });
 
             modelBuilder.Entity<HoaDon>(entity =>

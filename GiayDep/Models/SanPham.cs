@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GiayDep.Models
 {
@@ -27,8 +26,7 @@ namespace GiayDep.Models
         public string? Hinhanh3 { get; set; }
         public string? Hinhanh4 { get; set; }
 
-  
-        public virtual LoaiSp? MaloaispNavigation { get; set; }
+        public virtual LoaiSp MaloaispNavigation { get; set; } = null!;
         public virtual NhaCungCap? ManhaccNavigation { get; set; }
         public virtual SoLuongTon? SoLuongTon { get; set; }
         public virtual ICollection<ChitietSanPham> ChitietSanPhams { get; set; }
