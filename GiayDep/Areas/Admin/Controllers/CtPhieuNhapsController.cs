@@ -34,10 +34,11 @@ namespace GiayDep.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var ctPhieuNhap = await _context.CtPhieuNhaps
+            var ctPhieuNhap = _context.CtPhieuNhaps
                 .Include(c => c.IdphieunhapNavigation)
                 .Include(c => c.IdspNavigation)
-                .FirstOrDefaultAsync(m => m.IdchitietPn == id);
+                .ToList();
+              
             if (ctPhieuNhap == null)
             {
                 return NotFound();
@@ -97,29 +98,11 @@ namespace GiayDep.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdchitietPn,Idsp,Idphieunhap,Soluong,Gia")] CtPhieuNhap ctPhieuNhap)
         {
-            if (id != ctPhieuNhap.IdchitietPn)
-            {
-                return NotFound();
-            }
+          
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(ctPhieuNhap);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CtPhieuNhapExists(ctPhieuNhap.IdchitietPn))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+           
                 return RedirectToAction(nameof(Index));
             }
             ViewData["Idphieunhap"] = new SelectList(_context.PhieuNhaps, "Idphieunhap", "Idphieunhap", ctPhieuNhap.Idphieunhap);
@@ -134,10 +117,10 @@ namespace GiayDep.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            var ctPhieuNhap = await _context.CtPhieuNhaps
+            var ctPhieuNhap = _context.CtPhieuNhaps
                 .Include(c => c.IdphieunhapNavigation)
-                .Include(c => c.IdspNavigation)
-                .FirstOrDefaultAsync(m => m.IdchitietPn == id);
+                .Include(c => c.IdspNavigation);
+         
             if (ctPhieuNhap == null)
             {
                 return NotFound();
@@ -166,7 +149,7 @@ namespace GiayDep.Areas.Admin.Controllers
 
         private bool CtPhieuNhapExists(int id)
         {
-          return (_context.CtPhieuNhaps?.Any(e => e.IdchitietPn == id)).GetValueOrDefault();
+          return (_context.CtPhieuNhaps?.Any(e => e.Idphieunhap == id)).GetValueOrDefault();
         }
     }
 }

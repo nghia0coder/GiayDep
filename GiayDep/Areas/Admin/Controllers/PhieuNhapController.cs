@@ -74,7 +74,7 @@ namespace GiayDep.Areas.Admin.Controllers
                 sp = _context.SanPhams.Single(n => n.Idsp == item.Idsp);
                 sp.Soluong += item.Soluong;
                 item.Idphieunhap = model.Idphieunhap;
-                item.NgayNhap = model.Ngaynhap;
+            
             }
 
             _context.CtPhieuNhaps.AddRange(lstModel);
