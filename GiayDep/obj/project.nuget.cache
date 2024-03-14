@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1mfJTsNS+le/z5k+Wn+Zp8eUUvbD2jX8pc8h3KrvlZy6CO9FUzb592EkUMJkyKh6QClCdJzQhXWU5OioUrvs5g==",
+  "dgSpecHash": "rXH4t8MDYFdhvxOvQ9XpJCF6aACrYKwLf91EuxlJj5yKxIXifiNEcb09Kjc/0DNHv5FxB/xm9ubheYQb5jyQZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj",
   "expectedPackageFiles": [
@@ -161,7 +161,7 @@
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.net.stringtools\\17.3.2\\microsoft.net.stringtools.17.3.2.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\nghia\\.nuget\\packages\\microsoft.typescript.msbuild\\5.4.2\\microsoft.typescript.msbuild.5.4.2.nupkg.sha512",
+    "C:\\Users\\nghia\\.nuget\\packages\\microsoft.typescript.msbuild\\3.0.0\\microsoft.typescript.msbuild.3.0.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.16\\microsoft.visualstudio.web.codegeneration.6.0.16.nupkg.sha512",
     "C:\\Users\\nghia\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.16\\microsoft.visualstudio.web.codegeneration.core.6.0.16.nupkg.sha512",

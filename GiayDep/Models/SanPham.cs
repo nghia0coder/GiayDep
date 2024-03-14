@@ -8,6 +8,7 @@ namespace GiayDep.Models
     {
         public SanPham()
         {
+            ChitietSanPhams = new HashSet<ChitietSanPham>();
             CtHoaDons = new HashSet<CtHoaDon>();
             CtPhieuNhaps = new HashSet<CtPhieuNhap>();
         }
@@ -18,7 +19,7 @@ namespace GiayDep.Models
         public int? Soluong { get; set; }
         public string? Baohanh { get; set; }
         public string? Khuyenmai { get; set; }
-        public int? Maloaisp { get; set; }
+        public int Maloaisp { get; set; }
         public int? Manhacc { get; set; }
         public string? Hinhanh1 { get; set; }
         public string? Description { get; set; }
@@ -29,7 +30,8 @@ namespace GiayDep.Models
   
         public virtual LoaiSp? MaloaispNavigation { get; set; }
         public virtual NhaCungCap? ManhaccNavigation { get; set; }
-
+        public virtual SoLuongTon? SoLuongTon { get; set; }
+        public virtual ICollection<ChitietSanPham> ChitietSanPhams { get; set; }
         public virtual ICollection<CtHoaDon> CtHoaDons { get; set; }
         public virtual ICollection<CtPhieuNhap> CtPhieuNhaps { get; set; }
 

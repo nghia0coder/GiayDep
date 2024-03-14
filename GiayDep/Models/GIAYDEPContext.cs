@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using GiayDep.Models;
 
 namespace GiayDep.Models
 {
@@ -18,6 +17,9 @@ namespace GiayDep.Models
         {
         }
 
+  
+        public virtual DbSet<ChitietSanPham> ChitietSanPhams { get; set; } = null!;
+        public virtual DbSet<Color> Colors { get; set; } = null!;
         public virtual DbSet<CtHoaDon> CtHoaDons { get; set; } = null!;
         public virtual DbSet<CtPhieuNhap> CtPhieuNhaps { get; set; } = null!;
         public virtual DbSet<HoaDon> HoaDons { get; set; } = null!;
@@ -27,8 +29,7 @@ namespace GiayDep.Models
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; } = null!;
         public virtual DbSet<SanPham> SanPhams { get; set; } = null!;
         public virtual DbSet<Size> Sizes { get; set; } = null!;
-
-        public virtual DbSet<Color> Color { get; set; }
+        public virtual DbSet<SoLuongTon> SoLuongTons { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -41,6 +42,47 @@ namespace GiayDep.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+          
+
+            modelBuilder.Entity<ChitietSanPham>(entity =>
+            {
+                entity.HasKey(e => new { e.Idsp, e.Idcolor, e.Idsize });
+
+                entity.ToTable("ChitietSanPham");
+
+                entity.Property(e => e.Idsp).HasColumnName("IDSP");
+
+                entity.Property(e => e.Idcolor).HasColumnName("IDColor");
+
+                entity.Property(e => e.Idsize).HasColumnName("IDSize");
+
+                entity.HasOne(d => d.IdcolorNavigation)
+                    .WithMany(p => p.ChitietSanPhams)
+                    .HasForeignKey(d => d.Idcolor)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ChitietSanPham_Color");
+
+                entity.HasOne(d => d.IdsizeNavigation)
+                    .WithMany(p => p.ChitietSanPhams)
+                    .HasForeignKey(d => d.Idsize)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ChitietSanPham_Size");
+
+                entity.HasOne(d => d.IdspNavigation)
+                    .WithMany(p => p.ChitietSanPhams)
+                    .HasForeignKey(d => d.Idsp)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ChitietSanPham_SAN_PHAM");
+            });
+
+            modelBuilder.Entity<Color>(entity =>
+            {
+                entity.ToTable("Color");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.Name).HasMaxLength(50);
+            });
 
             modelBuilder.Entity<CtHoaDon>(entity =>
             {
@@ -196,32 +238,56 @@ namespace GiayDep.Models
                 entity.Property(e => e.Baohanh).HasMaxLength(50);
 
                 entity.Property(e => e.Description).HasMaxLength(100);
-                          
+
                 entity.Property(e => e.Khuyenmai).HasMaxLength(50);
 
-                entity.Property(e => e.Tensp).HasMaxLength(450);
-
+                entity.Property(e => e.Tensp).HasMaxLength(50);
 
                 entity.HasOne(d => d.MaloaispNavigation)
-                    .WithMany(p => p.SanPhams)
-                    .HasForeignKey(d => d.Maloaisp)
-                    .HasConstraintName("FK_SAN_PHAM_LoaiSp");
+                        .WithMany(p => p.SanPhams)
+                        .HasForeignKey(d => d.Maloaisp)
+                        .HasConstraintName("FK_SAN_PHAM_LoaiSp");
 
                 entity.HasOne(d => d.ManhaccNavigation)
                     .WithMany(p => p.SanPhams)
                     .HasForeignKey(d => d.Manhacc)
                     .HasConstraintName("FK_SAN_PHAM_NHA_CUNG_CAP");
-
             });
 
-        
-          
+            modelBuilder.Entity<Size>(entity =>
+            {
+                entity.ToTable("Size");
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedNever()
+                    .HasColumnName("ID");
+
+                entity.Property(e => e.Name).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<SoLuongTon>(entity =>
+            {
+                entity.HasKey(e => e.Idsp)
+                    .HasName("PK_SoLuongTon_1");
+
+                entity.ToTable("SoLuongTon");
+
+                entity.Property(e => e.Idsp)
+                    .ValueGeneratedNever()
+                    .HasColumnName("IDSP");
+
+                entity.Property(e => e.Soluongton1).HasColumnName("Soluongton");
+
+                entity.HasOne(d => d.IdspNavigation)
+                    .WithOne(p => p.SoLuongTon)
+                    .HasForeignKey<SoLuongTon>(d => d.Idsp)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_SoLuongTon_SAN_PHAM");
+            });
 
             base.OnModelCreating(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
-       
     }
 }

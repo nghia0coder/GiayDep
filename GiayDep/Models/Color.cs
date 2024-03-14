@@ -7,11 +7,12 @@ namespace GiayDep.Models
     {
         public Color()
         {
-            
+            ChitietSanPhams = new HashSet<ChitietSanPham>();
         }
 
         public int Id { get; set; }
-        public string? Color1 { get; set; }
-    
+        public string? Name { get; set; }
+
+        public virtual ICollection<ChitietSanPham> ChitietSanPhams { get; set; }
     }
 }

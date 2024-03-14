@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fDwYFrKpzJZl5DiNHEtBxJyY+j1TV3rF504XOSJ268s=",
+  "Hash": "fKheOCw2xHaYOSDp4DYUhPUVoKl9ukXn8wQjnUdsLv0=",
   "Source": "GiayDep",
   "BasePath": "_content/GiayDep",
   "Mode": "Default",
@@ -8432,6 +8432,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Contents\\Scripts\\esm\\popper-utils.min.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\Scripts\\index.d.ts",
+      "SourceId": "GiayDep",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\",
+      "BasePath": "_content/GiayDep",
+      "RelativePath": "Contents/Scripts/index.d.ts",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Contents\\Scripts\\index.d.ts"
     },
     {
       "Identity": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\Scripts\\index.js.flow",
@@ -18198,6 +18217,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\wwwroot\\Contents\\Scripts\\esm\\popper-utils.min.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\index.d.ts",
+      "SourceId": "GiayDep",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\",
+      "BasePath": "_content/GiayDep",
+      "RelativePath": "wwwroot/Contents/Scripts/index.d.ts",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\wwwroot\\Contents\\Scripts\\index.d.ts"
     },
     {
       "Identity": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\index.js.flow",

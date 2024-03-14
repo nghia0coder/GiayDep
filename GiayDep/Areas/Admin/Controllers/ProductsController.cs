@@ -25,8 +25,8 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/Products
         public async Task<IActionResult> Index()
         {
-            var giaydepContext = _context.SanPhams.Include(s => s.MaloaispNavigation).Include(s => s.ManhaccNavigation);
-            return View(await giaydepContext.ToListAsync());
+            var GiaydepContext = _context.SanPhams.ToList();
+            return View(GiaydepContext);
         }
 
         // GET: Admin/Products/Details/5
@@ -38,7 +38,7 @@ namespace GiayDep.Areas.Admin.Controllers
             }
 
             var sanPham = await _context.SanPhams
-                .Include(s => s.MaloaispNavigation)
+            
     
             
                 .FirstOrDefaultAsync(m => m.Idsp == id);
@@ -56,8 +56,8 @@ namespace GiayDep.Areas.Admin.Controllers
             ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai");
             ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc");
             ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx");
-            ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Size1");
-            ViewData["Color"] = new SelectList(_context.Color, "Id", "Color1");
+            ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Name");
+            ViewData["Color"] = new SelectList(_context.Colors, "Id", "Name");
             SanPham sanPham = new SanPham();
             return View(sanPham);
         }
@@ -153,7 +153,7 @@ namespace GiayDep.Areas.Admin.Controllers
             }
 
             var sanPham = await _context.SanPhams
-                .Include(s => s.MaloaispNavigation)
+         
                 .Include(s => s.ManhaccNavigation)
                 .FirstOrDefaultAsync(m => m.Idsp == id);
             if (sanPham == null)

@@ -213,6 +213,10 @@
       "PackagePath": "staticwebassets\\Contents\\Scripts\\esm\\popper.min.js.map"
     },
     {
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\Scripts\\index.d.ts",
+      "PackagePath": "staticwebassets\\Contents\\Scripts\\index.d.ts"
+    },
+    {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\Scripts\\index.js.flow",
       "PackagePath": "staticwebassets\\Contents\\Scripts\\index.js.flow"
     },
@@ -2547,6 +2551,10 @@
     {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\esm\\popper.min.js.map",
       "PackagePath": "staticwebassets\\wwwroot\\Contents\\Scripts\\esm\\popper.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\index.d.ts",
+      "PackagePath": "staticwebassets\\wwwroot\\Contents\\Scripts\\index.d.ts"
     },
     {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\index.js.flow",

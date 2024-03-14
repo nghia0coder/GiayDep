@@ -22,8 +22,8 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/CtPhieuNhaps
         public async Task<IActionResult> Index()
         {
-            var giaydepContext = _context.CtPhieuNhaps.Include(c => c.IdphieunhapNavigation).Include(c => c.IdspNavigation);
-            return View(await giaydepContext.ToListAsync());
+            var GiaydepContext = _context.CtPhieuNhaps.Include(c => c.IdphieunhapNavigation).Include(c => c.IdspNavigation);
+            return View(await GiaydepContext.ToListAsync());
         }
 
         // GET: Admin/CtPhieuNhaps/Details/5

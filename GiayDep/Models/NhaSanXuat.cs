@@ -8,7 +8,6 @@ namespace GiayDep.Models
         public NhaSanXuat()
         {
             NhaCungCaps = new HashSet<NhaCungCap>();
-            
         }
 
         public int Idnhasx { get; set; }
@@ -18,6 +17,5 @@ namespace GiayDep.Models
         public string? Email { get; set; }
 
         public virtual ICollection<NhaCungCap> NhaCungCaps { get; set; }
-     
     }
 }
