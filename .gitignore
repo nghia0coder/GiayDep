@@ -2,3 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 
 /.vs/GiayDep/FileContentIndex
+/.vs/GiayDep/DesignTimeBuild/.dtbcache.v2
+/.vs/GiayDep/v17/.suo
+/.vs/ProjectEvaluation/giaydep.metadata.v7.bin
+/.vs/ProjectEvaluation/giaydep.projects.v7.bin
