@@ -39,10 +39,8 @@ namespace GiayDep.Areas.Admin.Controllers
 
             var sanPham = await _context.SanPhams
                 .Include(s => s.MaloaispNavigation)
-                .Include(s => s.ManhaccNavigation)
-                .Include(s => s.ManhasxNavigation)
-                .Include(s => s.ColorNavigation)
-                .Include(s => s.SizeNavigation)
+    
+            
                 .FirstOrDefaultAsync(m => m.Idsp == id);
             if (sanPham == null)
             {
@@ -109,9 +107,8 @@ namespace GiayDep.Areas.Admin.Controllers
 
             ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
             ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
-			ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx",sanPham.Manhasx);
-			ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Size1",sanPham.Size);
-			ViewData["Color"] = new SelectList(_context.Color, "Id", "Color1",sanPham.Color);
+	
+		
 			return View(sanPham);
         }
 
@@ -141,9 +138,8 @@ namespace GiayDep.Areas.Admin.Controllers
              _context.SaveChanges();
             ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
             ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
-            ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx", sanPham.Manhasx);
-            ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Size1", sanPham.Size);
-            ViewData["Color"] = new SelectList(_context.Color, "Id", "Color1", sanPham.Color);
+          
+
 
             return RedirectToAction(nameof(Index));
         }

@@ -26,8 +26,8 @@
             DonGia = sanPham.Dongia;
             SoLuong = 1;
             HinhAnh = sanPham.Hinhanh1;
-            Size = sanPham.SizeNavigation.Size1;
-            Hang = sanPham.ManhasxNavigation.Tennhasx;
+   
+        
         }
     }
 }

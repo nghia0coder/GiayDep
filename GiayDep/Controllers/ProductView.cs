@@ -35,21 +35,14 @@ namespace GiayDep.Controllers
             }
             var sp = await _context.SanPhams
                 .Include(n => n.MaloaispNavigation)
-                .Include(n => n.SizeNavigation)
-                .Include(n => n.ManhasxNavigation)
+     
+     
+         
                 .SingleOrDefaultAsync(n => n.Idsp == id);
+
+
             ViewBag.ListSP = _context.SanPhams
                 .Where(n => n.Maloaisp == sp.Maloaisp);
-
-
-            var sizes = _context.SanPhams.Where(n => n.Tensp == sp.Tensp)
-                .Include(s => s.SizeNavigation)
-    
-                .GroupBy(n=>n.SizeNavigation.Size1)
-                .Select(n => n.FirstOrDefault())
-                .ToList();
-                
-            ViewBag.ListSizes = sizes;
 
             if (sp == null)
             {
@@ -70,7 +63,7 @@ namespace GiayDep.Controllers
 
 			// Load products based on the specified criteria
 			var lstSP = _context.SanPhams
-				.Where(n => n.Manhasx == Id)
+				.Where(n => n.ManhaccNavigation.Idnhasx == Id)
 				.Include(n => n.MaloaispNavigation)
                 .GroupBy(n => n.Tensp)
                 .Select(n => n.FirstOrDefault())

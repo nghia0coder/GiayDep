@@ -25,15 +25,11 @@ namespace GiayDep.Models
         public string? Hinhanh2 { get; set; }
         public string? Hinhanh3 { get; set; }
         public string? Hinhanh4 { get; set; }
-        public int? Manhasx { get; set; }
-        public int? Size { get; set; }
-        public int? Color { get; set; }
+ 
 
-        public virtual Color? ColorNavigation { get; set; }
         public virtual LoaiSp? MaloaispNavigation { get; set; }
         public virtual NhaCungCap? ManhaccNavigation { get; set; }
-        public virtual NhaSanXuat? ManhasxNavigation { get; set; }
-        public virtual Size? SizeNavigation { get; set; }
+
         public virtual ICollection<CtHoaDon> CtHoaDons { get; set; }
         public virtual ICollection<CtPhieuNhap> CtPhieuNhaps { get; set; }
 

@@ -33,7 +33,7 @@ namespace GiayDep.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=NGHIANGHIA\\SQLSEVER2020EV;Initial Catalog=GIAYDEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source=NGHIANGHIA\\SQLSEVER2020EV;Initial Catalog=QLGIAYDEP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
 
@@ -44,13 +44,11 @@ namespace GiayDep.Models
             {
                 entity.ToTable("Color");
 
-                entity.Property(e => e.Id).HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("Id");
 
                 entity.Property(e => e.Color1)
                     .HasMaxLength(50)
-                    .HasColumnName("Color");
-
-                entity.Property(e => e.ColorHex).HasMaxLength(50);
+                    .HasColumnName("Name");
             });
 
             modelBuilder.Entity<CtHoaDon>(entity =>
@@ -212,10 +210,6 @@ namespace GiayDep.Models
 
                 entity.Property(e => e.Tensp).HasMaxLength(450);
 
-                entity.HasOne(d => d.ColorNavigation)
-                    .WithMany(p => p.SanPhams)
-                    .HasForeignKey(d => d.Color)
-                    .HasConstraintName("FK_SAN_PHAM_Color");
 
                 entity.HasOne(d => d.MaloaispNavigation)
                     .WithMany(p => p.SanPhams)
@@ -227,28 +221,20 @@ namespace GiayDep.Models
                     .HasForeignKey(d => d.Manhacc)
                     .HasConstraintName("FK_SAN_PHAM_NHA_CUNG_CAP");
 
-                entity.HasOne(d => d.ManhasxNavigation)
-                    .WithMany(p => p.SanPhams)
-                    .HasForeignKey(d => d.Manhasx)
-                    .HasConstraintName("FK_SAN_PHAM_NHA_SAN_XUAT");
-
-                entity.HasOne(d => d.SizeNavigation)
-                    .WithMany(p => p.SanPhams)
-                    .HasForeignKey(d => d.Size)
-                    .HasConstraintName("FK_SAN_PHAM_Size");
             });
 
             modelBuilder.Entity<Size>(entity =>
             {
                 entity.ToTable("Size");
 
-                entity.Property(e => e.Id).HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("Id");
 
                 entity.Property(e => e.Size1)
                     .HasMaxLength(10)
-                    .HasColumnName("Size")
+                    .HasColumnName("Name")
                     .IsFixedLength();
             });
+          
 
             base.OnModelCreating(modelBuilder);
         }
