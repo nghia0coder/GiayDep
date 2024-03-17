@@ -25,7 +25,10 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/Products
         public async Task<IActionResult> Index()
         {
-            var GiaydepContext = _context.Products.ToList();
+            var GiaydepContext = _context.Products
+                .Include(n => n.Category)
+                .Include(n => n.BrandNavigation)
+                .ToList();
             return View(GiaydepContext);
         }
 
@@ -38,9 +41,6 @@ namespace GiayDep.Areas.Admin.Controllers
             }
 
             var Product = await _context.Products
-            
-    
-            
                 .FirstOrDefaultAsync(m => m.ProductId == id);
             if (Product == null)
             {
@@ -54,10 +54,7 @@ namespace GiayDep.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
-            ViewData["Brand"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId");
-            ViewData["Manhasx"] = new SelectList(_context.Brands, "BrandId", "BrandName");
-            ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Name");
-            ViewData["Color"] = new SelectList(_context.Colors, "Id", "Name");
+            ViewData["Brand"] = new SelectList(_context.Brands, "BrandId", "BrandName");
             Product Product = new Product();
             return View(Product);
         }
@@ -69,17 +66,10 @@ namespace GiayDep.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(Product Product)
         {
-            
-                //string uniqueFileName1 = GetProfilePhotoFileName1(Product);
-                //Product.Hinhanh1 = uniqueFileName1;
-                //string uniqueFileName2 = GetProfilePhotoFileName2(Product);
-                //Product.Hinhanh2 = uniqueFileName2;
-                //string uniqueFileName3 = GetProfilePhotoFileName3(Product);
-                //Product.Hinhanh3 = uniqueFileName3;
-                //string uniqueFileName4 = GetProfilePhotoFileName4(Product);
-                //Product.Hinhanh4 = uniqueFileName4;
 
-                _context.Products.Add(Product);
+       
+
+            _context.Products.Add(Product);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
            

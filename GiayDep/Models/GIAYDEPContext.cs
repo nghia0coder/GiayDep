@@ -177,10 +177,9 @@ namespace GiayDep.Models
             modelBuilder.Entity<ProductImage>(entity =>
             {
                 entity.HasKey(e => e.ImageId)
-                    .HasName("PK_HinhAnh_Product");
+                    .HasName("ImageId");
 
-                entity.Property(e => e.ImageId).ValueGeneratedNever();
-
+                entity.Property(e => e.ImageId);
                 entity.Property(e => e.ImageUrl).HasColumnName("imageUrl");
 
                 entity.HasOne(d => d.ProductItems)
@@ -195,7 +194,7 @@ namespace GiayDep.Models
                     .HasName("PK_Product_Items");
 
                 entity.Property(e => e.ProductItemsId)
-                    .ValueGeneratedNever()
+     
                     .HasColumnName("ProductItemsID");
 
                 entity.Property(e => e.ColorId).HasColumnName("ColorID");
@@ -223,7 +222,6 @@ namespace GiayDep.Models
                 entity.ToTable("ProductVariation");
 
                 entity.Property(e => e.VariationId)
-                    .ValueGeneratedNever()
                     .HasColumnName("VariationID");
 
                 entity.Property(e => e.ProductItemsId).HasColumnName("ProductItemsID");
@@ -243,7 +241,7 @@ namespace GiayDep.Models
 
             modelBuilder.Entity<Size>(entity =>
             {
-                entity.HasKey(e => e.SizeD);
+                entity.HasKey(e => e.SizeID);
 
                 entity.ToTable("Size");
 
@@ -256,7 +254,7 @@ namespace GiayDep.Models
 
                 entity.ToTable("Suppiler");
 
-                entity.Property(e => e.SupplierId).HasColumnName("SupplierId");
+                entity.Property(e => e.SupplierId).HasColumnName("SuppilerID");
 
                 entity.Property(e => e.Address).HasMaxLength(50);
 

@@ -10,7 +10,7 @@ namespace GiayDep.Models
             ProductVariations = new HashSet<ProductVariation>();
         }
 
-        public int SizeD { get; set; }
+        public int SizeID { get; set; }
         public int? Size1 { get; set; }
 
         public virtual ICollection<ProductVariation> ProductVariations { get; set; }

@@ -45,7 +45,6 @@ namespace GiayDep
             });
            
             builder.Services.AddScoped<IBrandRepository, BrandRepository>();
-            builder.Services.AddScoped<ICategoryRepositorycs, CategoryRepository>();
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddHttpContextAccessor();
             var app = builder.Build();
