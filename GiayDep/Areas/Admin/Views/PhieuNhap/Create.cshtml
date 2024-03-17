@@ -1,9 +1,9 @@
-﻿@model PhieuNhap
+﻿@model Invoice
 @{
     ViewData["Title"] = "Quản lý phiếu nhập";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 
-    IEnumerable<NhaCungCap> lstNCC = (IEnumerable<NhaCungCap>)ViewBag.MaNCC;
+    IEnumerable<Suppiler> lstNCC = (IEnumerable<Suppiler>)ViewBag.Brand;
 }
 
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -25,39 +25,39 @@
             <div class="form-group row pb-2">
                 <div class=" col-md-6">
                     <label class="col-form-label font-weight-bold">Nhà cung cấp</label>
-                    <select class="MaNCC form-control" name="MaNCC">
+                    <select class="Brand form-control" name="Brand">
                         @foreach (var item in lstNCC)
                         {
-                            <option value="@item.Idnhacc">@item.Tennhacc</option>
+                            <option value="@item.SupplierId">@item.SupplierName</option>
                         }
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label class="col-form-label font-weight-bold">Ngày nhập</label>
-                    <input type="datetime-local" class="datepicker form-control" value="@ViewBag.NgayNhap" />
+                    <input type="datetime-local" class="datepicker form-control" value="@ViewBag.CreateDate" />
                 </div>
                 <div class="clearfix"></div>
             </div>
             @*Phần chi tiết nhập hàng *@
-            <table class="tblChiTietPhieuNhap table  table-hover">
+            <table class="tblChiTietInvoice table  table-hover">
                 @{
-                    IEnumerable<SanPham> lstSanPham = ViewBag.ListSanPham as IEnumerable<SanPham>;
+                    IEnumerable<Product> lstProduct = ViewBag.ListProduct as IEnumerable<Product>;
                 }
                 @* tạo 1 tr với nd nhập hàng của 1 sp *@
                 <tr class="trAppend table-borderless">
                     <td>
-                        <select class="ddlSanPham" name="">
-                            @foreach (var item in lstSanPham)
+                        <select class="ddlProduct" name="">
+                            @foreach (var item in lstProduct)
                             {
-                                <option value="@item.Idsp"> @item.Idsp</option>
+                                <option value="@item.ProductId"> @item.ProductId</option>
                             }
                         </select>
                     </td>
                     <td>
-                        <input name="" class="txtDonGia"  />
+                        <input name="" class="txtPrice"  />
                     </td>
                     <td>
-                        <input name="" class="txtSoLuong" />
+                        <input name="" class="txtQuanity" />
                     </td>
                     <td>
                         <input type="button" class="btnDelete btn btn-danger" style="width: 2em; height:2em;" value="-" />
@@ -88,12 +88,12 @@
 
 <script>
     $('#btnAdd').click(function () {
-        var id_cuoi = $(".tblChiTietPhieuNhap").find("tr:last-child").attr("data-id");
+        var id_cuoi = $(".tblChiTietInvoice").find("tr:last-child").attr("data-id");
         i = parseInt(id_cuoi) + 1;
 
         var tdnoidung = $(".trAppend").html();
         var trnoidung = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdnoidung + "<\tr>";
-        $(".tblChiTietPhieuNhap").append(trnoidung);
+        $(".tblChiTietInvoice").append(trnoidung);
         loadIDLenThe();
     });
 
@@ -103,25 +103,25 @@
     });
 
     $("#btnNhapHang").click(function () {
-        if (kiemTraDonGia() == false) {
+        if (kiemTraPrice() == false) {
             return false;
         }
 
-        if (kiemTraSoLuong() == false) {
+        if (kiemTraQuanity() == false) {
             return false;
         }
-        var totalDonGia = 0;
-        var totalSoLuong = 0;
+        var totalPrice = 0;
+        var totalQuanity = 0;
 
-        $(".tblChiTietPhieuNhap .trAppended").each(function () {
-            var donGia = parseFloat($(this).find(".txtDonGia").val()) || 0;
-            var soLuong = parseInt($(this).find(".txtSoLuong").val()) || 0;
+        $(".tblChiTietInvoice .trAppended").each(function () {
+            var Price = parseFloat($(this).find(".txtPrice").val()) || 0;
+            var Quanity = parseInt($(this).find(".txtQuanity").val()) || 0;
 
-            totalDonGia += donGia;
-            totalSoLuong += soLuong;
+            totalPrice += Price;
+            totalQuanity += Quanity;
         });
 
-        if (totalDonGia <= 0 && totalSoLuong <= 0) {
+        if (totalPrice <= 0 && totalQuanity <= 0) {
             alert("Đơn giá nhập và số lượng nhập không hợp lệ. Vui lòng nhập lại ");
             return false;
         }
@@ -130,39 +130,39 @@
     function loadIDLenThe() {
         $(".trAppended").each(function () {
             var id = $(this).attr("data-id");
-            var nameMaSanPham = "[" + id + "].IDSP";
-            var nameDonGiaNhap = "[" + id + "].Gia";
-            var nameSoLuongNhap = "[" + id + "].Soluong";
+            var nameMaProduct = "[" + id + "].ProductId";
+            var namePriceNhap = "[" + id + "].Gia";
+            var nameQuanityNhap = "[" + id + "].Quanity";
 
 
-            $(this).find(".ddlSanPham").attr("name", nameMaSanPham);
-            $(this).find(".txtDonGia").attr("name", nameDonGiaNhap);
-            $(this).find(".txtSoLuong").attr("name", nameSoLuongNhap);
+            $(this).find(".ddlProduct").attr("name", nameMaProduct);
+            $(this).find(".txtPrice").attr("name", namePriceNhap);
+            $(this).find(".txtQuanity").attr("name", nameQuanityNhap);
         })
     };
 
     function CapNhapID() {
-        var id_cuoi = $(".tblChiTietPhieuNhap").find("trFirstChild").attr("data-id");
+        var id_cuoi = $(".tblChiTietInvoice").find("trFirstChild").attr("data-id");
         i = parseInt(id_cuoi) + 1;
 
         $(".trAppended").each(function () {
             var id = i;
             $(this).attr("data-id", i);
 
-            var nameMaSanPham = "[" + id + "].IDSP";
-            var nameDonGiaNhap = "[" + id + "].Gia";
-            var nameSoLuongNhap = "[" + id + "].Soluong";
+            var nameMaProduct = "[" + id + "].ProductId";
+            var namePriceNhap = "[" + id + "].Gia";
+            var nameQuanityNhap = "[" + id + "].Quanity";
 
-            $(this).find(".ddlSanPham").attr("name", nameMaSanPham);
-            $(this).find(".txtDonGia").attr("name", nameDonGiaNhap);
-            $(this).find(".txtSoLuong").attr("name", nameSoLuongNhap);
+            $(this).find(".ddlProduct").attr("name", nameMaProduct);
+            $(this).find(".txtPrice").attr("name", namePriceNhap);
+            $(this).find(".txtQuanity").attr("name", nameQuanityNhap);
         });
     }
 
-    function kiemTraDonGia() {
+    function kiemTraPrice() {
         var bl = true;
 
-        $(".txtDonGia").each(function () {
+        $(".txtPrice").each(function () {
             var giatri = $(this).val();
             if (isNaN(giatri) == true) {
                 alert("Đơn giá ko hợp lệ!");
@@ -174,10 +174,10 @@
         return bl;
     }
 
-    function kiemTraSoLuong() {
+    function kiemTraQuanity() {
         var bl = true;
 
-        $(".txtSoLuong").each(function () {
+        $(".txtQuanity").each(function () {
             var giatri = $(this).val();
             if (isNaN(giatri) == true) {
                 alert("Số lượng ko hợp lệ!");

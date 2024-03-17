@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SanPham>
+﻿@model IEnumerable<Product>
 <div class="h_menu4">
     <ul class="memenu skyblue">
         <li class="showhide" style="display:none;">
@@ -9,22 +9,22 @@
         </li>
 
         <!-- Url.action trả về kiểu đường dẫn url tương ứng với controller và action : ~/Controllers/Home/Index-->
-        @foreach (var groupItem in Model.GroupBy(n => n.MaloaispNavigation))
+        @foreach (var groupItem in Model.GroupBy(n => n.Category))
         {
             if (groupItem.Key != null)
             {
                 <li style="display:inline;">
-                    <a class="color1" href="@Url.Action("ProductCate", "ProductView", new { MaLoaiSP = groupItem.Key.Idloai })">@groupItem.Key.Tenloai</a>
+                    <a class="color1" href="@Url.Action("ProductCate", "ProductView", new { CategoryId = groupItem.Key.CategoryId })">@groupItem.Key.CategoryName</a>
                     <div class="mepanel">
                         <div class="row">
                             <div class="col1">
                                 <div class="h_nav">
                                     <ul>
-                                        @foreach (var item in groupItem.GroupBy(n => n.ManhaccNavigation))
+                                        @foreach (var item in groupItem.GroupBy(n => n.BrandNavigation))
                                         {
                                             if (item.Key != null)
                                             {
-                                                <li><a href="@Url.Action("ThuongHieu", "ProductView", new { @MaLoaiSP = groupItem.Key.Idloai,@MaNSX = item.Key.Idnhacc })">@item.Key.Tennhacc</a></li>
+                                                <li><a href="@Url.Action("ThuongHieu", "ProductView", new { @CategoryId = groupItem.Key.CategoryId,@MaNSX = item.Key.BrandId })">@item.Key.BrandName</a></li>
                                             }
                                         }
                                     </ul>
@@ -40,17 +40,17 @@
             <a class="color2" href="#">Thương Hiệu</a>
             <div class="mepanel">
                 <div class="row">
-                    @foreach (var groupItem in Model.GroupBy(n => n.MaloaispNavigation))
+                    @foreach (var groupItem in Model.GroupBy(n => n.Category))
                     {
                         if (groupItem.Key != null)
                         {
                             <div class="col1">
                                 <div class="h_nav">
-                                    <h4>@groupItem.Key.Tenloai</h4>
+                                    <h4>@groupItem.Key.CategoryName</h4>
                                     <ul>
-                                        @foreach (var item in groupItem.GroupBy(n => n.ManhaccNavigation))
+                                        @foreach (var item in groupItem.GroupBy(n => n.BrandNavigation))
                                         {
-                                            <li><a href="@Url.Action("ThuongHieu", "ProductView", new { @MaLoaiSP = groupItem.Key.Idloai, @MaNSX = item.Key.Idnhacc })">@item.Key.Tennhacc</a></li>
+                                            <li><a href="@Url.Action("ThuongHieu", "ProductView", new { @CategoryId = groupItem.Key.CategoryId, @MaNSX = item.Key.BrandId })">@item.Key.BrandName</a></li>
                                         }
                                     </ul>
                                 </div>

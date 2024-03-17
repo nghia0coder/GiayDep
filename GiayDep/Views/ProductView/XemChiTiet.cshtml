@@ -1,9 +1,9 @@
-﻿@model SanPham
+﻿@model Product
 @using Microsoft.AspNetCore.Http.Extensions
 @{
 	string currentUrl = Context.Request.GetDisplayUrl();
-	IEnumerable<SanPham> ListSP = ViewBag.ListSP;
-	IEnumerable<SanPham> ListSize = ViewBag.ListSizes;
+	IEnumerable<Product> ListSP = ViewBag.ListSP;
+	IEnumerable<Product> ListSize = ViewBag.ListSizes;
 }
 
 @{
@@ -19,7 +19,7 @@
 			<!-- Product main img -->
 			<div class="col-md-5 col-md-push-2">
 				<div id="product-main-img">
-					<div class="product-preview">
+			@* 		<div class="product-preview">
 						<img src="~/Contents/img/@Model.Hinhanh1" alt="">
 					</div>
 
@@ -33,14 +33,14 @@
 
 					<div class="product-preview">
 						<img src="~/Contents/img/@Model.Hinhanh4" alt="">
-					</div>
+					</div> *@
 				</div>
 			</div>
 			<!-- /Product main img -->
 			<!-- Product thumb imgs -->
 			<div class="col-md-2  col-md-pull-5">
 				<div id="product-imgs">
-					<div class="product-preview">
+				@* 	<div class="product-preview">
 						<img src="~/Contents/img/@Model.Hinhanh1" alt="">
 					</div>
 
@@ -54,14 +54,14 @@
 
 					<div class="product-preview">
 						<img src="~/Contents/img/@Model.Hinhanh4" alt="">
-					</div>
+					</div> *@
 				</div>
 			</div>
 			<!-- /Product thumb imgs -->
 			<!-- Product details -->
 			<div class="col-md-5">
 				<div class="product-details">
-					<h2 class="product-name">@Model.Tensp.ToUpper()</h2>
+					<h2 class="product-name">@Model.ProductName.ToUpper()</h2>
 					<div>
 						<div class="product-rating">
 							<i class="fa fa-star"></i>
@@ -73,7 +73,7 @@
 						<a class="review-link" href="#">10 Review(s) | Add your review</a>
 					</div>
 					<div>
-						<h3 class="product-price">$@Model.Dongia <del class="product-old-price">$@(Model.Dongia + 200)</del></h3>
+						<h3 class="product-price">$@Model.Price <del class="product-old-price">$@(Model.Price + 200)</del></h3>
 						<span class="product-available">In Stock</span>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -107,7 +107,7 @@
 							</div>
 						</div>
 						<div class="add-to-cart">
-							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.Idsp" asp-route-strURL="@currentUrl">
+							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.ProductId" asp-route-strURL="@currentUrl">
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</a>
 						</div>
@@ -366,18 +366,18 @@
 			@foreach (var item in ListSP.Take(4))
 			{
 				<div class="col-md-3 col-xs-6">
-					<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.Idsp })">
+					<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
 						<div class="product">
 							<div class="product-img">
-								<img src="~/Contents/img/@item.Hinhanh1" alt="">
+@* 								<img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
 								<div class="product-label">
 									<span class="sale">-30%</span>
 								</div>
 							</div>
 							<div class="product-body">
-								<p class="product-category">@item.MaloaispNavigation.Tenloai.ToUpper()</p>
-								<h3 class="product-name"><a href="#">@item.Tensp.ToUpper()</a></h3>
-								<h4 class="product-price">$@item.Dongia <del class="product-old-price">$@(item.Dongia + 200)</del></h4>
+								<p class="product-category">@item.Category.CategoryName.ToUpper()</p>
+								<h3 class="product-name"><a href="#">@item.ProductName.ToUpper()</a></h3>
+								<h4 class="product-price">$@item.Price <del class="product-old-price">$@(item.Price + 200)</del></h4>
 								<div class="product-rating">
 								</div>
 								<div class="product-btns">

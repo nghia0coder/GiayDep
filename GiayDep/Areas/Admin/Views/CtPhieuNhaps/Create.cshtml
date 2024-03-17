@@ -1,4 +1,4 @@
-﻿@model GiayDep.Models.CtPhieuNhap
+﻿@model GiayDep.Models.InvoiceDetail
 
 @{
     ViewData["Title"] = "Create";
@@ -14,23 +14,23 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Idsp" class="control-label"></label>
-                <select asp-for="Idsp" class ="form-control" asp-items="ViewBag.Idsp"></select>
+                <label asp-for="ProductId" class="control-label"></label>
+                <select asp-for="ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Idphieunhap" class="control-label">Mã phiếu nhập</label>
-                <select asp-for="Idphieunhap" class ="form-control" asp-items="ViewBag.Idphieunhap"></select>
+                <label asp-for="InvoiceId" class="control-label">Mã phiếu nhập</label>
+                <select asp-for="InvoiceId" class ="form-control" asp-items="ViewBag.InvoiceId"></select>
             </div>
           
             <div class="form-group">
-                <label asp-for="Soluong" class="control-label">Số lượng</label>
-                <input asp-for="Soluong" class="form-control" />
-                <span asp-validation-for="Soluong" class="text-danger"></span>
+                <label asp-for="Quanity" class="control-label">Số lượng</label>
+                <input asp-for="Quanity" class="form-control" />
+                <span asp-validation-for="Quanity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Gia" class="control-label">Giá</label>
-                <input asp-for="Gia" class="form-control" />
-                <span asp-validation-for="Gia" class="text-danger"></span>
+                <label asp-for="Price" class="control-label">Giá</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

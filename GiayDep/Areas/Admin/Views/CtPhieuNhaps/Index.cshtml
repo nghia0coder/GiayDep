@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GiayDep.Models.CtPhieuNhap>
+﻿@model IEnumerable<GiayDep.Models.InvoiceDetail>
 
 @{
     ViewData["Title"] = "Index";
@@ -23,10 +23,10 @@
                 Giá 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdphieunhapNavigation)
+                @Html.DisplayNameFor(model => model.InvoiceId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdspNavigation)
+                @Html.DisplayNameFor(model => model.Product)
             </th>
             <th></th>
         </tr>
@@ -36,16 +36,16 @@
         <tr>
 
             <td>
-                @Html.DisplayFor(modelItem => item.Soluong)
+                @Html.DisplayFor(modelItem => item.Quanity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gia)
+                @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdphieunhapNavigation.Idphieunhap)
+                @Html.DisplayFor(modelItem => item.Invoice.InvoiceId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdspNavigation.Idsp)
+                @Html.DisplayFor(modelItem => item.Product.ProductId)
             </td>
             <td>
                 <a asp-action="Edit">Chỉnh sửa </a> |

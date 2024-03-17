@@ -1,4 +1,4 @@
-﻿@model GiayDep.Models.PhieuNhap
+﻿@model GiayDep.Models.Invoice
 
 @{
     ViewData["Title"] = "Details";
@@ -15,17 +15,17 @@
             Ngày nhập
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ngaynhap)
+            @Html.DisplayFor(model => model.CreateDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdnhaccNavigation)
+            @Html.DisplayNameFor(model => model.Supplier)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdnhaccNavigation.Idnhacc)
+            @Html.DisplayFor(model => model.Supplier.SupplierId)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Idphieunhap">Chỉnh sửa</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.InvoiceId">Chỉnh sửa</a> |
     <a asp-action="Index">Trở về</a>
 </div>

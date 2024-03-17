@@ -25,41 +25,41 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/Products
         public async Task<IActionResult> Index()
         {
-            var GiaydepContext = _context.SanPhams.ToList();
+            var GiaydepContext = _context.Products.ToList();
             return View(GiaydepContext);
         }
 
         // GET: Admin/Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.SanPhams == null)
+            if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
 
-            var sanPham = await _context.SanPhams
+            var Product = await _context.Products
             
     
             
-                .FirstOrDefaultAsync(m => m.Idsp == id);
-            if (sanPham == null)
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+            if (Product == null)
             {
                 return NotFound();
             }
 
-            return View(sanPham);
+            return View(Product);
         }
 
         // GET: Admin/Products/Create
         public IActionResult Create()
         {
-            ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai");
-            ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc");
-            ViewData["Manhasx"] = new SelectList(_context.NhaSanXuats, "Idnhasx", "Tennhasx");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
+            ViewData["Brand"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId");
+            ViewData["Manhasx"] = new SelectList(_context.Brands, "BrandId", "BrandName");
             ViewData["Size"] = new SelectList(_context.Sizes, "Id", "Name");
             ViewData["Color"] = new SelectList(_context.Colors, "Id", "Name");
-            SanPham sanPham = new SanPham();
-            return View(sanPham);
+            Product Product = new Product();
+            return View(Product);
         }
 
         // POST: Admin/Products/Create
@@ -67,19 +67,19 @@ namespace GiayDep.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public IActionResult Create(SanPham sanPham)
+        public IActionResult Create(Product Product)
         {
             
-                string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
-                sanPham.Hinhanh1 = uniqueFileName1;
-                string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
-                sanPham.Hinhanh2 = uniqueFileName2;
-                string uniqueFileName3 = GetProfilePhotoFileName3(sanPham);
-                sanPham.Hinhanh3 = uniqueFileName3;
-                string uniqueFileName4 = GetProfilePhotoFileName4(sanPham);
-                sanPham.Hinhanh4 = uniqueFileName4;
+                //string uniqueFileName1 = GetProfilePhotoFileName1(Product);
+                //Product.Hinhanh1 = uniqueFileName1;
+                //string uniqueFileName2 = GetProfilePhotoFileName2(Product);
+                //Product.Hinhanh2 = uniqueFileName2;
+                //string uniqueFileName3 = GetProfilePhotoFileName3(Product);
+                //Product.Hinhanh3 = uniqueFileName3;
+                //string uniqueFileName4 = GetProfilePhotoFileName4(Product);
+                //Product.Hinhanh4 = uniqueFileName4;
 
-                _context.SanPhams.Add(sanPham);
+                _context.Products.Add(Product);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
            
@@ -89,27 +89,27 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.SanPhams == null)
+            if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
 
-            var sanPham = await _context.SanPhams.FindAsync(id);
-            if (sanPham == null)
+            var Product = await _context.Products.FindAsync(id);
+            if (Product == null)
             {
                 return NotFound();
             }
 
-            TempData["img1"] = sanPham.Hinhanh1;
-            TempData["img2"] = sanPham.Hinhanh2;
-            TempData["img3"] = sanPham.Hinhanh3;
-            TempData["img4"] = sanPham.Hinhanh4;
+            //TempData["img1"] = Product.Hinhanh1;
+            //TempData["img2"] = Product.Hinhanh2;
+            //TempData["img3"] = Product.Hinhanh3;
+            //TempData["img4"] = Product.Hinhanh4;
 
-            ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
-            ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", Product.CategoryId);
+            ViewData["Brand"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId", Product.Brand);
 	
 		
-			return View(sanPham);
+			return View(Product);
         }
 
         // POST: Admin/Products/Edit/5
@@ -117,27 +117,27 @@ namespace GiayDep.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, SanPham sanPham)
+        public IActionResult Edit(int id, Product Product)
         {
-            if (id != sanPham.Idsp)
+            if (id != Product.ProductId)
             {
                 return NotFound();
             }
 
            
-             string uniqueFileName1 = GetProfilePhotoFileName1(sanPham);
-             sanPham.Hinhanh1 = uniqueFileName1;
-             string uniqueFileName2 = GetProfilePhotoFileName2(sanPham);
-             sanPham.Hinhanh2 = uniqueFileName2;
-             string uniqueFileName3 = GetProfilePhotoFileName3(sanPham);
-             sanPham.Hinhanh3 = uniqueFileName3;
-             string uniqueFileName4 = GetProfilePhotoFileName4(sanPham);
-             sanPham.Hinhanh4 = uniqueFileName4;
+             //string uniqueFileName1 = GetProfilePhotoFileName1(Product);
+             //Product.Hinhanh1 = uniqueFileName1;
+             //string uniqueFileName2 = GetProfilePhotoFileName2(Product);
+             //Product.Hinhanh2 = uniqueFileName2;
+             //string uniqueFileName3 = GetProfilePhotoFileName3(Product);
+             //Product.Hinhanh3 = uniqueFileName3;
+             //string uniqueFileName4 = GetProfilePhotoFileName4(Product);
+             //Product.Hinhanh4 = uniqueFileName4;
 
-             _context.Update(sanPham);
+             _context.Update(Product);
              _context.SaveChanges();
-            ViewData["Maloaisp"] = new SelectList(_context.LoaiSps, "Idloai", "Idloai", sanPham.Maloaisp);
-            ViewData["Manhacc"] = new SelectList(_context.NhaCungCaps, "Idnhacc", "Idnhacc", sanPham.Manhacc);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", Product.CategoryId);
+            ViewData["Brand"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId", Product.Brand);
           
 
 
@@ -147,21 +147,21 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.SanPhams == null)
+            if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
 
-            var sanPham = await _context.SanPhams
+            var Product = await _context.Products
          
-                .Include(s => s.ManhaccNavigation)
-                .FirstOrDefaultAsync(m => m.Idsp == id);
-            if (sanPham == null)
+                .Include(s => s.BrandNavigation)
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+            if (Product == null)
             {
                 return NotFound();
             }
 
-            return View(sanPham);
+            return View(Product);
         }
 
         // POST: Admin/Products/Delete/5
@@ -169,88 +169,88 @@ namespace GiayDep.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.SanPhams == null)
+            if (_context.Products == null)
             {
-                return Problem("Entity set 'GiaydepContext.SanPhams'  is null.");
+                return Problem("Entity set 'GiaydepContext.Products'  is null.");
             }
-            var sanPham = await _context.SanPhams.FindAsync(id);
-            if (sanPham != null)
+            var Product = await _context.Products.FindAsync(id);
+            if (Product != null)
             {
-                _context.SanPhams.Remove(sanPham);
+                _context.Products.Remove(Product);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        private string GetProfilePhotoFileName1(SanPham sanPham)
+        private string GetProfilePhotoFileName1(ProductItem Product)
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image1 != null)
+            if (Product.Image1 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image1.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image1.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image1.CopyTo(fileStream);
+                    Product.Image1.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
         }
-        private string GetProfilePhotoFileName2(SanPham sanPham)
+        private string GetProfilePhotoFileName2(ProductItem Product)
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image2 != null)
+            if (Product.Image2 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image2.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image2.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image2.CopyTo(fileStream);
+                    Product.Image2.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
         }
-        private string GetProfilePhotoFileName3(SanPham sanPham)
+        private string GetProfilePhotoFileName3(ProductItem Product)
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image3 != null)
+            if (Product.Image3 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image3.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image3.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image3.CopyTo(fileStream);
+                    Product.Image3.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
         }
-        private string GetProfilePhotoFileName4(SanPham sanPham)
+        private string GetProfilePhotoFileName4(ProductItem Product)
         {
             string uniqueFileName = null;
 
-            if (sanPham.Image4 != null)
+            if (Product.Image4 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + sanPham.Image4.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image4.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    sanPham.Image4.CopyTo(fileStream);
+                    Product.Image4.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
         }
 
 
-        private bool SanPhamExists(int id)
+        private bool ProductExists(int id)
         {
-          return (_context.SanPhams?.Any(e => e.Idsp == id)).GetValueOrDefault();
+          return (_context.Products?.Any(e => e.ProductId == id)).GetValueOrDefault();
         }
     }
 }

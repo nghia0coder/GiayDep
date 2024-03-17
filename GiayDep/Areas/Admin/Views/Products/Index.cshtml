@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GiayDep.Models.SanPham>
+﻿@model IEnumerable<GiayDep.Models.Product>
 
 @{
     ViewData["Title"] = "Index";
@@ -14,32 +14,21 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Tensp)
+                @Html.DisplayNameFor(model => model.ProductName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Dongia)
+                @Html.DisplayNameFor(model => model.Price)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Soluong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Baohanh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Khuyenmai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hinhanh1)
-            </th>
+     
 
             <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MaloaispNavigation)
+                @Html.DisplayNameFor(model => model.Category)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ManhaccNavigation)
+                @Html.DisplayNameFor(model => model.BrandNavigation)
             </th>
             <th></th>
         </tr>
@@ -48,36 +37,28 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Tensp)
+                @Html.DisplayFor(modelItem => item.ProductName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Dongia)
+                @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Soluong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Baohanh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Khuyenmai)
-           
                 <td>
-                    <img class="thumbnail-image" src="~/Contents/img/@item.Hinhanh1" />
-                </td>
-            
+                
+                 @*    <img class="thumbnail-image" src="~/Contents/img/@item.Hinhanh1" /> *@
+              </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MaloaispNavigation.Idloai)
+                @Html.DisplayFor(modelItem => item.Category.CategoryId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ManhaccNavigation.Idnhacc)
+                @Html.DisplayFor(modelItem => item.BrandNavigation.BrandName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Idsp">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idsp">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idsp">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
             </td>
         </tr>
 }

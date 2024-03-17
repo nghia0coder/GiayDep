@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GiayDep.Models.LoaiSp>
+﻿@model IEnumerable<GiayDep.Models.Category>
 
 @{
     ViewData["Title"] = "Index";
@@ -23,12 +23,12 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Tenloai)
+                @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Idloai">Chỉnh sửa</a> |
-                <a asp-action="Details" asp-route-id="@item.Idloai">Chi tiết</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idloai">Xóa </a>
+                <a asp-action="Edit" asp-route-id="@item.CategoryId">Chỉnh sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.CategoryId">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.CategoryId">Xóa </a>
             </td>
         </tr>
 }

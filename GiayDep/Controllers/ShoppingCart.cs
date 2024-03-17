@@ -28,25 +28,25 @@ namespace GiayDep.Controllers
             {
                 CartItems = cartItems,
                 Quanity = cartItems.Count(),
-                Total = cartItems.Sum(x => (x.SoLuong ?? 0) * (x.DonGia ?? 0))
+                Total = cartItems.Sum(x => (x.Quanity ?? 0) * (x.Price ?? 0))
             };
             ViewBag.TongTien = cart.Total;
-            ViewBag.TongSoLuong = cart.Quanity;
+            ViewBag.TongQuanity = cart.Quanity;
             return View(cart);
         }
         public async Task<IActionResult> ThemGioHang(int MaSP, string strURL)
         {
-            SanPham sanPham =  await _context.SanPhams
-                .FirstOrDefaultAsync(s => s.Idsp == MaSP);
+            ProductVariation Product =  await _context.ProductVariations
+                .FirstOrDefaultAsync(s => s.ProductItemsId == MaSP);
             List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
-            CartItemsModel cartItems = cart.Where(c => c.MaSP == MaSP).FirstOrDefault();
+            CartItemsModel cartItems = cart.Where(c => c.ProductID == MaSP).FirstOrDefault();
             if (cartItems == null)
             {
-                cart.Add(new CartItemsModel(sanPham));
+                cart.Add(new CartItemsModel(Product));
             }
             else
             {
-                cartItems.SoLuong += 1; // this is increase quanity 
+                cartItems.Quanity += 1; // this is increase quanity 
             }
             HttpContext.Session.SetJson("Cart", cart);
             TempData["success"] = "Thêm vào giỏ hàng thành công";
@@ -56,14 +56,14 @@ namespace GiayDep.Controllers
         {
 
             List<CartItemsModel> cart =  HttpContext.Session.GetJson<List<CartItemsModel>>("Cart");
-            CartItemsModel cartItems =  cart.Where(c => c.MaSP == Id).FirstOrDefault();
-            if (cartItems.SoLuong >  1)
+            CartItemsModel cartItems =  cart.Where(c => c.ProductID == Id).FirstOrDefault();
+            if (cartItems.Quanity >  1)
             {
-                --cartItems.SoLuong;
+                --cartItems.Quanity;
             }
             else
             {
-                cart.RemoveAll(p =>p.MaSP == Id);
+                cart.RemoveAll(p =>p.ProductID == Id);
             }
             if (cart.Count ==0)
             {
@@ -79,10 +79,10 @@ namespace GiayDep.Controllers
         {
 
             List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart");
-            CartItemsModel cartItems = cart.Where(c => c.MaSP == Id).FirstOrDefault();
-            if (cartItems.SoLuong >= 1)
+            CartItemsModel cartItems = cart.Where(c => c.ProductID == Id).FirstOrDefault();
+            if (cartItems.Quanity >= 1)
             {
-                cartItems.SoLuong +=1;
+                cartItems.Quanity +=1;
             }
             HttpContext.Session.SetJson("Cart", cart);
             return RedirectToAction("Index");
@@ -91,7 +91,7 @@ namespace GiayDep.Controllers
         {
 
             List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart");
-            cart.RemoveAll(n => n.MaSP == Id);
+            cart.RemoveAll(n => n.ProductID == Id);
             if (cart.Count == 0)
             {
                 HttpContext.Session.Remove("Cart");
@@ -115,28 +115,24 @@ namespace GiayDep.Controllers
             // Check if the shopping cart session exists
 
             // Add a new order
-            HoaDon ddh = new HoaDon();
-            ddh.Ngaythanhtoan = DateTime.Now;
-            ddh.Tinhtranggiaohang = false;
-            ddh.Dathanhtoan = false;
-            ddh.Khuyenmai = 0;
-            ddh.Dahuy = false;
-            ddh.Daxoa = false;
-            ddh.Makh = userId;
-            _context.HoaDons.Add(ddh);
+            Order ddh = new Order();
+            ddh.OrderDate = DateTime.Now;
+            ddh.Delivered = false;
+            ddh.Status = false;
+            ddh.CustomerId = userId;
+            _context.Orders.Add(ddh);
             _context.SaveChanges();
 
             // Add order details
             List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
             foreach (var item in cart)
             {
-                CtHoaDon ctdh = new CtHoaDon();
-                ctdh.Idhoadon = ddh.Idhoadon;
-                ctdh.Idsp = item.MaSP;
-                ctdh.Tensp = item.TenSP;
-                ctdh.Soluong = item.SoLuong;
-                ctdh.Dongia = item.DonGia;
-                _context.CtHoaDons.Add(ctdh);
+                OrdersDetail ctdh = new OrdersDetail();
+                ctdh.OrderId = ddh.OrderId;
+                ctdh.ProductId = item.ProductID;
+                ctdh.Quanity = item.Quanity;
+                ctdh.Price = item.Price;
+                _context.OrdersDetails.Add(ctdh);
             }
             _context.SaveChanges();
             HttpContext.Session.Remove("Cart"); // Clear the shopping cart session

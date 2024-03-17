@@ -1,0 +1,81 @@
+﻿@using GiayDep.Models
+@model Order
+@{
+    ViewData["Title"] = "DuyetDonHang";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Duyệt đơn hàng </h1>
+<div class="card">
+    <div class="card-body">
+        <h2 class="col-md-8">Thông tin đơn hàng @Model.Customer.UserName</h2>
+        <form asp-action="" method="post">
+            <div class="ChiTietDonHang table">
+                @{
+                    IEnumerable<OrdersDetail> lstChiTietDH = (IEnumerable<OrdersDetail>)ViewBag.ListChiTietDH; 
+                }
+                <table class="table table-bordered" id="table">
+                    @* Thông tin đơn hàng *@
+                    <tr>
+                        <td colspan="4">
+                            <table style="100%" class="table-borderless">
+                                <tr>
+                                    <td>Mã đơn hàng: <b>@Model.OrderId <input type="hidden" name="MaDDH" value="@Model.OrderId" /></b></td>
+                                    <td>Mã đơn hàng: <b>@Model.Customer.Id </b></td>
+                                    <td>Mã đơn hàng: <b>@Model.Customer.UserName </b></td>
+                                    <td>Ngày đặt: <b>@Model.OrderDate.Value.ToString("dd/MM/yyyy")</b></td>
+                                    <td>Đã thanh toán: <input asp-for="Status" /></td>
+                                    <td>Đã giao: <input asp-for="Delivered" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    @* Thông tin chi tiết đơn hàng *@
+                    <tr>
+                        <td><b>Sản phẩm</b></td>
+                        <td><b>Hình ảnh</b></td>
+                        <td><b>Số lượng đặt</b></td>
+                        <td><b>Đơn giá đặt</b></td>
+                    </tr>
+                    @foreach (var item in lstChiTietDH)
+                    {
+                        <tr>
+                            <td>@item.Product.ProductItemsId</td>
+                       @*      <td><img width="150" height="50" src="@Url.Content("~/Contents/"+item.Product.Hinhanh1)" /></td> *@
+                            <td>@item.Quanity</td>
+                            <td>@item.Price.Value.ToString("#,##")</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td align="right" colspan="4">
+                            <span class="mr-5">Tổng số lượng: @Model.OrdersDetails.Sum(n => n.Quanity) Sản phẩm</span>
+                            <span>Tổng tiền: @Model.OrdersDetails.Sum(n => n.Product?.Product.Price).Value.ToString("#,##") VNĐ</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-offset-2 col-sm-6">
+                    <input type="button" value="In đơn hàng" class="btn btn-sm btn-success font-weight-bold" id="btnInDonHang" />
+                    <input type="submit" value="Lưu đơn hàng" class="btn btn-sm btn-primary font-weight-bold" id="btnLuuDonHang" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $('#btnInDonHang').click(function () {
+        var content = "<table>" + $("#table").html() + "</table>";
+        InDonHang(content);
+    });
+
+    function InDonHang(content) {
+        var printWindow = window.open('', '', 'height=50%,width=100%');
+        printWindow.document.write('<html><head><title>DIV contents</title>');
+        printWindow.document.write('</head><body>');
+        printWindow.document.write(content);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+</script>

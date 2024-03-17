@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Http.Extensions
-@model IEnumerable<SanPham>
+@model IEnumerable<Product>
 @{
 	string currentUrl = Context.Request.GetDisplayUrl();
 }
@@ -29,18 +29,18 @@
 								@foreach (var item in Model.Take(6))
 								{
 									<div class="product">
-										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)	- @item.Idsp">
+										@* <a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)	- @item.ProductId"> *@
 											<div class="product-img">
-												<img src="~/Contents/img/@item.Hinhanh1" alt="">
+										@* 		<img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
 												</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category">@item.MaloaispNavigation.Tenloai</p>
-												<h3 class="product-name"><a href="#">@item.Tensp.ToUpper()</a></h3>
-												<h4 class="product-price">@item.Dongia <del class="product-old-price">@(item.Dongia + 200)</del></h4>
+												<p class="product-category">@item.BrandNavigation.BrandName</p>
+												<h3 class="product-name"><a href="#">@item.ProductName.ToUpper()</a></h3>
+												<h4 class="product-price">@item.Price <del class="product-old-price">@(item.Price + 200)</del></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -55,7 +55,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@item.Idsp" asp-route-strURL="@currentUrl">
+												<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@item.ProductId" asp-route-strURL="@currentUrl">
 													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 												</a>
 											</div>

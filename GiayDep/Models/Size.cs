@@ -7,12 +7,12 @@ namespace GiayDep.Models
     {
         public Size()
         {
-            ChitietSanPhams = new HashSet<ChitietSanPham>();
+            ProductVariations = new HashSet<ProductVariation>();
         }
 
-        public int Id { get; set; }
-        public string? Name { get; set; }
+        public int SizeD { get; set; }
+        public int? Size1 { get; set; }
 
-        public virtual ICollection<ChitietSanPham> ChitietSanPhams { get; set; }
+        public virtual ICollection<ProductVariation> ProductVariations { get; set; }
     }
 }

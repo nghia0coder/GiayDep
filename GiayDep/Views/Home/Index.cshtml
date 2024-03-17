@@ -1,13 +1,13 @@
-﻿@model IEnumerable<SanPham>
+﻿@model IEnumerable<Product>
 
 @{
 	ViewBag.Title = "Index";
 	Layout = "~/Views/Layout/HomeLayout.cshtml";
 
 	// Định nghĩa các viewbag để truyền vào partial view
-	IEnumerable<SanPham> lstLTM = ViewBag.ListLTM as IEnumerable<SanPham>; // Cách ép kiểu 1
-	IEnumerable<SanPham> lstSelling = ViewBag.ListSelling as IEnumerable<SanPham>;
-	IEnumerable<SanPham> lstDTM = ViewBag.ListDTM as IEnumerable<SanPham>;
+	IEnumerable<Product> lstLTM = ViewBag.ListLTM as IEnumerable<Product>; // Cách ép kiểu 1
+	IEnumerable<Product> lstSelling = ViewBag.ListSelling as IEnumerable<Product>;
+	IEnumerable<Product> lstDTM = ViewBag.ListDTM as IEnumerable<Product>;
 }
 
 <!-- SECTION -->
@@ -138,14 +138,14 @@
 						@foreach (var item in lstDTM.Take(3))
 						{
 							<div class="product-widget">
-								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.Idsp })">
+								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
 									<div class="product-img">
-										<img src="~/Contents/img/@item.Hinhanh1" alt="">
+								@* 		<img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
 									</div>
 									<div class="product-body">
-										<p class="product-category">@item.MaloaispNavigation.Tenloai.ToUpper()</p>
-										<h3 class="product-name"><a href="#">@item.Tensp.ToUpper()</a></h3>
-										<h4 class="product-price">$@item.Dongia <del class="product-old-price">$@(item.Dongia + 200)</del></h4>
+										<p class="product-category">@item.BrandNavigation.BrandName.ToUpper()</p>
+										<h3 class="product-name"><a href="#">@item.ProductName.ToUpper()</a></h3>
+										<h4 class="product-price">$@item.Price <del class="product-old-price">$@(item.Price + 200)</del></h4>
 									</div>
 							</div>
 						}
@@ -168,14 +168,14 @@
 						@foreach (var item in lstSelling.Take(3))
 						{
 							<div class="product-widget">
-								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.Idsp })">
+								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
 									<div class="product-img">
-										<img src="~/Contents/img/@item.Hinhanh1" alt="">
+										@* <img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
 									</div>
 									<div class="product-body">
-										<p class="product-category">@item.MaloaispNavigation.Tenloai.ToUpper()</p>
-										<h3 class="product-name"><a href="#">@item.Tensp.ToUpper()</a></h3>
-										<h4 class="product-price">$@item.Dongia <del class="product-old-price">$@(item.Dongia + 200)</del></h4>
+										<p class="product-category">@item.BrandNavigation.BrandName.ToUpper()</p>
+										<h3 class="product-name"><a href="#">@item.ProductName.ToUpper()</a></h3>
+										<h4 class="product-price">$@item.Price <del class="product-old-price">$@(item.Price + 200)</del></h4>
 									</div>
 							</div>
 						}
@@ -200,14 +200,14 @@
 						@foreach (var item in lstLTM.Take(3))
 						{
 							<div class="product-widget">
-								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.Idsp })">
+								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
 									<div class="product-img">
-										<img src="~/Contents/img/@item.Hinhanh1" alt="">
+							@* 			<img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
 									</div>
 									<div class="product-body">
-									@* 	<p class="product-category">@item.MaloaispNavigation.Tenloai.ToUpper()</p> *@
-										<h3 class="product-name"><a href="#">@item.Tensp.ToUpper()</a></h3>
-										<h4 class="product-price">$@item.Dongia <del class="product-old-price">$@(item.Dongia + 200)</del></h4>
+									@* 	<p class="product-category">@item.Category.CategoryName.ToUpper()</p> *@
+										<h3 class="product-name"><a href="#">@item.ProductName.ToUpper()</a></h3>
+										<h4 class="product-price">$@item.Price <del class="product-old-price">$@(item.Price + 200)</del></h4>
 									</div>
 							</div>
 						}

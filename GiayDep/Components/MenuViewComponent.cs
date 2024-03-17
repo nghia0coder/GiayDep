@@ -13,9 +13,9 @@ namespace GiayDep.Components
         }
 		public IViewComponentResult Invoke()
 		{
-			var lstSP = _context.SanPhams
-			   .Include(n => n.ManhaccNavigation)
-			   .Include(n => n.MaloaispNavigation);
+			var lstSP = _context.Products
+			   .Include(n => n.BrandNavigation)
+			   .Include(n => n.Category);
 			return View(lstSP);
 		}
 	}

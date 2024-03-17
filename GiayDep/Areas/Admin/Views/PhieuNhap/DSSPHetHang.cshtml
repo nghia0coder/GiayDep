@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GiayDep.Models.SanPham>
+﻿@model IEnumerable<GiayDep.Models.Product>
 @{
     ViewData["Title"] = "Sản phẩm gần hết hàng";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -22,11 +22,11 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.Idsp</td>
-                                <td>@item.Tensp</td>
-                                <td><img width="100" height="100" src="~/Contents/img/@item.Hinhanh1" /></td>
+                                <td>@item.ProductId</td>
+                                <td>@item.ProductName</td>
+                              @*   <td><img width="100" height="100" src="~/Contents/img/@item.Hinhanh1" /></td> *@
                                 <td>
-                                    <a asp-action="NhapHangDon" asp-route-id="@item.Idsp">Nhập hàng</a>
+                                    <a asp-action="NhapHangDon" asp-route-id="@item.ProductId">Nhập hàng</a>
                                 </td>
                             </tr>
                         }

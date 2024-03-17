@@ -44,9 +44,8 @@ namespace GiayDep
                 options.Cookie.IsEssential = true;
             });
            
-            builder.Services.AddScoped<INhaSXRepository, NhaSXRepository>();
-            builder.Services.AddScoped<INhaCungCapRepositorycs, NhaCCRepository>();
-            builder.Services.AddScoped<ILoaiSpRepositorycs, LoaiSpRepository>();
+            builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+            builder.Services.AddScoped<ICategoryRepositorycs, CategoryRepository>();
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddHttpContextAccessor();
             var app = builder.Build();
