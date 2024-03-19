@@ -11,11 +11,10 @@ namespace GiayDep.Models
         }
 
         public int InvoiceId { get; set; }
-        public DateTime Status { get; set; }
         public int SupplierId { get; set; }
         public DateTime? CreateDate { get; set; }
 
-        public virtual Suppiler Supplier { get; set; } = null!;
+        public virtual Supplier Supplier { get; set; } = null!;
         public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
     }
 }

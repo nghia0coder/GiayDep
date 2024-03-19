@@ -1,0 +1,248 @@
+﻿@model Invoice
+@{
+    ViewData["Title"] = "Quản lý phiếu nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+    IEnumerable<ProductItem> lstProduct = ViewBag.ListProduct as IEnumerable<ProductItem>;
+}
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+</script>
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        @using (Html.BeginForm())
+        {
+            <div class="form-group row pb-2">
+                <div class=" col-md-6">
+                    <label class="col-form-label font-weight-bold" asp-for="SupplierId">Nhà cung cấp</label>
+                    <select  asp-for="SupplierId" class="form-control" asp-items="@ViewBag.Supplier"></select>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-form-label font-weight-bold">Ngày nhập</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                        </div>
+                        <input type="datetime-local" asp-for="CreateDate" class="form-control" />
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            @*Phần chi tiết nhập hàng *@
+            <table class="tblChiTietInvoice table  table-hover">
+                @* tạo 1 tr với nd nhập hàng của 1 sp *@
+                <tr class="trAppend table-borderless">
+                    <td>
+                        <select id="productList" class="form-select" asp-items="@ViewBag.productItem">
+                         
+                        </select>
+                    </td>
+                    <td>
+                        <select id="colorId" >
+                        </select>
+                    </td>
+                    <td>
+                        <select id="sizeId">
+                        </select>
+                    </td>
+
+                    <td>
+                        <input name="" class="txtPrice"  />
+                    </td>
+                    <td>
+                        <input name="" class="txtQuanity" />
+                    </td>
+                    <td>
+                        <input type="button" class="btnDelete btn btn-danger" style="width: 2em; height:2em;" value="-" />
+                    </td>
+                </tr>
+                <tr class="trFirstChild" data-id="-1">
+                    <td class="col-form-label font-weight-bold">Product</td>
+                    <td class="col-form-label font-weight-bold">Color</td>
+                    <td class="col-form-label font-weight-bold">Size</td>
+                    <td class="col-form-label font-weight-bold">Price</td>
+                    <td class="col-form-label font-weight-bold">Quantity</td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="form-group row">
+                <div class="col-md-offset-2 col-sm-6">
+                    <input type="button" value="+" class="btn btn-sm btn-success font-weight-bold mr-2" style="width: 3em; height:2em;" id="btnAdd" />
+                    <input type="submit" value="Nhập Hàng" class="btn btn-sm btn-primary font-weight-bold " id="btnNhapHang" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .trAppend {
+        display: none;
+    }
+</style>
+
+@section Scripts
+{
+  <script>
+        $(document).ready(function () {
+            getProductByColor();
+        });
+
+        $("#productList").change(function () {
+            getProductByColor();
+        });
+        function getProductByColor() {
+            $.ajax({
+                url: '@Url.Action("GetProductByColor", "Invoice")',
+                type: 'GET',
+                data: {
+                    id : $('#productList').val()
+                },
+                success: function (data) {
+                    $('#colorId').empty();
+                    $(data).each(function (index, item) {
+                        $('#colorId').append('<option value="' + item.colorId + '">' + item.colorId + '</option>');
+                    });
+                }
+            });
+        }
+        $(document).ready(function () {
+            getProductBySize();
+        });
+
+        $("#colorId").change(function () {
+            getProductBySize();
+        });
+        function getProductBySize() {
+            $.ajax({
+                url: '@Url.Action("GetProductBySize", "Invoice")',
+                type: 'GET',
+                data: {
+                    id: $('#productList').val()
+                },
+                success: function (data) {
+                    $('#sizeId').empty();
+                    $(data).each(function (index, item) {
+                        $('#sizeId').append('<option value="' + item.productItemsId + '">' + item.sizeId + '</option>');
+                    });
+                }
+            });
+        }
+
+
+        
+
+            $('#btnAdd').click(function () {
+                var id_cuoi = $(".tblChiTietInvoice").find("tr:last-child").attr("data-id");
+                i = parseInt(id_cuoi) + 1;
+
+                var tdnoidung = $(".trAppend").html();
+                var trnoidung = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdnoidung + "<\tr>";
+                $(".tblChiTietInvoice").append(trnoidung);
+                loadIDLenThe();
+            });
+
+            $("body").delegate(".btnDelete", "click", function () {
+                $(this).closest(".trAppended").remove();
+                CapNhapID();
+            });
+
+            $("#btnNhapHang").click(function () {
+                if (kiemTraPrice() == false) {
+                    return false;
+                }
+
+                if (kiemTraQuanity() == false) {
+                    return false;
+                }
+                var totalPrice = 0;
+                var totalQuanity = 0;
+
+                $(".tblChiTietInvoice .trAppended").each(function () {
+                    var Price = parseFloat($(this).find(".txtPrice").val()) || 0;
+                    var Quanity = parseInt($(this).find(".txtQuanity").val()) || 0;
+
+                    totalPrice += Price;
+                    totalQuanity += Quanity;
+                });
+
+                if (totalPrice <= 0 && totalQuanity <= 0) {
+                    alert("Đơn giá nhập và số lượng nhập không hợp lệ. Vui lòng nhập lại ");
+                    return false;
+                }
+            });
+
+            function loadIDLenThe() {
+                $(".trAppended").each(function () {
+                    var id = $(this).attr("data-id");
+                    var nameMaProduct = "[" + id + "].ProductId";
+                    var namePriceNhap = "[" + id + "].Gia";
+                    var nameQuanityNhap = "[" + id + "].Quanity";
+
+
+                    $(this).find(".ddlProduct").attr("name", nameMaProduct);
+                    $(this).find(".txtPrice").attr("name", namePriceNhap);
+                    $(this).find(".txtQuanity").attr("name", nameQuanityNhap);
+                })
+            };
+
+            function CapNhapID() {
+                var id_cuoi = $(".tblChiTietInvoice").find("trFirstChild").attr("data-id");
+                i = parseInt(id_cuoi) + 1;
+
+                $(".trAppended").each(function () {
+                    var id = i;
+                    $(this).attr("data-id", i);
+
+                    var nameMaProduct = "[" + id + "].ProductId";
+                    var namePriceNhap = "[" + id + "].Gia";
+                    var nameQuanityNhap = "[" + id + "].Quanity";
+
+                    $(this).find(".ddlProduct").attr("name", nameMaProduct);
+                    $(this).find(".txtPrice").attr("name", namePriceNhap);
+                    $(this).find(".txtQuanity").attr("name", nameQuanityNhap);
+                });
+            }
+
+            function kiemTraPrice() {
+                var bl = true;
+
+                $(".txtPrice").each(function () {
+                    var giatri = $(this).val();
+                    if (isNaN(giatri) == true) {
+                        alert("Đơn giá ko hợp lệ!");
+                        bl = false;
+                        return bl;
+                    }
+                });
+
+                return bl;
+            }
+
+
+            function kiemTraQuanity() {
+                var bl = true;
+
+                $(".txtQuanity").each(function () {
+                    var giatri = $(this).val();
+                    if (isNaN(giatri) == true) {
+                        alert("Số lượng ko hợp lệ!");
+                        bl = false;
+                        return bl;
+                    }
+                });
+
+                return bl;
+            }
+  </script>
+}

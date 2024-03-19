@@ -25,49 +25,25 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Price)
         </dd>
+      
         <dt class="col-sm-2">
-            Số lượng:
-        </dt>
-
-        <dt class="col-sm-2">
-            Mô tả:
+            Loại Sản Phẩm
         </dt>
         <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
         <dt class="col-sm-2">
-            Mã loại sản phẩm:
+            Thương Hiệu
         </dt>
         <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Category.CategoryId)
+            @Html.DisplayFor(model => model.BrandNavigation.BrandName)
         </dd>
         <dt class="col-sm-2">
-            Mã nhà cung cấp:
+            Mô Tả
         </dt>
         <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.BrandNavigation.BrandId)
+            @Html.DisplayFor(model => model.Description)
         </dd>
-        <dt class="col-sm-2">
-            Mã nhà sản xuất
-        </dt>
-    
-          <dt class="col-sm-2">
-            Màu Sản Phẩm
-        </dt>
-   
-
-@*         <dt class="col-sm-2">
-            <img src="~/Contents/img/@Model.Hinhanh1" class="thumbnail-image" />
-        </dt>
-        <dt class="col-sm-2">
-            <img src="~/Contents/img/@Model.Hinhanh2" class="thumbnail-image" />
-        </dt>
-        <dt class="col-sm-2">
-            <img src="~/Contents/img/@Model.Hinhanh3" class="thumbnail-image" />
-        </dt>
-        <dt class="col-sm-2">
-            <img src="~/Contents/img/@Model.Hinhanh4" class="thumbnail-image" />
-        </dt> *@
         <dt class="col-sm-2">
     </dl>
 </div>

@@ -50,7 +50,7 @@ namespace PriceyDep.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewData["InvoiceId"] = new SelectList(_context.Invoices, "InvoiceId", "InvoiceId");
-            ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductId");
+            ViewData["ProductId"] = new SelectList(_context.ProductItems, "ProductId", "ProductName");
             return View();
         }
 

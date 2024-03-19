@@ -12,7 +12,7 @@ namespace GiayDep.ViewModels
         
         public int Size { get; set; }
         public int ProductId { get; set; }
-        public IFormFile Image1 { get; set; }
+        public List<IFormFile> Image { get; set; }  
 
     }
 }

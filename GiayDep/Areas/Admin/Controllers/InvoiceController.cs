@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GiayDep.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Drawing;
 
 namespace GiayDep.Areas.Admin.Controllers
 {   
@@ -46,37 +47,39 @@ namespace GiayDep.Areas.Admin.Controllers
             return View(Invoice);
         }
         [Authorize(Roles = "Manager")]
+        [HttpGet]
         // GET: Admin/Invoice/Create
         public IActionResult Create()
         {
-            ViewBag.Brand = _context.Suppilers.ToList();
-            ViewBag.ListProduct = _context.Products.ToList();
+            ViewBag.Supplier = new SelectList(_context.Suppilers, "SupplierId", "SupplierName");
+            ViewBag.ListProduct = _context.ProductItems
+                .Include(n =>n.Product)
+                .Include(n =>n.Color)
+                .ToList();
+            ViewBag.ListSize = _context.ProductVariations.ToList();
+            ViewBag.productItem = new SelectList(_context.ProductItems, "ProductItemsId", "Product.ProductName");
             ViewBag.CreateDate = DateTime.Today;
             return View();
         }
         [Authorize(Roles = "Manager")]
         // POST: Admin/Invoice/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // To protect from overposting attacks, enable the specific proper ties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         public ActionResult Create([Bind("InvoiceId,CreateDate,SupplierId")] Invoice model, IEnumerable<InvoiceDetail> lstModel)
         {
-            ViewBag.Brand = _context.Suppilers.ToList();
-            ViewBag.ListProduct = _context.Products.ToList();
-            ViewBag.CreateDate = DateTime.Now;
-            model.CreateDate = ViewBag.CreateDate;
 
+        
             _context.Invoices.Add(model);
             _context.SaveChanges();
-            Product product;
+            ProductVariation product;
             foreach (var item in lstModel)
             {
-                product = _context.Products.Single(n => n.ProductId == item.ProductId);
+                product = _context.ProductVariations.Single(n => n.ProductItemsId == item.ProductId);
                 //product. += item.Quanity;
                 item.InvoiceId = model.InvoiceId;
             
             }
-
             _context.InvoiceDetails.AddRange(lstModel);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
@@ -220,6 +223,17 @@ namespace GiayDep.Areas.Admin.Controllers
             return RedirectToAction("Index","Products");
         }
 
+     
+        public JsonResult GetProductByColor (int id)
+        {
+            return Json(_context.ProductItems.Where(n=>n.ProductItemsId == id)
+ 
+                .ToList());    
+        }
+        public JsonResult GetProductBySize(int id)
+        {
+            return Json(_context.ProductVariations.Where(n => n.ProductItemsId == id).ToList());
+        }
         private bool InvoiceExists(int id)
         {
           return (_context.Invoices?.Any(e => e.InvoiceId == id)).GetValueOrDefault();

@@ -50,7 +50,7 @@ namespace GiayDep.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SupplierId,SupplierName,Address,Phone,Email")] Suppiler suppiler)
+        public async Task<IActionResult> Create([Bind("SupplierId,SupplierName,Address,Phone,Email")] Supplier suppiler)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace GiayDep.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SupplierId,SupplierName,Address,Phone,Email")] Suppiler suppiler)
+        public async Task<IActionResult> Edit(int id, [Bind("SupplierId,SupplierName,Address,Phone,Email")] Supplier suppiler)
         {
             if (id != suppiler.SupplierId)
             {

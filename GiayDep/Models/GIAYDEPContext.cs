@@ -29,7 +29,7 @@ namespace GiayDep.Models
         public virtual DbSet<ProductItem> ProductItems { get; set; } = null!;
         public virtual DbSet<ProductVariation> ProductVariations { get; set; } = null!;
         public virtual DbSet<Size> Sizes { get; set; } = null!;
-        public virtual DbSet<Suppiler> Suppilers { get; set; } = null!;
+        public virtual DbSet<Supplier> Suppilers { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -166,12 +166,14 @@ namespace GiayDep.Models
                 entity.HasOne(d => d.BrandNavigation)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.Brand)
-                    .HasConstraintName("FK_Product_Brand");
+                    .HasConstraintName("FK_Product_Brand")
+                    .OnDelete(DeleteBehavior.Cascade); ;
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK_Product_Category");
+                    .HasConstraintName("FK_Product_Category")
+                    .OnDelete(DeleteBehavior.Cascade); ;
             });
 
             modelBuilder.Entity<ProductImage>(entity =>
@@ -185,7 +187,8 @@ namespace GiayDep.Models
                 entity.HasOne(d => d.ProductItems)
                     .WithMany(p => p.ProductImages)
                     .HasForeignKey(d => d.ProductItemsId)
-                    .HasConstraintName("FK_Product_Images_Product_Items");
+                    .HasConstraintName("FK_Product_Images_Product_Items")
+                    .OnDelete(DeleteBehavior.Cascade); 
             });
 
             modelBuilder.Entity<ProductItem>(entity =>
@@ -206,23 +209,21 @@ namespace GiayDep.Models
                 entity.HasOne(d => d.Color)
                     .WithMany(p => p.ProductItems)
                     .HasForeignKey(d => d.ColorId)
-                    .HasConstraintName("FK_Product_Items_Color");
+                    .HasConstraintName("FK_Product_Items_Color")
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.ProductItems)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK_Product_Items_Product");
+                    .HasConstraintName("FK_Product_Items_Product")
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<ProductVariation>(entity =>
             {
-                entity.HasKey(e => e.VariationId)
-                    .HasName("PK_Product_Variation");
+                entity.HasKey(e => new { e.ProductItemsId, e.SizeId });
 
                 entity.ToTable("ProductVariation");
-
-                entity.Property(e => e.VariationId)
-                    .HasColumnName("VariationID");
 
                 entity.Property(e => e.ProductItemsId).HasColumnName("ProductItemsID");
 
@@ -231,30 +232,31 @@ namespace GiayDep.Models
                 entity.HasOne(d => d.ProductItems)
                     .WithMany(p => p.ProductVariations)
                     .HasForeignKey(d => d.ProductItemsId)
-                    .HasConstraintName("FK_Product_Variation_Product_Items1");
+                    .HasConstraintName("FK_ProductVariation_ProductItems")
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(d => d.Size)
                     .WithMany(p => p.ProductVariations)
                     .HasForeignKey(d => d.SizeId)
-                    .HasConstraintName("FK_Product_Variation_Size");
+                    .HasConstraintName("FK_ProductVariation_Size");
             });
 
             modelBuilder.Entity<Size>(entity =>
             {
-                entity.HasKey(e => e.SizeID);
+                entity.HasKey(e => e.SizeId);
 
                 entity.ToTable("Size");
 
                 entity.Property(e => e.Size1).HasColumnName("Size");
             });
 
-            modelBuilder.Entity<Suppiler>(entity =>
+            modelBuilder.Entity<Supplier>(entity =>
             {
                 entity.HasKey(e => e.SupplierId);
 
-                entity.ToTable("Suppiler");
+                entity.ToTable("Supplier");
 
-                entity.Property(e => e.SupplierId).HasColumnName("SuppilerID");
+                entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
 
                 entity.Property(e => e.Address).HasMaxLength(50);
 

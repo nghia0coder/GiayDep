@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    IEnumerable<Size> listSize = ViewBag.Size as IEnumerable<Size>;
 }
 
 <h2>Create</h2>
@@ -28,12 +29,32 @@
                 <span asp-validation-for="ProductCode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Size" class="control-label"></label>
-                <select asp-for="Size" class="form-control" asp-items="ViewBag.Size"></select>
+                <label class="control-label">Size</label><br />
+                @foreach (var size in listSize)
+                {
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="SelectedSizes" value="@size.SizeId" /> @size.Size1
+                        </label>
+                    </div>
+                }
+            </div>
+      
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control-file" />
             </div>
             <div class="form-group">
-                <label asp-for="Image1" class="control-label"></label>
-                <input asp-for="Image1" class="form-control-file" />
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control-file" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

@@ -13,6 +13,8 @@
     <link href="/Assets/admin/css/styles.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -127,7 +129,7 @@
                         <div class="collapse" id="collapseLayoutsProductManagement" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a asp-controller="Products" asp-action="Index" class="nav-link">Mục Sản Phẩm</a>
-                                <a asp-controller="Invoice" asp-action="ChuaGiao" class="nav-link">Đã Thanh Toán & Chưa Giao</a>
+                                <a asp-controller="ProductItems" asp-action="Index" class="nav-link">Danh Sách Các Sản Phẩm</a>
                                 <a asp-controller="Invoice" asp-action="DaGiaoStatus" class="nav-link">Đã Thanh Toán & Đã Giao</a>
                             </nav>
                         </div>

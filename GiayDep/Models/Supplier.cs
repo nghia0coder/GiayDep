@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace GiayDep.Models
 {
-    public partial class Suppiler
+    public partial class Supplier
     {
-        public Suppiler()
+        public Supplier()
         {
             Invoices = new HashSet<Invoice>();
         }

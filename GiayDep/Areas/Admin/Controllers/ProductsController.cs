@@ -41,6 +41,8 @@ namespace GiayDep.Areas.Admin.Controllers
             }
 
             var Product = await _context.Products
+                .Include(_ => _.Category)
+                .Include(_ => _.BrandNavigation)
                 .FirstOrDefaultAsync(m => m.ProductId == id);
             if (Product == null)
             {
