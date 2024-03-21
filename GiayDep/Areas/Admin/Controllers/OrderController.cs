@@ -82,7 +82,7 @@ namespace GiayDep.Areas.Admin.Controllers
 
             var lstChiTietDH = _context.OrdersDetails
                 .Where(n => n.OrderId == ddh.OrderId)
-                .Include(n => n.Product)
+                .Include(n => n.ProductVar)
                 .ToList();
 
             ViewBag.ListChiTietDH = lstChiTietDH;

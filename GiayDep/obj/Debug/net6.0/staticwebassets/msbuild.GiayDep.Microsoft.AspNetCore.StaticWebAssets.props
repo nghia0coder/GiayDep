@@ -1200,6 +1200,70 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\16e84a67-6873-4fcc-99bf-d0c976820c99_133542532848704352.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\16fa6dc8-fc0e-4530-9150-c9ba14e7ee58_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/16fa6dc8-fc0e-4530-9150-c9ba14e7ee58_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\16fa6dc8-fc0e-4530-9150-c9ba14e7ee58_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\20d43e70-c41c-4a58-8c4a-89b7b21a9df7_133542532848704352.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/20d43e70-c41c-4a58-8c4a-89b7b21a9df7_133542532848704352.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\20d43e70-c41c-4a58-8c4a-89b7b21a9df7_133542532848704352.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\23353ede-116d-43a6-a90a-6ff7b3eacb27_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/23353ede-116d-43a6-a90a-6ff7b3eacb27_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\23353ede-116d-43a6-a90a-6ff7b3eacb27_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\52423cf9-9810-4806-a07b-d6680086673e_133550293774970828.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/52423cf9-9810-4806-a07b-d6680086673e_133550293774970828.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\52423cf9-9810-4806-a07b-d6680086673e_133550293774970828.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\541ea0d2-9edf-4f70-a710-32fe7751d6e1_133550293774970828.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>GiayDep</SourceId>
@@ -1263,6 +1327,86 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\63634fc2-cc58-44e2-ab52-d356f4b79e0b_133542532848704352.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\6c3b1255-e19c-40a6-aec9-f8b4d828d32e_133550293774970828.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/6c3b1255-e19c-40a6-aec9-f8b4d828d32e_133550293774970828.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\6c3b1255-e19c-40a6-aec9-f8b4d828d32e_133550293774970828.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7271dba3-5d24-4374-875c-14b7f4c55f03_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/7271dba3-5d24-4374-875c-14b7f4c55f03_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7271dba3-5d24-4374-875c-14b7f4c55f03_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7941bc57-2779-48b9-9148-0af18505065d_133542532848704352.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/7941bc57-2779-48b9-9148-0af18505065d_133542532848704352.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7941bc57-2779-48b9-9148-0af18505065d_133542532848704352.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7b6c6fb6-481c-4bc7-8a46-32f74ca4a111_133542532848704352.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/7b6c6fb6-481c-4bc7-8a46-32f74ca4a111_133542532848704352.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7b6c6fb6-481c-4bc7-8a46-32f74ca4a111_133542532848704352.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7d30912f-9797-4e0a-a84d-7c249b85faf0_133550293774970828.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/7d30912f-9797-4e0a-a84d-7c249b85faf0_133550293774970828.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\7d30912f-9797-4e0a-a84d-7c249b85faf0_133550293774970828.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\8a9aa588-51e6-4733-9a3b-ba77485bc24d_133542532848704352.jpg))">
       <SourceType>Package</SourceType>
@@ -1376,6 +1520,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\c0f2b6a3-42b6-4c3b-a41e-462079e7ff79_133542532848704352.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\c2d0a686-55df-47ea-ad65-03465e50e4c9_133550293774970828.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/c2d0a686-55df-47ea-ad65-03465e50e4c9_133550293774970828.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\c2d0a686-55df-47ea-ad65-03465e50e4c9_133550293774970828.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\c5037136-6d90-4145-95b1-db3957050377_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/c5037136-6d90-4145-95b1-db3957050377_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\c5037136-6d90-4145-95b1-db3957050377_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\c73c2e1e-d63f-4dc2-82d7-befd358274aa_133542532848704352.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>GiayDep</SourceId>
@@ -1487,6 +1663,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\e81bd932-72c5-45c0-beb0-664177fbf5dd_133542532848704352.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\f2ff38c7-c874-4084-884d-6d8cfe38f505_133542532848704352.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GiayDep</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GiayDep</BasePath>
+      <RelativePath>Contents/img/f2ff38c7-c874-4084-884d-6d8cfe38f505_133542532848704352.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\f2ff38c7-c874-4084-884d-6d8cfe38f505_133542532848704352.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Contents\img\f92301fc-312a-4570-b468-81999e5061e1_133542532848704352.jpg))">
       <SourceType>Package</SourceType>

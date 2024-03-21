@@ -12,7 +12,15 @@ namespace GiayDep.ViewModels
         
         public int Size { get; set; }
         public int ProductId { get; set; }
-        public List<IFormFile> Image { get; set; }  
+
+        [NotMapped]
+        public IFormFile Img1 { get; set; }
+        [NotMapped]
+        public IFormFile Img2 { get; set; }
+        [NotMapped]
+        public IFormFile Img3 { get; set; }
+        [NotMapped]
+        public IFormFile Img4 { get; set; }
 
     }
 }

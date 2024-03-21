@@ -1,0 +1,58 @@
+﻿@model IEnumerable<InvoiceDetail>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên Sản Phẩm
+            </th>
+            <th>
+                Màu
+            </th>
+            <th>
+                Size
+            </th>
+            <th>
+                Số Lượng
+            </th>
+            <th>
+                Ngày Nhập
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductVar.ProductItems.Product.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductVar.ProductItems.Color.ColorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quanity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Invoice.CreateDate)
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using GiayDep.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Drawing;
+using System.Diagnostics;
+using System.Text;
 
 namespace GiayDep.Areas.Admin.Controllers
 {   
@@ -24,8 +26,12 @@ namespace GiayDep.Areas.Admin.Controllers
 
         // GET: Admin/Invoice
         public async Task<IActionResult> Index()
-        {
-            return RedirectToAction("Index","InvoiceDetails");
+        {   
+            var details = _context.InvoiceDetails
+                .Include(n => n.ProductVar.ProductItems.Product)
+                .Include(n => n.Invoice)
+                .ToList();
+            return View(details);
         }
 
         // GET: Admin/Invoice/Details/5
@@ -51,13 +57,13 @@ namespace GiayDep.Areas.Admin.Controllers
         // GET: Admin/Invoice/Create
         public IActionResult Create()
         {
-            ViewBag.Supplier = new SelectList(_context.Suppilers, "SupplierId", "SupplierName");
-            ViewBag.ListProduct = _context.ProductItems
-                .Include(n =>n.Product)
-                .Include(n =>n.Color)
+            ViewBag.Supplier = new SelectList(_context.Suppliers, "SupplierId", "SupplierName");
+            ViewBag.Product = new SelectList(_context.Products, "ProductId", "ProductName");
+            ViewBag.ListProduct = _context.ProductVariations
+                .Include(n =>n.ProductItems.Product)
                 .ToList();
             ViewBag.ListSize = _context.ProductVariations.ToList();
-            ViewBag.productItem = new SelectList(_context.ProductItems, "ProductItemsId", "Product.ProductName");
+            ViewBag.productItem = new SelectList(_context.ProductVariations, "ProductVarID", "ProductVarID");
             ViewBag.CreateDate = DateTime.Today;
             return View();
         }
@@ -69,14 +75,15 @@ namespace GiayDep.Areas.Admin.Controllers
         public ActionResult Create([Bind("InvoiceId,CreateDate,SupplierId")] Invoice model, IEnumerable<InvoiceDetail> lstModel)
         {
 
-        
+
             _context.Invoices.Add(model);
             _context.SaveChanges();
+          
             ProductVariation product;
             foreach (var item in lstModel)
             {
-                product = _context.ProductVariations.Single(n => n.ProductItemsId == item.ProductId);
-                //product. += item.Quanity;
+                product = _context.ProductVariations.SingleOrDefault(n => n.ProductVarId == item.ProductVarId); 
+                product.QtyinStock += item.Quanity;
                 item.InvoiceId = model.InvoiceId;
             
             }
@@ -99,7 +106,7 @@ namespace GiayDep.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["SupplierId"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId", invoice.SupplierId);
+            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "SupplierId", "SupplierId", invoice.SupplierId);
             return View(invoice);
         }
 
@@ -135,7 +142,7 @@ namespace GiayDep.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SupplierId"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId", _Invoice.SupplierId);
+            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "SupplierId", "SupplierId", _Invoice.SupplierId);
             return View(_Invoice);
         }
 
@@ -187,7 +194,7 @@ namespace GiayDep.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult NhapHangDon(int? id)
         {
-            ViewBag.Brand = new SelectList(_context.Suppilers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName");
+            ViewBag.Brand = new SelectList(_context.Suppliers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName");
 
             if (id == null)
             {
@@ -206,7 +213,7 @@ namespace GiayDep.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult NhapHangDon(Invoice model, InvoiceDetail ctpn)
         {
-            ViewBag.Brand = new SelectList(_context.Suppilers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName", model.SupplierId);
+            ViewBag.Brand = new SelectList(_context.Suppliers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName", model.SupplierId);
 
             model.CreateDate = DateTime.Now;
 
@@ -214,7 +221,7 @@ namespace GiayDep.Areas.Admin.Controllers
             _context.SaveChanges();
 
             ctpn.InvoiceId = model.InvoiceId;
-            Product sp = _context.Products.Single(n => n.ProductId == ctpn.ProductId);
+            Product sp = _context.Products.Single(n => n.ProductId == ctpn.ProductVarId);
             //sp.Quanity += ctpn.Quanity;
 
             _context.InvoiceDetails.Add(ctpn);
@@ -225,9 +232,9 @@ namespace GiayDep.Areas.Admin.Controllers
 
      
         public JsonResult GetProductByColor (int id)
-        {
-            return Json(_context.ProductItems.Where(n=>n.ProductItemsId == id)
- 
+        {   
+               
+            return Json(_context.ProductItems.Where(n=>n.ProductId == id)
                 .ToList());    
         }
         public JsonResult GetProductBySize(int id)

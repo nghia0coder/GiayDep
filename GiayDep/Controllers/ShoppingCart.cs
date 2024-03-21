@@ -34,10 +34,11 @@ namespace GiayDep.Controllers
             ViewBag.TongQuanity = cart.Quanity;
             return View(cart);
         }
-        public async Task<IActionResult> ThemGioHang(int MaSP, string strURL)
+        public async Task<IActionResult> ThemGioHang(int MaSP,int? size, string strURL)
         {
             ProductVariation Product =  await _context.ProductVariations
-                .FirstOrDefaultAsync(s => s.ProductItemsId == MaSP);
+                .Include(n => n.ProductItems.Product)
+                .FirstOrDefaultAsync(s => s.ProductItemsId == MaSP &&  s.SizeId == size);
             List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
             CartItemsModel cartItems = cart.Where(c => c.ProductID == MaSP).FirstOrDefault();
             if (cartItems == null)
@@ -129,7 +130,7 @@ namespace GiayDep.Controllers
             {
                 OrdersDetail ctdh = new OrdersDetail();
                 ctdh.OrderId = ddh.OrderId;
-                ctdh.ProductId = item.ProductID;
+                ctdh.ProductVar.ProductItems.Product.ProductId = item.ProductID;
                 ctdh.Quanity = item.Quanity;
                 ctdh.Price = item.Price;
                 _context.OrdersDetails.Add(ctdh);

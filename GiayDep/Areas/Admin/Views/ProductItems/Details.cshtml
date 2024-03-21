@@ -23,17 +23,19 @@
             <dt class="col-sm-3">Product:</dt>
             <dd class="col-sm-9">@Html.DisplayFor(model => model.Product.ProductName)</dd>
 
-            @foreach (var item in listSize)
-            {
-                <dt class="col-sm-3">Size:</dt>
-                <dd class="col-sm-9">@item.Size.Size1 Số Lượng : @item.QtyinStock</dd>
-            }
-            @foreach (var item in listImg)
-            {
-                <dt class="col-sm-2">
-                    <img src="~/Contents/img/@item.ImageUrl" class="thumbnail-image" />
-                </dt>
-            }
+            <dt class="col-sm-2">
+                <img src="~/Contents/img/@Model.Image1" class="thumbnail-image" />
+            </dt>
+            <dt class="col-sm-2">
+                <img src="~/Contents/img/@Model.Image2" class="thumbnail-image" />
+            </dt>
+            <dt class="col-sm-2">
+                <img src="~/Contents/img/@Model.Image3" class="thumbnail-image" />
+            </dt>
+            <dt class="col-sm-2">
+                <img src="~/Contents/img/@Model.Image4" class="thumbnail-image" />
+            </dt>
+            <dt class="col-sm-2">
            
         </dl>
     </div>

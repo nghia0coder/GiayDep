@@ -98,7 +98,7 @@ namespace GiayDep.Areas.Admin.Controllers
             //TempData["img4"] = Product.Hinhanh4;
 
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", Product.CategoryId);
-            ViewData["Brand"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId", Product.Brand);
+            ViewData["Brand"] = new SelectList(_context.Suppliers, "SupplierId", "SupplierId", Product.Brand);
 	
 		
 			return View(Product);
@@ -129,7 +129,7 @@ namespace GiayDep.Areas.Admin.Controllers
              _context.Update(Product);
              _context.SaveChanges();
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", Product.CategoryId);
-            ViewData["Brand"] = new SelectList(_context.Suppilers, "SupplierId", "SupplierId", Product.Brand);
+            ViewData["Brand"] = new SelectList(_context.Suppliers, "SupplierId", "SupplierId", Product.Brand);
           
 
 
@@ -174,70 +174,7 @@ namespace GiayDep.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        private string GetProfilePhotoFileName1(ProductItem Product)
-        {
-            string uniqueFileName = null;
-
-            if (Product.Image1 != null)
-            {
-                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image1.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    Product.Image1.CopyTo(fileStream);
-                }
-            }
-            return uniqueFileName;
-        }
-        private string GetProfilePhotoFileName2(ProductItem Product)
-        {
-            string uniqueFileName = null;
-
-            if (Product.Image2 != null)
-            {
-                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image2.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    Product.Image2.CopyTo(fileStream);
-                }
-            }
-            return uniqueFileName;
-        }
-        private string GetProfilePhotoFileName3(ProductItem Product)
-        {
-            string uniqueFileName = null;
-
-            if (Product.Image3 != null)
-            {
-                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image3.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    Product.Image3.CopyTo(fileStream);
-                }
-            }
-            return uniqueFileName;
-        }
-        private string GetProfilePhotoFileName4(ProductItem Product)
-        {
-            string uniqueFileName = null;
-
-            if (Product.Image4 != null)
-            {
-                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image4.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    Product.Image4.CopyTo(fileStream);
-                }
-            }
-            return uniqueFileName;
-        }
+       
 
 
         private bool ProductExists(int id)

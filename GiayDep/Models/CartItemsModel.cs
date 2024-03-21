@@ -10,7 +10,7 @@
         {
             get { return Price * Quanity; }
         }
-        public string Size { get; set; }
+        public int Size { get; set; }
         public string HinhAnh { get; set; }
 
         public string Hang { get; set; }
@@ -20,9 +20,10 @@
         // Constructor theo id (dùng cho trường hợp chỉ có sl=1)
         public CartItemsModel(ProductVariation Product)
         {
-            ProductID = Product.ProductItems.ProductId;
+            ProductID = Product.ProductItemsId;
             ProductName = Product.ProductItems.Product.ProductName;
             Quanity = Product.QtyinStock;
+            Size = Product.SizeId;
             Price = Product.ProductItems.Product.Price;
             Quanity = 1;
             //HinhAnh = Product.Hinhanh1;

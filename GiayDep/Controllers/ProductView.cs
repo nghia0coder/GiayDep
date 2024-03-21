@@ -33,16 +33,15 @@ namespace GiayDep.Controllers
             {
                 return BadRequest();
             }
-            var sp = await _context.Products
-                .Include(n => n.Category)
-     
-     
-         
-                .SingleOrDefaultAsync(n => n.ProductId == id);
+            var sp = await _context.ProductVariations
+                .Include(n => n.ProductItems.Product)
+                .FirstOrDefaultAsync(n => n.ProductItemsId == id);
+                
 
 
-            ViewBag.ListSP = _context.Products
-                .Where(n => n.CategoryId == sp.CategoryId);
+            ViewBag.ListSP = _context.ProductItems
+                .Include(n => n.Product.Category)
+				.Where(n => n.Product.CategoryId == sp.ProductItems.Product.CategoryId);
 
             if (sp == null)
             {

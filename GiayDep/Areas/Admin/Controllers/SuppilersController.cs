@@ -10,26 +10,26 @@ using GiayDep.Models;
 namespace GiayDep.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class SuppilersController : Controller
+    public class SuppliersController : Controller
     {
         private readonly GiaydepContext _context;
 
-        public SuppilersController(GiaydepContext context)
+        public SuppliersController(GiaydepContext context)
         {
             _context = context;
         }
 
-        // GET: Admin/Suppilers
+        // GET: Admin/Suppliers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Suppilers.ToListAsync());
+            return View(await _context.Suppliers.ToListAsync());
         }
 
-        // GET: Admin/Suppilers/Details/5
+        // GET: Admin/Suppliers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
            
-            var suppiler = await _context.Suppilers
+            var suppiler = await _context.Suppliers
                 .FirstOrDefaultAsync(m => m.SupplierId == id);
             if (suppiler == null)
             {
@@ -39,13 +39,13 @@ namespace GiayDep.Areas.Admin.Controllers
             return View(suppiler);
         }
 
-        // GET: Admin/Suppilers/Create
+        // GET: Admin/Suppliers/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Suppilers/Create
+        // POST: Admin/Suppliers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -61,15 +61,15 @@ namespace GiayDep.Areas.Admin.Controllers
             return View(suppiler);
         }
 
-        // GET: Admin/Suppilers/Edit/5
+        // GET: Admin/Suppliers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Suppilers == null)
+            if (id == null || _context.Suppliers == null)
             {
                 return NotFound();
             }
 
-            var suppiler = await _context.Suppilers.FindAsync(id);
+            var suppiler = await _context.Suppliers.FindAsync(id);
             if (suppiler == null)
             {
                 return NotFound();
@@ -77,7 +77,7 @@ namespace GiayDep.Areas.Admin.Controllers
             return View(suppiler);
         }
 
-        // POST: Admin/Suppilers/Edit/5
+        // POST: Admin/Suppliers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -112,15 +112,15 @@ namespace GiayDep.Areas.Admin.Controllers
             return View(suppiler);
         }
 
-        // GET: Admin/Suppilers/Delete/5
+        // GET: Admin/Suppliers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Suppilers == null)
+            if (id == null || _context.Suppliers == null)
             {
                 return NotFound();
             }
 
-            var suppiler = await _context.Suppilers
+            var suppiler = await _context.Suppliers
                 .FirstOrDefaultAsync(m => m.SupplierId == id);
             if (suppiler == null)
             {
@@ -130,19 +130,19 @@ namespace GiayDep.Areas.Admin.Controllers
             return View(suppiler);
         }
 
-        // POST: Admin/Suppilers/Delete/5
+        // POST: Admin/Suppliers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Suppilers == null)
+            if (_context.Suppliers == null)
             {
-                return Problem("Entity set 'GiaydepContext.Suppilers'  is null.");
+                return Problem("Entity set 'GiaydepContext.Suppliers'  is null.");
             }
-            var suppiler = await _context.Suppilers.FindAsync(id);
+            var suppiler = await _context.Suppliers.FindAsync(id);
             if (suppiler != null)
             {
-                _context.Suppilers.Remove(suppiler);
+                _context.Suppliers.Remove(suppiler);
             }
             
             await _context.SaveChangesAsync();
@@ -151,7 +151,7 @@ namespace GiayDep.Areas.Admin.Controllers
 
         private bool SuppilerExists(int id)
         {
-          return (_context.Suppilers?.Any(e => e.SupplierId == id)).GetValueOrDefault();
+          return (_context.Suppliers?.Any(e => e.SupplierId == id)).GetValueOrDefault();
         }
     }
 }

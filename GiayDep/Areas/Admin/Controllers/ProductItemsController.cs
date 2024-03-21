@@ -47,9 +47,7 @@ namespace GiayDep.Areas.Admin.Controllers
                 .Where(n => n.ProductItemsId == productItem.ProductItemsId)
                 .Include(n => n.Size)
                 .ToListAsync();
-            ViewData["productImg"] = await _context.ProductImages
-                .Where(n => n.ProductItemsId == productItem.ProductItemsId)
-                .ToListAsync();
+            
 
             if (productItem == null)
             {
@@ -77,27 +75,28 @@ namespace GiayDep.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProductItemViewModel product, List<int> SelectedSizes)
         {
+
+            string uniqueFileName1 = GetProfilePhotoFileName1(product);
+            string uniqueFileName2 = GetProfilePhotoFileName2(product);
+            string uniqueFileName3 = GetProfilePhotoFileName3(product);
+            string uniqueFileName4 = GetProfilePhotoFileName4(product);
+     
             var productItem = new ProductItem()
             {
                 ProductId = product.ProductId,
                 ProductCode = product.ProductCode,
                 ColorId = product.ColorId,
+                Image1 = uniqueFileName1,
+                Image2 = uniqueFileName2,
+                Image3 = uniqueFileName3,
+                Image4 = uniqueFileName4
+
             };
             _context.ProductItems.Add(productItem);
             await _context.SaveChangesAsync();
 
+            
 
-            for (int i = 0; i<product.Image.Count(); i ++)
-            {
-                string uniqueFileName = GetProfilePhotoFileName(product,i);
-
-                var productImg = new ProductImage()
-                {
-                    ProductItemsId = productItem.ProductItemsId,
-                    ImageUrl = uniqueFileName
-                };
-                _context.ProductImages.Add(productImg);
-            }    
             await _context.SaveChangesAsync();
 
             foreach (var sizeId in SelectedSizes)
@@ -213,18 +212,66 @@ namespace GiayDep.Areas.Admin.Controllers
         {
           return (_context.ProductItems?.Any(e => e.ProductItemsId == id)).GetValueOrDefault();
         }
-        private string GetProfilePhotoFileName(ProductItemViewModel Product,int i)
+        private string GetProfilePhotoFileName1(ProductItemViewModel Product)
         {
             string uniqueFileName = null;
 
-            if (Product.Image[i] != null)
+            if (Product.Img1 != null)
             {
                 string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Image[i].FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Img1.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    Product.Image[i].CopyTo(fileStream);
+                    Product.Img1.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+        private string GetProfilePhotoFileName2(ProductItemViewModel Product)
+        {
+            string uniqueFileName = null;
+
+            if (Product.Img2 != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Img2.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    Product.Img2.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+        private string GetProfilePhotoFileName3(ProductItemViewModel Product)
+        {
+            string uniqueFileName = null;
+
+            if (Product.Img3 != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Img3.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    Product.Img3.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+        private string GetProfilePhotoFileName4(ProductItemViewModel Product)
+        {
+            string uniqueFileName = null;
+
+            if (Product.Img4 != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "Contents/img/");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Product.Img4.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    Product.Img4.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
