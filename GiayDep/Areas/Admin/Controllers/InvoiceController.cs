@@ -81,10 +81,17 @@ namespace GiayDep.Areas.Admin.Controllers
             ProductVariation product;
             foreach (var item in lstModel)
             {
-                product = _context.ProductVariations.SingleOrDefault(n => n.ProductVarId == item.ProductVarId); 
-                product.QtyinStock += item.Quanity;
+                product = _context.ProductVariations.SingleOrDefault(n => n.ProductVarId == item.ProductVarId);
+                if (product.QtyinStock == 0 || product.QtyinStock == null)
+                {
+                    product.QtyinStock = item.Quanity;
+                }
+                else
+                {
+                    product.QtyinStock += item.Quanity;
+                }
                 item.InvoiceId = model.InvoiceId;
-            
+         
             }
             _context.InvoiceDetails.AddRange(lstModel);
             _context.SaveChanges();
@@ -239,10 +246,7 @@ namespace GiayDep.Areas.Admin.Controllers
         }
         public async Task<JsonResult> GetProductBySizeAsync(int id)
         {   
-            if (id == null)
-            {
-                return Json("Error");
-            }    
+               
             var list = _context.ProductVariations.Where(n => n.ProductItemsId == id)
                 .Include(n => n.Size)
                 .ToList();
