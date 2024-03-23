@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Diagnostics;
 
+
 namespace GiayDep.Controllers
 {	
-	//change
-    //nghia
+	
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -23,27 +23,25 @@ namespace GiayDep.Controllers
 		public ActionResult Index()
 		{
 			//Lần lượt tạo các viewbag để lấy list sp từ csdl
-			//List maloaisp bằng 1
-			var lstLTM = _context.SanPhams
-				.Where(n => n.Manhasx == 6)
-				.Include(n => n.MaloaispNavigation)
-				.GroupBy(n => n.Tensp)	
-				.Select(n => n.FirstOrDefault())
-				.ToList();
+			//List CategoryId bằng 1
+			var lstLTM = _context.Products
+				.Where(n => n.ProductId == 5)
+				.Include (n => n.ProductItems)
+                .ToList();
 			//Gán vào viewbag
 			ViewBag.ListLTM = lstLTM;
 
-			var lstSelling = _context.SanPhams
-				.Where(n => n.Manhasx == 7)
-				.Include(n => n.MaloaispNavigation)
+			var lstSelling = _context.Products
+				.Where(n => n.ProductId == 5)
+				.Include(n => n.ProductItems)
 				.ToList();
 			//Gán vào viewbag
 			ViewBag.ListSelling = lstSelling;
 
-			//List maloaisp bằng 3
-			var lstDTM = _context.SanPhams
-				.Where(n => n.Manhasx == 8)
-				.Include(n => n.MaloaispNavigation)
+			//List CategoryId bằng 3
+			var lstDTM = _context.Products
+				.Where(n => n.ProductId == 5)
+				.Include(n => n.ProductItems)
 				.ToList();
 			//Gán vào viewbag
 			ViewBag.ListDTM = lstDTM;

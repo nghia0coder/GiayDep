@@ -2,5 +2,20 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 
 /.vs/GiayDep/FileContentIndex
-*.bin
+/.vs/GiayDep/DesignTimeBuild/.dtbcache.v2
 /.vs/GiayDep/v17/.suo
+/.vs/ProjectEvaluation/giaydep.metadata.v7.bin
+/.vs/ProjectEvaluation/giaydep.projects.v7.bin
+/GiayDep/obj/Debug/net6.0/GiayDep.AssemblyInfo.cs
+/GiayDep/obj/Debug/net6.0/GiayDep.AssemblyInfoInputs.cache
+/.vs/GiayDep/v17/.futdcache.v2
+/GiayDep/bin/Debug/net6.0/GiayDep.dll
+/GiayDep/bin/Debug/net6.0/GiayDep.pdb
+/GiayDep/bin/Debug/net6.0/GiayDep.exe
+/GiayDep/obj/Debug/net6.0/ref/GiayDep.dll
+/GiayDep/obj/Debug/net6.0/refint/GiayDep.dll
+/GiayDep/obj/Debug/net6.0/apphost.exe
+/GiayDep/obj/Debug/net6.0/GiayDep.dll
+/GiayDep/obj/Debug/net6.0/GiayDep.pdb
+/GiayDep/obj/Debug/net6.0/GiayDep.sourcelink.json
+/GiayDep/obj/Debug/net6.0/project.razor.vs.bin
