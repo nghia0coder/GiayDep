@@ -18,11 +18,11 @@ namespace GiayDep.Controllers
             return View();
         }
    
-        public ActionResult SanPhamStyle1Partial()
+        public ActionResult Productstyle1Partial()
         {
             return PartialView();
         }
-        public ActionResult SanPhamStyle2Partial()
+        public ActionResult Productstyle2Partial()
         {
             return PartialView();
         }
@@ -33,18 +33,15 @@ namespace GiayDep.Controllers
             {
                 return BadRequest();
             }
-            var sp = await _context.SanPhams
-                .Include(n => n.MaloaispNavigation)
-                .Include(n => n.SizeNavigation)
-                .Include(n => n.ManhasxNavigation)
-                .SingleOrDefaultAsync(n => n.Idsp == id);
-            ViewBag.ListSP = _context.SanPhams
-                .Where(n => n.Maloaisp == sp.Maloaisp);
-
-
-            var sizes = _context.SanPhams.Where(n => n.Tensp == sp.Tensp).Include(s => s.SizeNavigation).ToList();
+            var sp = await _context.ProductVariations
+                .Include(n => n.ProductItems.Product)
+                .FirstOrDefaultAsync(n => n.ProductItemsId == id);
                 
-            ViewBag.ListSizes = sizes;
+
+
+            ViewBag.ListSP = _context.ProductItems
+                .Include(n => n.Product.Category)
+				.Where(n => n.Product.CategoryId == sp.ProductItems.Product.CategoryId);
 
             if (sp == null)
             {
@@ -54,7 +51,7 @@ namespace GiayDep.Controllers
             return View(sp);
         }
 
-		[Route("sanpham/{slug}-{id:int}")]
+		[Route("Product/{slug}-{id:int}")]
 		public IActionResult ProductCate(int? Id)
 		{
 			// Check if the parameter is null
@@ -64,10 +61,10 @@ namespace GiayDep.Controllers
 			}
 
 			// Load products based on the specified criteria
-			var lstSP = _context.SanPhams
-				.Where(n => n.Manhasx == Id)
-				.Include(n => n.MaloaispNavigation)
-                .GroupBy(n => n.Tensp)
+			var lstSP = _context.Products
+				.Where(n => n.BrandNavigation.BrandId == Id)
+				.Include(n => n.Category)
+                .GroupBy(n => n.ProductName)
                 .Select(n => n.FirstOrDefault())
                 .ToList();
 
@@ -76,10 +73,10 @@ namespace GiayDep.Controllers
 			{
 				return NotFound();
 			}
-			ViewBag.MaLoaiSP = Id;
+			ViewBag.CategoryId = Id;
 
 			// Return the view with paginated products
-			return View(lstSP.OrderBy(n => n.Idsp));
+			return View(lstSP.OrderBy(n => n.ProductId));
 		}
 	}
 }

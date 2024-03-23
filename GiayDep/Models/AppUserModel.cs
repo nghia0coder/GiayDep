@@ -6,6 +6,6 @@ namespace GiayDep.Models
     {
         public string Address { get; set; }
 
-        public virtual ICollection<HoaDon> HoaDons { get; } = new List<HoaDon>();
+        public virtual ICollection<Order> Orders { get; } = new List<Order>();
     }
 }

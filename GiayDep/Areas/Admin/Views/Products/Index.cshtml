@@ -1,92 +1,65 @@
-﻿@model IEnumerable<GiayDep.Models.SanPham>
+﻿@model IEnumerable<GiayDep.Models.Product>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Các Mục Sản Phẩm</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Tensp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dongia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Soluong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Baohanh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Khuyenmai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hinhanh1)
-            </th>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Brand)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BrandNavigation.BrandName)
+                    </td>
+                    <td>
+                        <a class="btn btn-info" asp-controller="ProductItems" asp-action="Create" asp-route-id="@item.ProductId">Tạo Sản Phẩm</a>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ProductId">Edit</a>
+                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.ProductId">Details</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaloaispNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ManhaccNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tensp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dongia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Soluong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Baohanh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Khuyenmai)
-           
-                <td>
-                    <img class="thumbnail-image" src="~/Contents/img/@item.Hinhanh1" />
-                </td>
-            
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaloaispNavigation.Idloai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ManhaccNavigation.Idnhacc)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Idsp">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Idsp">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Idsp">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-
-<style>
-    .thumbnail-image {
-        max-width: 100px; /* Adjust the maximum width as needed */
-        max-height: 100px; /* Adjust the maximum height as needed */
-    }
-</style>

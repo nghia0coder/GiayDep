@@ -4,6 +4,7 @@ using GiayDep.Areas.Admin.InterfacesRepositories;
 using GiayDep.Areas.Admin.Repositories;
 using System.Configuration;
 using Microsoft.AspNetCore.Identity;
+using System.Text.Json.Serialization;
 
 namespace GiayDep
 {
@@ -14,7 +15,10 @@ namespace GiayDep
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            }); ;
             builder.Services.AddDbContext<GiaydepContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Store"));
@@ -44,9 +48,7 @@ namespace GiayDep
                 options.Cookie.IsEssential = true;
             });
            
-            builder.Services.AddScoped<INhaSXRepository, NhaSXRepository>();
-            builder.Services.AddScoped<INhaCungCapRepositorycs, NhaCCRepository>();
-            builder.Services.AddScoped<ILoaiSpRepositorycs, LoaiSpRepository>();
+            builder.Services.AddScoped<IBrandRepository, BrandRepository>();
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddHttpContextAccessor();
             var app = builder.Build();

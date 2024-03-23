@@ -213,6 +213,10 @@
       "PackagePath": "staticwebassets\\Contents\\Scripts\\esm\\popper.min.js.map"
     },
     {
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\Scripts\\index.d.ts",
+      "PackagePath": "staticwebassets\\Contents\\Scripts\\index.d.ts"
+    },
+    {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\Scripts\\index.js.flow",
       "PackagePath": "staticwebassets\\Contents\\Scripts\\index.js.flow"
     },
@@ -597,10 +601,6 @@
       "PackagePath": "staticwebassets\\Contents\\Scripts\\umd\\popper.min.js.map"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\de08cba5-8cf4-4a3d-a348-1dc163222a3d_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\de08cba5-8cf4-4a3d-a348-1dc163222a3d_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\fontawesome\\css\\all.css",
       "PackagePath": "staticwebassets\\Contents\\fontawesome\\css\\all.css"
     },
@@ -861,884 +861,136 @@
       "PackagePath": "staticwebassets\\Contents\\fontawesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\00085a6a-4f86-4d13-b21f-0e6963b10f42_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\00085a6a-4f86-4d13-b21f-0e6963b10f42_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\01818f37-2602-49f1-9b72-dc43d7fda254_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\01818f37-2602-49f1-9b72-dc43d7fda254_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\03a14865-8a81-4c44-ba4a-fe1e07941a92_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (3).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\03a14865-8a81-4c44-ba4a-fe1e07941a92_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (3).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\16e84a67-6873-4fcc-99bf-d0c976820c99_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\16e84a67-6873-4fcc-99bf-d0c976820c99_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\042f61e1-ea74-4d17-8f88-918d8e75e870_vans-slip-on-classic-black-vn000eyeblk-2.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\042f61e1-ea74-4d17-8f88-918d8e75e870_vans-slip-on-classic-black-vn000eyeblk-2.webp"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\16fa6dc8-fc0e-4530-9150-c9ba14e7ee58_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
+      "PackagePath": "staticwebassets\\Contents\\img\\16fa6dc8-fc0e-4530-9150-c9ba14e7ee58_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\057c30c5-029b-46d3-9e7c-44550550c5b5_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\057c30c5-029b-46d3-9e7c-44550550c5b5_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\20d43e70-c41c-4a58-8c4a-89b7b21a9df7_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\20d43e70-c41c-4a58-8c4a-89b7b21a9df7_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\059f6724-5fcc-496b-a0a3-3abed4866f69_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\059f6724-5fcc-496b-a0a3-3abed4866f69_vans-slip-on-classic-black-vn000eyeblk-1.webp"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\23353ede-116d-43a6-a90a-6ff7b3eacb27_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png",
+      "PackagePath": "staticwebassets\\Contents\\img\\23353ede-116d-43a6-a90a-6ff7b3eacb27_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\061d735f-b912-442b-b2f7-7b45abc566bb_air-force-1-07-shoes-NMmm1B (2).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\061d735f-b912-442b-b2f7-7b45abc566bb_air-force-1-07-shoes-NMmm1B (2).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\52423cf9-9810-4806-a07b-d6680086673e_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\52423cf9-9810-4806-a07b-d6680086673e_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\061fcd94-53d2-43cd-87fa-4d77f3085ae9_vans-slip-on-classic-black-vn000eyeblk-3.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\061fcd94-53d2-43cd-87fa-4d77f3085ae9_vans-slip-on-classic-black-vn000eyeblk-3.webp"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\541ea0d2-9edf-4f70-a710-32fe7751d6e1_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\541ea0d2-9edf-4f70-a710-32fe7751d6e1_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0756b5ef-c74b-44f2-9318-97d4a5a7bdd3_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\0756b5ef-c74b-44f2-9318-97d4a5a7bdd3_ao-thun-soc-xanh-at718-9143.jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5ad10601-75da-408b-97dc-c7283d1f3bc7_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\5ad10601-75da-408b-97dc-c7283d1f3bc7_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\07683059-543c-49f1-802a-c4380f7d15fe_hsm006000trg__8__722e9a13fa2f4d2f8892c1e9114c68ec.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\07683059-543c-49f1-802a-c4380f7d15fe_hsm006000trg__8__722e9a13fa2f4d2f8892c1e9114c68ec.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5edbd0ec-1c9b-4970-8849-703ad0b28f2b_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\5edbd0ec-1c9b-4970-8849-703ad0b28f2b_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\093b4e53-a73f-4789-bbfc-221af0a5cdc6_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\093b4e53-a73f-4789-bbfc-221af0a5cdc6_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\63634fc2-cc58-44e2-ab52-d356f4b79e0b_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\63634fc2-cc58-44e2-ab52-d356f4b79e0b_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\093dabc2-a8b8-4200-b14a-9aff483a8c71_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-jqdks-color-den_bb0de91bc6904b0da3771b1b881df18d.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\093dabc2-a8b8-4200-b14a-9aff483a8c71_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-jqdks-color-den_bb0de91bc6904b0da3771b1b881df18d.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\6c3b1255-e19c-40a6-aec9-f8b4d828d32e_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\6c3b1255-e19c-40a6-aec9-f8b4d828d32e_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0974ab65-33bd-4605-8684-621489b0d5ed_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\0974ab65-33bd-4605-8684-621489b0d5ed_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7271dba3-5d24-4374-875c-14b7f4c55f03_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png",
+      "PackagePath": "staticwebassets\\Contents\\img\\7271dba3-5d24-4374-875c-14b7f4c55f03_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0af8287a-c4b0-4802-bb17-22812215fac4_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\0af8287a-c4b0-4802-bb17-22812215fac4_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7941bc57-2779-48b9-9148-0af18505065d_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\7941bc57-2779-48b9-9148-0af18505065d_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0c7d64b9-3374-4b73-944b-8f190aeb78be_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\0c7d64b9-3374-4b73-944b-8f190aeb78be_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7b6c6fb6-481c-4bc7-8a46-32f74ca4a111_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\7b6c6fb6-481c-4bc7-8a46-32f74ca4a111_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0ca186fa-9c34-427c-86e9-c8bd956e83f3_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (2).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\0ca186fa-9c34-427c-86e9-c8bd956e83f3_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (2).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7d30912f-9797-4e0a-a84d-7c249b85faf0_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\7d30912f-9797-4e0a-a84d-7c249b85faf0_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0cab7471-be0f-473b-a7c9-bbb6b273d946_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\0cab7471-be0f-473b-a7c9-bbb6b273d946_OIP (4).jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8a9aa588-51e6-4733-9a3b-ba77485bc24d_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\8a9aa588-51e6-4733-9a3b-ba77485bc24d_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\0d39a5f1-bab7-4e16-8ec5-3e6e79a4892f_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\0d39a5f1-bab7-4e16-8ec5-3e6e79a4892f_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8dd2ade3-5929-41b6-abf6-7abd8d14c40c_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\8dd2ade3-5929-41b6-abf6-7abd8d14c40c_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\128a6d4c-9503-41e2-b469-80f408ce4e06_vans-slip-on-classic-black-vn000eyeblk-2.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\128a6d4c-9503-41e2-b469-80f408ce4e06_vans-slip-on-classic-black-vn000eyeblk-2.webp"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9091df82-2395-422f-b03e-d2a244fb5f8a_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\9091df82-2395-422f-b03e-d2a244fb5f8a_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\13ef0300-7ec6-42c8-abdb-032a26228682_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (4).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\13ef0300-7ec6-42c8-abdb-032a26228682_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (4).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\92721a57-f271-4940-9157-e53a731d554e_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\92721a57-f271-4940-9157-e53a731d554e_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\14008047-c6aa-43c1-b61c-87de9f1d5221_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\14008047-c6aa-43c1-b61c-87de9f1d5221_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9be9f2ca-f923-41e3-9630-838665e5194d_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\9be9f2ca-f923-41e3-9630-838665e5194d_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\144468bf-c688-44de-9c2a-a2b45fae5082_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\144468bf-c688-44de-9c2a-a2b45fae5082_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b05b90d9-23b0-401e-8131-c5f6031db2bc_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\b05b90d9-23b0-401e-8131-c5f6031db2bc_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\179bb684-8cc4-43d6-95ff-5576f2c7d08f_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\179bb684-8cc4-43d6-95ff-5576f2c7d08f_air-force-1-07-shoes-NMmm1B.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c0f2b6a3-42b6-4c3b-a41e-462079e7ff79_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\c0f2b6a3-42b6-4c3b-a41e-462079e7ff79_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\17a1df55-cbbd-455f-857d-db9b5c9c1ba9_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\17a1df55-cbbd-455f-857d-db9b5c9c1ba9_OIP (4).jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c2d0a686-55df-47ea-ad65-03465e50e4c9_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\c2d0a686-55df-47ea-ad65-03465e50e4c9_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\19929c1c-ef08-40bd-b2d7-3c5467ce0b1b_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\19929c1c-ef08-40bd-b2d7-3c5467ce0b1b_vans-slip-on-classic-black-vn000eyeblk-1.webp"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c5037136-6d90-4145-95b1-db3957050377_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png",
+      "PackagePath": "staticwebassets\\Contents\\img\\c5037136-6d90-4145-95b1-db3957050377_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\1d9f87d5-017e-4eb7-9424-adcb305d855d_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\1d9f87d5-017e-4eb7-9424-adcb305d855d_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c73c2e1e-d63f-4dc2-82d7-befd358274aa_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\c73c2e1e-d63f-4dc2-82d7-befd358274aa_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\1db0ab68-3faa-4ac6-8932-3a74f551ec03_air-jordan-1-mid-shoes-BpARGV (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\1db0ab68-3faa-4ac6-8932-3a74f551ec03_air-jordan-1-mid-shoes-BpARGV (1).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cc7509dd-d039-44f1-aaed-60b6e3fd48e6_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\cc7509dd-d039-44f1-aaed-60b6e3fd48e6_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\1f3bbb65-cd3e-4c81-8394-5cb21eb15afd_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\1f3bbb65-cd3e-4c81-8394-5cb21eb15afd_ao-thun-soc-xanh-at718-9143.jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cf781e91-de40-44b8-b251-cd8e8f212710_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\cf781e91-de40-44b8-b251-cd8e8f212710_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\1fb2a973-25b9-488d-a76f-e259fc36ac40_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\1fb2a973-25b9-488d-a76f-e259fc36ac40_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d13cce3e-0bdd-4792-9994-2f8633ba2526_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\d13cce3e-0bdd-4792-9994-2f8633ba2526_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\20063e18-7b98-4c90-b6d7-839c6f6d25d6_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\20063e18-7b98-4c90-b6d7-839c6f6d25d6_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d9aec999-1600-4d86-ac78-db1e8a107d76_133550293774970828.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\d9aec999-1600-4d86-ac78-db1e8a107d76_133550293774970828.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\20756411-30b9-4675-96c2-0f86b730cf91_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\20756411-30b9-4675-96c2-0f86b730cf91_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e5b9c356-74f9-4181-bbeb-a6ffe77b14a7_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\e5b9c356-74f9-4181-bbeb-a6ffe77b14a7_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\21aed8e6-0432-4c2e-a322-fdd345c41c5c_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\21aed8e6-0432-4c2e-a322-fdd345c41c5c_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e81bd932-72c5-45c0-beb0-664177fbf5dd_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\e81bd932-72c5-45c0-beb0-664177fbf5dd_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\22b2d7d5-a059-4eea-b962-062711eb886f_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM4.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\22b2d7d5-a059-4eea-b962-062711eb886f_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM4.png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f2ff38c7-c874-4084-884d-6d8cfe38f505_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\f2ff38c7-c874-4084-884d-6d8cfe38f505_133542532848704352.jpg"
     },
     {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\24c07b38-41ac-47c3-9c37-9869951ab959_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\24c07b38-41ac-47c3-9c37-9869951ab959_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\24e64b23-c905-4aaf-8b30-18fdd62f9a05_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\24e64b23-c905-4aaf-8b30-18fdd62f9a05_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2590903e-359f-4c74-bb40-462a1800a3e9_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\2590903e-359f-4c74-bb40-462a1800a3e9_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\27fe115a-cd8e-4cdd-a96e-59d8af4ad45a_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\27fe115a-cd8e-4cdd-a96e-59d8af4ad45a_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\29b25e76-b2bd-4fdc-8d49-389c2d017b42_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\29b25e76-b2bd-4fdc-8d49-389c2d017b42_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2a60d039-abff-4ca1-ba96-8553421fcb1f_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\2a60d039-abff-4ca1-ba96-8553421fcb1f_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2bd1115a-ee1f-414a-96d5-896493ab170b_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\2bd1115a-ee1f-414a-96d5-896493ab170b_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2ce8f25a-1a39-47c5-a13b-01a1ccef0838_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\2ce8f25a-1a39-47c5-a13b-01a1ccef0838_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2f08ccca-e31a-425b-9abb-750e1b53d5be_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\2f08ccca-e31a-425b-9abb-750e1b53d5be_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2f5eb49a-0d58-4bee-91fe-587c68a393ab_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\2f5eb49a-0d58-4bee-91fe-587c68a393ab_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\2fe23432-fb24-4a4d-ade8-75ac80bb1d67_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-p8bqd-color-den_cfbe4667ddd440338a3bbf54fc456c87.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\2fe23432-fb24-4a4d-ade8-75ac80bb1d67_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-p8bqd-color-den_cfbe4667ddd440338a3bbf54fc456c87.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\30660022-2596-48a8-bb01-37f933a2d874_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\30660022-2596-48a8-bb01-37f933a2d874_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\316199c2-a91f-4173-a8c1-9b7d2e2817c9_58fa9fa0-ad20-4703-ba26-b614292ac30a.gif",
-      "PackagePath": "staticwebassets\\Contents\\img\\316199c2-a91f-4173-a8c1-9b7d2e2817c9_58fa9fa0-ad20-4703-ba26-b614292ac30a.gif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\31fe54be-0005-475d-b262-7578f32558f3_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\31fe54be-0005-475d-b262-7578f32558f3_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3262294a-2331-4da9-8049-0694910efe81_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3262294a-2331-4da9-8049-0694910efe81_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (3).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\33d7cae9-13e9-460f-a012-6c76e25d5221_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\33d7cae9-13e9-460f-a012-6c76e25d5221_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\346d7540-da37-4751-a651-cfaa289d4f09_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\346d7540-da37-4751-a651-cfaa289d4f09_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\34fb33d7-bb8b-4ff7-96bd-f76aa3e34ebc_vans-authentic-classic-black-vn000ee3blk-2.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\34fb33d7-bb8b-4ff7-96bd-f76aa3e34ebc_vans-authentic-classic-black-vn000ee3blk-2.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3658ab58-bf9e-49a9-ae0b-9a95e8cddfb6_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3658ab58-bf9e-49a9-ae0b-9a95e8cddfb6_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3804a0c5-b80d-49b0-b342-b322e653c41f_vans-authentic-classic-black-vn000ee3blk-2.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\3804a0c5-b80d-49b0-b342-b322e653c41f_vans-authentic-classic-black-vn000ee3blk-2.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\38747bc1-a64e-436e-b7cf-c016da8eb611_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\38747bc1-a64e-436e-b7cf-c016da8eb611_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3aaa9353-8e27-45f8-908f-71de984f5b00_vans-slip-on-classic-black-vn000eyeblk-2.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\3aaa9353-8e27-45f8-908f-71de984f5b00_vans-slip-on-classic-black-vn000eyeblk-2.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3b453a7e-0eeb-49a1-a29b-0d25c8f6bb5b_air-jordan-1-low-shoes-6Q1tFM.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3b453a7e-0eeb-49a1-a29b-0d25c8f6bb5b_air-jordan-1-low-shoes-6Q1tFM.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3b6b7612-71eb-4619-97f9-55a3dce5bd52_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\3b6b7612-71eb-4619-97f9-55a3dce5bd52_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3bb7513a-b07e-42c4-97e1-81f05693706b_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3bb7513a-b07e-42c4-97e1-81f05693706b_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3bdfd463-496b-428b-b979-0cd6c545a706_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3bdfd463-496b-428b-b979-0cd6c545a706_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3e719f50-f9d4-40a8-ba4e-5e931b214c9d_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3e719f50-f9d4-40a8-ba4e-5e931b214c9d_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3f90febb-b620-4cfd-a623-149e68392db2_vans-authentic-classic-black-vn000ee3blk-5.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\3f90febb-b620-4cfd-a623-149e68392db2_vans-authentic-classic-black-vn000ee3blk-5.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\3ff8a3c7-9756-4712-8ec7-ac004fbc3c2e_air-jordan-1-mid-shoes-BpARGV (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\3ff8a3c7-9756-4712-8ec7-ac004fbc3c2e_air-jordan-1-mid-shoes-BpARGV (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\404c7236-2af0-4abb-b470-329ab6e6f92c_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\404c7236-2af0-4abb-b470-329ab6e6f92c_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\404d5c53-2ac5-433a-8e85-24992e5bdfcd_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\404d5c53-2ac5-433a-8e85-24992e5bdfcd_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\438a5d5a-379c-493f-a7c3-3eef6ec8eb25_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\438a5d5a-379c-493f-a7c3-3eef6ec8eb25_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\44a9fb93-bbdf-4f67-9745-27ac56449ab0_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\44a9fb93-bbdf-4f67-9745-27ac56449ab0_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\4514dfac-119c-4d84-9258-831a63373fe4_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\4514dfac-119c-4d84-9258-831a63373fe4_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\452f8c49-088e-4207-826b-10a0df4361ca_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\452f8c49-088e-4207-826b-10a0df4361ca_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\45bedce3-a9d8-45d1-85bc-4208d416d7fa_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\45bedce3-a9d8-45d1-85bc-4208d416d7fa_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\46180849-9f90-4a5c-9d80-273e315bbbd9_vans-slip-on-classic-black-vn000eyeblk-4.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\46180849-9f90-4a5c-9d80-273e315bbbd9_vans-slip-on-classic-black-vn000eyeblk-4.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\46298b3c-50f6-45be-b94d-449b16462604_air-force-1-07-shoes-NMmm1B (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\46298b3c-50f6-45be-b94d-449b16462604_air-force-1-07-shoes-NMmm1B (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\46409b5c-39be-4558-9dc9-365a2a95a872_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\46409b5c-39be-4558-9dc9-365a2a95a872_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\4722100d-e6f9-4965-8e81-d41f0cdce257_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (4).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\4722100d-e6f9-4965-8e81-d41f0cdce257_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (4).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\488e5c5c-5bfb-403f-b110-995bc51e858c_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\488e5c5c-5bfb-403f-b110-995bc51e858c_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\48ea5b32-88ee-43cd-a8b9-008362b26d47_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\48ea5b32-88ee-43cd-a8b9-008362b26d47_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\497236b0-c698-4cc3-8de5-cf328b7ed6d7_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\497236b0-c698-4cc3-8de5-cf328b7ed6d7_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\4bf97dcf-d230-42a2-87c2-e05280f54cee_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-luacw-color-den_aa78bf9ad04645369f6bbdb9427a1b33_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\4bf97dcf-d230-42a2-87c2-e05280f54cee_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-luacw-color-den_aa78bf9ad04645369f6bbdb9427a1b33_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\4fdd25e7-2a5a-4e3c-ab83-138bf009cd40_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\4fdd25e7-2a5a-4e3c-ab83-138bf009cd40_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\50c8f12a-665f-4621-b80f-ababa10a40b7_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\50c8f12a-665f-4621-b80f-ababa10a40b7_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\53d3f7f7-28d7-4834-bc33-aef632110f3c_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\53d3f7f7-28d7-4834-bc33-aef632110f3c_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\54e9af8e-684b-4232-afa8-40f44b7173b3_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\54e9af8e-684b-4232-afa8-40f44b7173b3_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5662670e-763e-45ee-bc96-3697f1954a74_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\5662670e-763e-45ee-bc96-3697f1954a74_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\56939a19-cb90-4c1d-969c-44f77e9c6c7d_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\56939a19-cb90-4c1d-969c-44f77e9c6c7d_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\56fe1c5b-9266-4620-83de-bcb8ea46c841_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\56fe1c5b-9266-4620-83de-bcb8ea46c841_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\579f9eb3-ab27-4bde-8dda-f6796118d753_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\579f9eb3-ab27-4bde-8dda-f6796118d753_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\57f4d19b-6dba-4a7d-929d-398eae4cc703_vans-slip-on-checkerboard-black-off-white-vn000eyebww-2.ong.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\57f4d19b-6dba-4a7d-929d-398eae4cc703_vans-slip-on-checkerboard-black-off-white-vn000eyebww-2.ong.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5931048d-a04f-40d8-bb2d-1c256184f263_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\5931048d-a04f-40d8-bb2d-1c256184f263_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5ae0385d-0830-4d44-8048-beef7ae23b94_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\5ae0385d-0830-4d44-8048-beef7ae23b94_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5cf20931-47c0-4663-8bdd-1007c0767232_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\5cf20931-47c0-4663-8bdd-1007c0767232_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5e80dad8-7196-4092-9558-89f5d542931e_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\5e80dad8-7196-4092-9558-89f5d542931e_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5f6a04c4-b9b3-4940-8f24-027b5c039b0f_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (2).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\5f6a04c4-b9b3-4940-8f24-027b5c039b0f_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (2).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\5f80b16e-3714-4777-bdec-6ea723d88b49_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\5f80b16e-3714-4777-bdec-6ea723d88b49_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\60d627d8-f0e7-417f-be5f-9c98ac863348_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\60d627d8-f0e7-417f-be5f-9c98ac863348_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\61424a23-44fa-4c04-a950-13011c260795_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\61424a23-44fa-4c04-a950-13011c260795_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\61661103-3fea-4d18-9d87-5368e703b2f1_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\61661103-3fea-4d18-9d87-5368e703b2f1_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\62e24398-c8b6-4276-bfe9-8d9a8c87185c_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\62e24398-c8b6-4276-bfe9-8d9a8c87185c_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\6333a376-dd75-4bed-ad83-26329bc304d3_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\6333a376-dd75-4bed-ad83-26329bc304d3_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\63d8c9e4-7489-4941-8ce3-f8e9bc9a849b_air-jordan-1-mid-shoes-BpARGV (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\63d8c9e4-7489-4941-8ce3-f8e9bc9a849b_air-jordan-1-mid-shoes-BpARGV (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\64894877-c3dc-431e-9ed6-02c2a4aa11d8_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\64894877-c3dc-431e-9ed6-02c2a4aa11d8_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\679bc21d-a23f-404f-ac1c-17dd3f5c991b_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\679bc21d-a23f-404f-ac1c-17dd3f5c991b_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\684cd01f-398f-4243-ad9b-c96eacc762f6_dsmh05000xam__3__bdfda62a54bd4231968f395313b2ca1f.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\684cd01f-398f-4243-ad9b-c96eacc762f6_dsmh05000xam__3__bdfda62a54bd4231968f395313b2ca1f.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\68cbe67c-e3bf-4c5f-9fb5-03b9042dfe8e_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\68cbe67c-e3bf-4c5f-9fb5-03b9042dfe8e_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\6c51fc33-da14-418b-b69e-9f33d80bc2e9_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\6c51fc33-da14-418b-b69e-9f33d80bc2e9_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\6e7d0a26-39a8-4867-8422-cbbeb80dbab8_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\6e7d0a26-39a8-4867-8422-cbbeb80dbab8_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\6f8a1900-b11f-4853-b14c-08224539208b_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\6f8a1900-b11f-4853-b14c-08224539208b_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\6fbc18ff-eb79-490b-bb2f-e5d1ef249c13_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\6fbc18ff-eb79-490b-bb2f-e5d1ef249c13_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\72fef18d-65e3-4641-8ed9-3bca0ec75f5d_vans-slip-on-classic-black-vn000eyeblk-2.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\72fef18d-65e3-4641-8ed9-3bca0ec75f5d_vans-slip-on-classic-black-vn000eyeblk-2.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\739cd141-7b71-49d1-9fad-5d41dc01b642_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\739cd141-7b71-49d1-9fad-5d41dc01b642_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\73b66305-b8d4-404d-a7f1-5d8c93cd5194_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\73b66305-b8d4-404d-a7f1-5d8c93cd5194_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\742749cf-dc5e-44bc-b700-5fffce7a82e7_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\742749cf-dc5e-44bc-b700-5fffce7a82e7_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\74b7744c-c838-4637-bc49-38463e1ccf7a_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\74b7744c-c838-4637-bc49-38463e1ccf7a_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\760f85e4-20e3-4467-9032-72f0ecca9c24_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\760f85e4-20e3-4467-9032-72f0ecca9c24_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\787581e4-9229-4edc-87fb-1186433a8a5e_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\787581e4-9229-4edc-87fb-1186433a8a5e_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\799a7720-f878-4f8e-83fb-006a530f6adf_vans-authentic-classic-black-vn000ee3blk-2.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\799a7720-f878-4f8e-83fb-006a530f6adf_vans-authentic-classic-black-vn000ee3blk-2.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\79a1ce47-8f86-44f7-ae1c-4922511d742c_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\79a1ce47-8f86-44f7-ae1c-4922511d742c_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7abffc62-9e4d-4f57-9c0a-4d0f722d4195_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\7abffc62-9e4d-4f57-9c0a-4d0f722d4195_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7b568a26-ca6a-4e93-9d83-a12acda10ead_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\7b568a26-ca6a-4e93-9d83-a12acda10ead_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\7e69af5a-a0fc-4231-91b8-94144bfdb0c0_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\7e69af5a-a0fc-4231-91b8-94144bfdb0c0_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\81103d97-90c1-406c-ab92-58daa61995fd_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM8.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\81103d97-90c1-406c-ab92-58daa61995fd_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM8.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\81e9964c-43f8-4d36-b35a-7c3d03d431b8_hsm006000trg__6__9b77a893975d4450864b5d9021c02677.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\81e9964c-43f8-4d36-b35a-7c3d03d431b8_hsm006000trg__6__9b77a893975d4450864b5d9021c02677.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8229d62b-ee84-406e-b5d2-b50ee1eb851b_air-force-1-07-shoes-NMmm1B (3).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\8229d62b-ee84-406e-b5d2-b50ee1eb851b_air-force-1-07-shoes-NMmm1B (3).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8306fa09-a877-4e26-b9c4-43e8478df7d8_air-jordan-1-low-shoes-6Q1tFM (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\8306fa09-a877-4e26-b9c4-43e8478df7d8_air-jordan-1-low-shoes-6Q1tFM (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\83215576-c545-4a40-98a1-c22c642faa84_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\83215576-c545-4a40-98a1-c22c642faa84_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\869c06b7-999e-4fe1-9f16-7a9670887a86_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\869c06b7-999e-4fe1-9f16-7a9670887a86_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\86fe94c3-12a2-4c04-bebc-26176bd71850_vans-slip-on-classic-black-vn000eyeblk-3.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\86fe94c3-12a2-4c04-bebc-26176bd71850_vans-slip-on-classic-black-vn000eyeblk-3.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8971858d-eb12-4f4c-bf6e-c5ed7dc3b95b_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\8971858d-eb12-4f4c-bf6e-c5ed7dc3b95b_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8c136fbb-2dec-45b3-89dc-cb135b182fff_vans-slip-on-classic-black-vn000eyeblk-4.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\8c136fbb-2dec-45b3-89dc-cb135b182fff_vans-slip-on-classic-black-vn000eyeblk-4.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8c80681b-3980-4056-a989-09397d7a8c55_vans-slip-on-classic-black-vn000eyeblk-4.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\8c80681b-3980-4056-a989-09397d7a8c55_vans-slip-on-classic-black-vn000eyeblk-4.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\8d1088c0-70ee-4201-b53e-e4dd1912afb7_vans-slip-on-classic-black-vn000eyeblk-2.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\8d1088c0-70ee-4201-b53e-e4dd1912afb7_vans-slip-on-classic-black-vn000eyeblk-2.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\90578f9e-4138-488d-97b4-b3a2eaf56269_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\90578f9e-4138-488d-97b4-b3a2eaf56269_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\939b5aa7-534f-4f79-9d69-558310ae665b_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\939b5aa7-534f-4f79-9d69-558310ae665b_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9496b373-38f0-43ed-9e4e-5fd79f152ccd_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\9496b373-38f0-43ed-9e4e-5fd79f152ccd_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\958b8ea1-1058-4f49-9e08-e4f130b1191e_air-jordan-1-low-shoes-6Q1tFM (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\958b8ea1-1058-4f49-9e08-e4f130b1191e_air-jordan-1-low-shoes-6Q1tFM (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\95f94a2d-4b13-48e9-aefa-a781ea742869_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\95f94a2d-4b13-48e9-aefa-a781ea742869_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\98fd074f-6898-4472-bebf-1198cbf93571_vans-slip-on-checkerboard-black-off-white-vn000eyebww-3.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\98fd074f-6898-4472-bebf-1198cbf93571_vans-slip-on-checkerboard-black-off-white-vn000eyebww-3.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\993b8c07-8d0d-4f3d-8cc5-cdda9854e2c4_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\993b8c07-8d0d-4f3d-8cc5-cdda9854e2c4_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9a245acf-88d9-4150-884b-4aa908ebd196_vans-authentic-classic-black-vn000ee3blk-3.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\9a245acf-88d9-4150-884b-4aa908ebd196_vans-authentic-classic-black-vn000ee3blk-3.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9b35a382-4b61-4dad-9d0c-93804990402a_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\9b35a382-4b61-4dad-9d0c-93804990402a_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9d29cbc2-3c9d-40bd-91f9-2b50e039e462_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\9d29cbc2-3c9d-40bd-91f9-2b50e039e462_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9f08ed06-4f8c-4d5b-8275-474787ca61a5_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\9f08ed06-4f8c-4d5b-8275-474787ca61a5_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\9f7c35d8-725e-4e90-b04b-eb8baa6b2abd_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM3_hover.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\9f7c35d8-725e-4e90-b04b-eb8baa6b2abd_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM3_hover.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a0011fe3-5cf5-4f05-96e1-036da1324568_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (3).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a0011fe3-5cf5-4f05-96e1-036da1324568_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (3).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a2543652-aff3-4aea-9462-5ef338e54234_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\a2543652-aff3-4aea-9462-5ef338e54234_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a4820f34-edaf-464a-9c7c-91f0d4a46456_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a4820f34-edaf-464a-9c7c-91f0d4a46456_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a4aed30f-0be8-4515-a1a0-32ea2fccfaae_dsmh05000xam__4__cbcd40027b6b4a929ee2d57b78fd7525.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a4aed30f-0be8-4515-a1a0-32ea2fccfaae_dsmh05000xam__4__cbcd40027b6b4a929ee2d57b78fd7525.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a4e98dcf-341e-4fb7-82de-a730f9eed763_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\a4e98dcf-341e-4fb7-82de-a730f9eed763_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a5544ee7-d60a-4b72-bb43-1f2557f791a8_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\a5544ee7-d60a-4b72-bb43-1f2557f791a8_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a5b1793a-9b68-4f78-9f75-7fca7376aa4c_air-jordan-1-mid-shoes-BpARGV (3).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a5b1793a-9b68-4f78-9f75-7fca7376aa4c_air-jordan-1-mid-shoes-BpARGV (3).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a738dbdc-6d0a-4b75-b232-66ae4b8c5ea3_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\a738dbdc-6d0a-4b75-b232-66ae4b8c5ea3_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a7b0390f-1730-47c5-9031-c0d854e7be7d_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a7b0390f-1730-47c5-9031-c0d854e7be7d_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a90b6a06-b6bd-4a40-8e93-8ee49f9eb603_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a90b6a06-b6bd-4a40-8e93-8ee49f9eb603_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\a9d6a426-bc44-49ea-8563-e2fd41987f17_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\a9d6a426-bc44-49ea-8563-e2fd41987f17_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\aaa56425-20f5-4fea-b2d5-ee49b65af6a9_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\aaa56425-20f5-4fea-b2d5-ee49b65af6a9_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ae5b58a6-f9cd-43b0-8c38-c0147a958a72_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\ae5b58a6-f9cd-43b0-8c38-c0147a958a72_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (2).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\aebcd828-be4a-425f-8c0f-7e1a75fb1e9b_hsm006000trg__10__516845f1add743b78c8379b57436964c.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\aebcd828-be4a-425f-8c0f-7e1a75fb1e9b_hsm006000trg__10__516845f1add743b78c8379b57436964c.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b137c679-d893-47f7-ba7f-58141ef3b7f1_air-jordan-1-low-shoes-6Q1tFM (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\b137c679-d893-47f7-ba7f-58141ef3b7f1_air-jordan-1-low-shoes-6Q1tFM (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b166f683-8e8b-4a43-9550-a6e68504fcaa_vans-authentic-classic-black-vn000ee3blk-2.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\b166f683-8e8b-4a43-9550-a6e68504fcaa_vans-authentic-classic-black-vn000ee3blk-2.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b1699888-3791-487b-bd5f-4dcfc42327ad_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\b1699888-3791-487b-bd5f-4dcfc42327ad_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b418ba44-cd62-4e85-87c1-cfa75bd8ccdb_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\b418ba44-cd62-4e85-87c1-cfa75bd8ccdb_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b42282e5-461d-4512-9b1f-cb3c02dc5b6e_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\b42282e5-461d-4512-9b1f-cb3c02dc5b6e_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (4).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b49343be-e7a3-40a7-a960-f7967a81b91d_vans-slip-on-classic-black-vn000eyeblk-3.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\b49343be-e7a3-40a7-a960-f7967a81b91d_vans-slip-on-classic-black-vn000eyeblk-3.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b7070246-f741-48f5-8176-0b5011091b81_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\b7070246-f741-48f5-8176-0b5011091b81_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\b7da0ddd-4b77-4c69-b4f0-18cca047e25b_air-jordan-1-mid-shoes-BpARGV (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\b7da0ddd-4b77-4c69-b4f0-18cca047e25b_air-jordan-1-mid-shoes-BpARGV (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ba051aa2-d727-4efd-bccf-ffdf653e73e2_vans-slip-on-checkerboard-black-off-white-vn000eyebww-4.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\ba051aa2-d727-4efd-bccf-ffdf653e73e2_vans-slip-on-checkerboard-black-off-white-vn000eyebww-4.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\bbbe36d7-173a-44c6-a37f-009be77ae51c_vans-slip-on-classic-black-vn000eyeblk-4.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\bbbe36d7-173a-44c6-a37f-009be77ae51c_vans-slip-on-classic-black-vn000eyeblk-4.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\bbe977f0-a33e-4668-ac34-5fa916202d65_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\bbe977f0-a33e-4668-ac34-5fa916202d65_giay-the-thao-nam-biti-s-hunter-x-2k22-jet-dsmh02202-i2zmo-color-den_0f907b411b2b497d9c066636d6f13e59.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\bc41d806-8e13-4b9f-b456-81e74f59049e_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\bc41d806-8e13-4b9f-b456-81e74f59049e_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\bd8d3de7-00cf-459c-b453-b23dda4c572f_vans-slip-on-classic-black-vn000eyeblk-3.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\bd8d3de7-00cf-459c-b453-b23dda4c572f_vans-slip-on-classic-black-vn000eyeblk-3.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\bda32ca6-f159-4dc7-ab2e-1963affed526_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\bda32ca6-f159-4dc7-ab2e-1963affed526_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c0a1fc4c-c24a-4444-b0d0-21c68cc50cc6_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\c0a1fc4c-c24a-4444-b0d0-21c68cc50cc6_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c11c4658-cadf-43bb-b560-a18c7440f0d0_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\c11c4658-cadf-43bb-b560-a18c7440f0d0_dsmh0500xam_0e0e69f2744d4d7783247ce9fa3d1c8c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c15cfe40-4e5d-4535-85ef-393935fdb415_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\c15cfe40-4e5d-4535-85ef-393935fdb415_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c2568cff-bf02-493a-86fe-a05500736010_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\c2568cff-bf02-493a-86fe-a05500736010_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c43ab354-572c-4e15-b483-141c3f652edd_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\c43ab354-572c-4e15-b483-141c3f652edd_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c4927581-7e64-4281-b83e-45a47a843b77_dsmh05000xam__7__1eef9705616447ed9de490c30692d10a.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\c4927581-7e64-4281-b83e-45a47a843b77_dsmh05000xam__7__1eef9705616447ed9de490c30692d10a.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c543f8af-86c0-4efa-bfcc-4be6febc8cc3_air-jordan-1-mid-shoes-BpARGV (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\c543f8af-86c0-4efa-bfcc-4be6febc8cc3_air-jordan-1-mid-shoes-BpARGV (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c5ad892e-e561-4b80-af24-96dbfff9031f_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\c5ad892e-e561-4b80-af24-96dbfff9031f_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\c5bf7df5-ad1d-446f-8700-0982a0e0885e_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\c5bf7df5-ad1d-446f-8700-0982a0e0885e_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cc88b21f-2ae2-4eee-952c-03de7806f207_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\cc88b21f-2ae2-4eee-952c-03de7806f207_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cc9ef600-e811-45f2-ae0c-b2e2a1b7df7f_air-jordan-1-low-shoes-6Q1tFM (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\cc9ef600-e811-45f2-ae0c-b2e2a1b7df7f_air-jordan-1-low-shoes-6Q1tFM (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cd202575-f64d-4a60-9329-3c533d088294_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\cd202575-f64d-4a60-9329-3c533d088294_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cd8608eb-1191-495f-a0a3-18cc825ae047_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\cd8608eb-1191-495f-a0a3-18cc825ae047_hsm006000trg__2__46c2b704e519449483ea717a327c568c_1024x1024.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\cfb52ee2-58ca-45fb-abb6-9316410331b5_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\cfb52ee2-58ca-45fb-abb6-9316410331b5_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d06a3b74-8623-4dfe-889d-7da1a499d3ae_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\d06a3b74-8623-4dfe-889d-7da1a499d3ae_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d09b0a47-196d-4f2c-8b79-24b5aa7cf7dc_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\d09b0a47-196d-4f2c-8b79-24b5aa7cf7dc_giay-the-thao-nam-hunter-core-dsmh09400den-den-0y3ev-color-den_7075a6b14e2f455b880172331ca80b9c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d1268879-794c-4a1d-b8d9-92e7e4e9ea46_vans-authentic-classic-black-vn000ee3blk-2.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\d1268879-794c-4a1d-b8d9-92e7e4e9ea46_vans-authentic-classic-black-vn000ee3blk-2.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d67d8dab-b8d1-47c3-8acb-5510bb93bced_air-jordan-1-low-shoes-6Q1tFM.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\d67d8dab-b8d1-47c3-8acb-5510bb93bced_air-jordan-1-low-shoes-6Q1tFM.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d73c4fa0-0743-43ba-a0d6-0e2436664899_air-jordan-1-mid-shoes-BpARGV.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\d73c4fa0-0743-43ba-a0d6-0e2436664899_air-jordan-1-mid-shoes-BpARGV.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d797e674-0dc9-43e4-9d5f-3e93ec6113aa_air-jordan-1-low-shoes-6Q1tFM (1).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\d797e674-0dc9-43e4-9d5f-3e93ec6113aa_air-jordan-1-low-shoes-6Q1tFM (1).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\d873cf05-28f0-494a-947c-c378c276de23_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\d873cf05-28f0-494a-947c-c378c276de23_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\da3eda0a-8742-440f-9c6c-e2d1ccff3ceb_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\da3eda0a-8742-440f-9c6c-e2d1ccff3ceb_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\da4aa98b-f250-4000-9128-042d5c7cda2e_adidas-forum-84-hi-blue-white-release-date-FY7793-2.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\da4aa98b-f250-4000-9128-042d5c7cda2e_adidas-forum-84-hi-blue-white-release-date-FY7793-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\db94dc88-43b8-4127-bfe3-109864fc7249_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\db94dc88-43b8-4127-bfe3-109864fc7249_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\dcf27f67-4a62-4f53-8844-bb49b0d0a217_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\dcf27f67-4a62-4f53-8844-bb49b0d0a217_vans-old-skool-classic-true-white-vn000d3hw00-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ddf0323c-046f-45a8-90fe-152c8653c475_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\ddf0323c-046f-45a8-90fe-152c8653c475_giay-the-thao-nam-hunter-core-dsmh09400den-den-cu55j-color-den_6280fb06e3e14f86b1a7c644cc73114b_1024x1024 (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\de08cba5-8cf4-4a3d-a348-1dc163222a3d_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\de08cba5-8cf4-4a3d-a348-1dc163222a3d_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\de527358-33ac-40de-b179-f28d31b10d97_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\de527358-33ac-40de-b179-f28d31b10d97_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\deal.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\deal.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\df99bec8-c992-4d91-8848-a6aca5bf28c3_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\df99bec8-c992-4d91-8848-a6aca5bf28c3_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\dfecfc32-3426-4fd5-b476-9e567c1a273d_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\dfecfc32-3426-4fd5-b476-9e567c1a273d_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e0d6b884-af42-4d22-907d-b541f782f0cd_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\e0d6b884-af42-4d22-907d-b541f782f0cd_air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e26ebbcf-f51c-43bd-bb66-3202d9e1a0ee_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\e26ebbcf-f51c-43bd-bb66-3202d9e1a0ee_SUPERNOVA_SOLUTION_M_DJen_IF3005_HM1.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e34a0e61-f017-4998-9b41-e00d79cae786_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\e34a0e61-f017-4998-9b41-e00d79cae786_Giay_Hiking_Terrex_AX4_GORE-TEX_Xam_HP7396_01_standard (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e3b32e8e-080f-488f-aa8a-fe6e01d90090_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\e3b32e8e-080f-488f-aa8a-fe6e01d90090_vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e7cd1da5-2664-460e-8f64-6537e0ebca2d_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\e7cd1da5-2664-460e-8f64-6537e0ebca2d_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e7f7c2d3-e741-4abe-aa52-1657096518e3_vans-slip-on-classic-black-vn000eyeblk-1.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\e7f7c2d3-e741-4abe-aa52-1657096518e3_vans-slip-on-classic-black-vn000eyeblk-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\e984ba33-83d1-464e-a416-f3f8e5c969b5_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\e984ba33-83d1-464e-a416-f3f8e5c969b5_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ea3f7d53-2522-4c8d-86e1-27baf11f702e_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\ea3f7d53-2522-4c8d-86e1-27baf11f702e_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover (1).png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\eb23bfa1-358c-48dd-99f5-c437a23ef4cc_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\eb23bfa1-358c-48dd-99f5-c437a23ef4cc_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ee8d5918-a3ad-4070-b7fb-339cd0c1812e_vans-authentic-classic-black-vn000ee3blk-4.png.webp",
-      "PackagePath": "staticwebassets\\Contents\\img\\ee8d5918-a3ad-4070-b7fb-339cd0c1812e_vans-authentic-classic-black-vn000ee3blk-4.png.webp"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\eebfcc60-f640-465b-a1a9-830a84112437_ao-thun-soc-xanh-at718-9143.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\eebfcc60-f640-465b-a1a9-830a84112437_ao-thun-soc-xanh-at718-9143.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ef159198-e86c-47fd-b425-34933ca2acf1_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\ef159198-e86c-47fd-b425-34933ca2acf1_Giay_Supernova_Rise_Mau_xanh_da_troi_IG7512_HM3_hover.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ef3c9181-7668-406f-a947-2c9bf9f76211_air-jordan-1-low-shoes-6Q1tFM (2).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\ef3c9181-7668-406f-a947-2c9bf9f76211_air-jordan-1-low-shoes-6Q1tFM (2).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f04216af-1093-4945-9b87-f7f604e0fdfc_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\f04216af-1093-4945-9b87-f7f604e0fdfc_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f100c5ed-6de1-4738-b7bd-da4309c6ad13_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\f100c5ed-6de1-4738-b7bd-da4309c6ad13_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f1acf751-eb7e-44c1-a43d-978f43f27f60_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\f1acf751-eb7e-44c1-a43d-978f43f27f60_giay-the-thao-nam-hunter-core-dsmh09400den-den-j5lw5-color-den_f845960bac3d48a489dbeb5bfd39259c_large.jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f2d5be11-3896-4765-b54b-bab293b609a9_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\f2d5be11-3896-4765-b54b-bab293b609a9_giay-the-thao-nam-hunter-core-dsmh09400den-den-0vh3m-color-den_a01d54901b2d47e0a26723c1b8bbb431.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f5e06b64-ea73-4eb7-b403-2f96be155d67_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif",
-      "PackagePath": "staticwebassets\\Contents\\img\\f5e06b64-ea73-4eb7-b403-2f96be155d67_Giay_Hiking_TERREX_Free_Hiker_2.0_Low_GORE-TEX_mau_xanh_la_IE5104_01_standard.avif"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f922f6b7-8f76-4a74-b1ea-209bee435f93_air-force-1-07-shoes-NMmm1B.png",
-      "PackagePath": "staticwebassets\\Contents\\img\\f922f6b7-8f76-4a74-b1ea-209bee435f93_air-force-1-07-shoes-NMmm1B.png"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f9ecf636-ccd6-48ed-ae45-61aa8a24a23c_OIP (4).jpg",
-      "PackagePath": "staticwebassets\\Contents\\img\\f9ecf636-ccd6-48ed-ae45-61aa8a24a23c_OIP (4).jpg"
-    },
-    {
-      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\ff95ee87-6756-408c-8326-5f5adfe1b65f_air-jordan-1-mid-shoes-BpARGV (2).png",
-      "PackagePath": "staticwebassets\\Contents\\img\\ff95ee87-6756-408c-8326-5f5adfe1b65f_air-jordan-1-mid-shoes-BpARGV (2).png"
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Contents\\img\\f92301fc-312a-4570-b468-81999e5061e1_133542532848704352.jpg",
+      "PackagePath": "staticwebassets\\Contents\\img\\f92301fc-312a-4570-b468-81999e5061e1_133542532848704352.jpg"
     },
     {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\Product\\css\\bootstrap.min.css",
@@ -2371,6 +1623,10 @@
     {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\esm\\popper.min.js.map",
       "PackagePath": "staticwebassets\\wwwroot\\Contents\\Scripts\\esm\\popper.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\index.d.ts",
+      "PackagePath": "staticwebassets\\wwwroot\\Contents\\Scripts\\index.d.ts"
     },
     {
       "Id": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\wwwroot\\wwwroot\\Contents\\Scripts\\index.js.flow",

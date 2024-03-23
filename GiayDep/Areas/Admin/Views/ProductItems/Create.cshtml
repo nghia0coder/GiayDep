@@ -1,0 +1,72 @@
+﻿@using GiayDep.ViewModels
+@model ProductItemViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    IEnumerable<Size> listSize = ViewBag.Size as IEnumerable<Size>;
+}
+
+<h2>Create</h2>
+
+<h4>ProductItem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="ProductItems" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductId" class="control-label"></label>
+                <input type="hidden" asp-for="ProductId" class="form-control" value="@ViewBag.ProductId" />
+                <input readonly class="form-control" value="@ViewBag.ProductName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ColorId" class="control-label"></label>
+                <select asp-for="ColorId" class ="form-control" asp-items="ViewBag.ColorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductCode" class="control-label"></label>
+                <input asp-for="ProductCode" class="form-control" />
+                <span asp-validation-for="ProductCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Size</label><br />
+                @foreach (var size in listSize)
+                {
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="SelectedSizes" value="@size.SizeId" /> @size.Size1
+                        </label>
+                    </div>
+                }
+            </div>
+      
+            <div class="form-group">
+                <label asp-for="Img1" class="control-label"></label>
+                <input asp-for="Img1" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Img2" class="control-label"></label>
+                <input asp-for="Img2" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Img3" class="control-label"></label>
+                <input asp-for="Img3" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Img4" class="control-label"></label>
+                <input asp-for="Img4" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

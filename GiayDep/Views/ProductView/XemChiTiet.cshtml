@@ -1,9 +1,9 @@
-﻿@model SanPham
+﻿@model ProductVariation
 @using Microsoft.AspNetCore.Http.Extensions
 @{
 	string currentUrl = Context.Request.GetDisplayUrl();
-	IEnumerable<SanPham> ListSP = ViewBag.ListSP;
-	IEnumerable<SanPham> ListSize = ViewBag.ListSizes;
+	IEnumerable<ProductItem> ListSP = ViewBag.ListSP ;
+	IEnumerable<Product> ListSize = ViewBag.ListSizes;
 }
 
 @{
@@ -20,19 +20,19 @@
 			<div class="col-md-5 col-md-push-2">
 				<div id="product-main-img">
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh1" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image1" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh2" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image2" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh3" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image3" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh4" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image4" alt="">
 					</div>
 				</div>
 			</div>
@@ -41,19 +41,19 @@
 			<div class="col-md-2  col-md-pull-5">
 				<div id="product-imgs">
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh1" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image1" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh2" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image2" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh3" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image3" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.Hinhanh4" alt="">
+						<img src="~/Contents/img/@Model.ProductItems.Image4" alt="">
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 			<!-- Product details -->
 			<div class="col-md-5">
 				<div class="product-details">
-					<h2 class="product-name">@Model.Tensp.ToUpper()</h2>
+					<h2 class="product-name">@Model.ProductItems.Product.ProductName.ToUpper()</h2>
 					<div>
 						<div class="product-rating">
 							<i class="fa fa-star"></i>
@@ -73,29 +73,28 @@
 						<a class="review-link" href="#">10 Review(s) | Add your review</a>
 					</div>
 					<div>
-						<h3 class="product-price">$@Model.Dongia <del class="product-old-price">$@(Model.Dongia + 200)</del></h3>
+						<h3 class="product-price">$@Model.ProductItems.Product.Price <del class="product-old-price">$@(Model.ProductItems.Product.Price + 200)</del></h3>
 						<span class="product-available">In Stock</span>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 					<div class="product-options">
 						<label>
+							Color
+							<select class="input-select" onchange="redirectToSelectedOption(this)">
+						
+						
+							</select>
+						</label>
+
+						<label>
 							Size
 							<select class="input-select" onchange="redirectToSelectedOption(this)">
-								<option >@Model.SizeNavigation.Size1</option>
-								@foreach (var item in ViewBag.ListSizes)
-								{
-									<option value="@item.SizeNavigation.Size1" data-url="/post/@(SlugGenerator.SlugGenerator.GenerateSlug(item.Hinhanh1)) - @(item.Idsp)">@item.SizeNavigation.Size1</option>
-								}
+							
 							</select>
 
 						</label>
-						<label>
-							Color
-							<select class="input-select">
-								<option value="0">Red</option>
-							</select>
-						</label>
+					
 					</div>
 
 					<div class="add-to-cart">
@@ -108,7 +107,7 @@
 							</div>
 						</div>
 						<div class="add-to-cart">
-							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.Idsp" asp-route-strURL="@currentUrl">
+							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.ProductItemsId" asp-route-size="@Model.SizeId" asp-route-strURL="@currentUrl">
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</a>
 						</div>
@@ -152,7 +151,7 @@
 						<div id="tab1" class="tab-pane fade in active">
 							<div class="row">
 								<div class="col-md-12">
-									<p>@Model.Description</p>
+									<p>@Model.ProductItems.Product.Description</p>
 								</div>
 							</div>
 						</div>
@@ -161,7 +160,7 @@
 						<div id="tab2" class="tab-pane fade in">
 							<div class="row">
 								<div class="col-md-12">
-									<p>@Model.Description</p>
+									<p>@Model.ProductItems.Product.Description</p>
 								</div>
 							</div>
 						</div>
@@ -367,18 +366,18 @@
 			@foreach (var item in ListSP.Take(4))
 			{
 				<div class="col-md-3 col-xs-6">
-					<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.Idsp })">
+					<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductItemsId} )">
 						<div class="product">
 							<div class="product-img">
-								<img src="~/Contents/img/@item.Hinhanh1" alt="">
+@* 								<img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
 								<div class="product-label">
 									<span class="sale">-30%</span>
 								</div>
 							</div>
 							<div class="product-body">
-								<p class="product-category">@item.MaloaispNavigation.Tenloai.ToUpper()</p>
-								<h3 class="product-name"><a href="#">@item.Tensp.ToUpper()</a></h3>
-								<h4 class="product-price">$@item.Dongia <del class="product-old-price">$@(item.Dongia + 200)</del></h4>
+								<p class="product-category">@item.Product.Category.CategoryName.ToUpper()</p>
+								<h3 class="product-name"><a href="#">@item.Product.ProductName.ToUpper()</a></h3>
+								<h4 class="product-price">$@item.Product.Price <del class="product-old-price">$@(item.Product.Price + 200)</del></h4>
 								<div class="product-rating">
 								</div>
 								<div class="product-btns">

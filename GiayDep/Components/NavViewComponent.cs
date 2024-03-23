@@ -13,7 +13,7 @@ namespace GiayDep.Components
         }
 		public IViewComponentResult Invoke()
 		{
-			var listCategory = _context.NhaSanXuats
+			var listCategory = _context.Brands
 				.ToList();
 			return View(listCategory);
 		}
