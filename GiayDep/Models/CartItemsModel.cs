@@ -20,9 +20,10 @@
         // Constructor theo id (dùng cho trường hợp chỉ có sl=1)
         public CartItemsModel(ProductVariation Product)
         {
-            ProductID = Product.ProductItemsId;
+            ProductID = Product.ProductVarId;
             ProductName = Product.ProductItems.Product.ProductName;
             Quanity = Product.QtyinStock;
+            HinhAnh = Product.ProductItems.Image1;
             Size = Product.SizeId;
             Price = Product.ProductItems.Product.Price;
             Quanity = 1;

@@ -36,10 +36,16 @@ namespace GiayDep.Controllers
         }
         public async Task<IActionResult> ThemGioHang(int MaSP,int? size, string strURL)
         {
-            ProductVariation Product =  await _context.ProductVariations
-                .Include(n => n.ProductItems.Product)
-                .FirstOrDefaultAsync(s => s.ProductItemsId == MaSP &&  s.SizeId == size);
-            List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
+			 IQueryable<ProductVariation> query = _context.ProductVariations
+	           .Include(n => n.ProductItems.Product)
+	           .Where(s => s.ProductItemsId == MaSP);
+			        if (size.HasValue)
+			        {
+				        query = query.Where(s => s.SizeId == size);
+			        }
+
+			ProductVariation Product = await query.FirstOrDefaultAsync();
+			List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
             CartItemsModel cartItems = cart.Where(c => c.ProductID == MaSP).FirstOrDefault();
             if (cartItems == null)
             {
@@ -117,6 +123,7 @@ namespace GiayDep.Controllers
 
             // Add a new order
             Order ddh = new Order();
+         
             ddh.OrderDate = DateTime.Now;
             ddh.Delivered = false;
             ddh.Status = false;
@@ -130,7 +137,7 @@ namespace GiayDep.Controllers
             {
                 OrdersDetail ctdh = new OrdersDetail();
                 ctdh.OrderId = ddh.OrderId;
-                ctdh.ProductVar.ProductItems.Product.ProductId = item.ProductID;
+                ctdh.ProductVarId = item.ProductID;
                 ctdh.Quanity = item.Quanity;
                 ctdh.Price = item.Price;
                 _context.OrdersDetails.Add(ctdh);

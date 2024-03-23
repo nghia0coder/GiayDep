@@ -3,7 +3,7 @@
     ViewData["Title"] = "Quản lý phiếu nhập";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 
-    IEnumerable<ProductVariation> lstProduct = ViewBag.ListProduct as IEnumerable<ProductVariation>;
+    IEnumerable<ProductItem> lstProduct = ViewBag.ListProduct as IEnumerable<ProductItem>;
 }
 
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -43,21 +43,15 @@
                 @* tạo 1 tr với nd nhập hàng của 1 sp *@
                 <tr class="trAppend table-borderless">
                     <td>
-                        <select name="" id="productList" class="ddlProductItemsId">
-                            @foreach (var item in lstProduct)
-                            {
-                                <option value="@item.ProductVarId">@item.ProductItems.Product.ProductName</option>
-                            }
+                        <select class="ddlProductItemsId productList" id="productList" asp-items="ViewBag.Product">
                         </select>
-                      @*   <select class="ddlProductItemsId" id="CategoryTypeId" asp-items="ViewBag.Product" class="form-control">
-                            <option value="">Select Category</option>
-                        </select> *@
+                        
                     </td>
                     <td>
-                        <select id="colorId"></select>
+                        <select name="" class="ddlColors colorId" id="colorId"></select>
                     </td>
                     <td>
-                        <select name="" class="ddlSize" id="sizeId">
+                        <select name="" class="ddlSize sizeId" id="sizeId">
                         </select>
                     </td>
 
@@ -70,7 +64,9 @@
                     <td>
                         <input type="button" class="btnDelete btn btn-danger" style="width: 2em; height:2em;" value="-" />
                     </td>
+                   
                 </tr>
+        
                 <tr class="trFirstChild" data-id="-1">
                     <td class="col-form-label font-weight-bold">Product</td>
                     <td class="col-form-label font-weight-bold">Color</td>
@@ -79,17 +75,20 @@
                     <td class="col-form-label font-weight-bold">Quantity</td>
                     <td></td>
                 </tr>
+               
             </table>
+   
+           
             <div class="form-group row">
                 <div class="col-md-offset-2 col-sm-6">
                     <input type="button" value="+" class="btn btn-sm btn-success font-weight-bold mr-2" style="width: 3em; height:2em;" id="btnAdd" />
-                    <input type="submit" value="Nhập Hàng" class="btn btn-sm btn-primary font-weight-bold " id="btnNhapHang" />
+                    <input type="submit" value="Submit" class="btn btn-sm btn-primary font-weight-bold " id="btnNhapHang" />
                 </div>
             </div>
         }
+      
     </div>
 </div>
-
 <style>
     .trAppend {
         display: none;
@@ -99,95 +98,79 @@
 @section Scripts
 {
     <script>
-        // $(function () {
-        //     $("select#CategoryTypeId").change(function () {
-        //         var cid = $(this).val();
 
-        //         $("select#SubCategoryTypeId").empty();
-
-        //         $.getJSON(`/Admin/Invoice/GetProductByColor?id=${cid}`, function (data) {
-        //             //console.log(data);
-        //             $.each(data, function (i, item) {
-        //                 $("select#SubCategoryTypeId").append(`<option value="${item.colorId}">${item.colorId}</option>`);
-        //             });
-        //         });
-        //     })
-        // });
-
-
-        $(document).ready(function () {
-            GetProductByColor();
+        $(document).on('change', '.ddlProductItemsId', function () {
+            GetProductByColor($(this));
+          
         });
+       
 
-        $("#productList").change(function () {
-            GetProductByColor();
-        });
+        function GetProductByColor(selectedProductDropdown) {
+            var productId = $(selectedProductDropdown).val(); 
+            var colorDropdown = $(selectedProductDropdown).closest('tr').find('select[id="colorId"]'); 
 
-        function GetProductByColor() {
             $.ajax({
                 url: '@Url.Action("GetProductByColor", "Invoice")',
                 type: 'GET',
-                data: {
-                    id: $("#productList").val()
-                },
+                data: { id: productId },
                 success: function (data) {
-                    $('#colorId').empty();
-                    $(data).each(function (index, item) {
-                        $('#colorId').append('<option value="' + item.productId + '">' + item.colorId + '</option>');
+                    $(colorDropdown).empty(); // Xóa các lựa chọn hiện tại
+                    $.each(data["$values"], function (index, item) {
+                        // Thêm các lựa chọn mới dựa trên dữ liệu trả về
+                        
+                        $(colorDropdown).append('<option value="' + item.productItemsId + '">' + item.color.colorName + '</option>');
                     });
                 }
             });
         }
 
-        // $(document).ready(function () {
-        //     getProductBySize();
-        // });
+        $(document).on('change', '.ddlColors', function () {
+            GetProductBySize($(this));
+        });
+        function GetProductBySize(selectedColorDropdown) {
+            var productItemsId = $(selectedColorDropdown).val();
+            var sizeDropdown = $(selectedColorDropdown).closest('tr').find('select[id="sizeId"]');
 
-        // $("#colorId").change(function () {
-        //     getProductBySize();
-        // });
-        // function getProductBySize() {
-        //     $.ajax({
-        //         url: '@Url.Action("GetProductBySize", "Invoice")',
-        //         type: 'GET',
-        //         data: {
-        //             id: $('#productList').val()
-        //         },
-        //         success: function (data) {
-        //             $('#sizeId').empty();
-        //             $(data).each(function (index, item) {
-        //                 $('#sizeId').append('<option value="' + item.sizeId + '">' + item.sizeId + '</option>');
-        //             });
-        //         }
-        //     });
-        // }
+            $.ajax({
+                url: '@Url.Action("GetProductBySize", "Invoice")',
+                type: 'GET',
+                data: { id: productItemsId },
+                success: function (data) {
+                    $(sizeDropdown).empty(); // Xóa các lựa chọn hiện tại
+                    $.each(data["$values"], function (index, item) {
+                        // Thêm các lựa chọn mới dựa trên dữ liệu trả về
+                        $(sizeDropdown).append('<option value="' + item.productVarId + '">' + item.sizeId + '</option>');
+                    });
+                }
+            });
+        }
     </script>
-
-    
-
-
 <script>
         $('#btnAdd').click(function () {
-            var id_cuoi = $(".tblInvoiceDetail").find("tr:last-child").attr("data-id");
-            i = parseInt(id_cuoi) + 1;
+            var id_last = $(".tblInvoiceDetail").find("tr:last-child").attr("data-id");
+            i = parseInt(id_last) + 1;
 
-            var tdnoidung = $(".trAppend").html();
-            var trnoidung = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdnoidung + "<\tr>";
-            $(".tblInvoiceDetail").append(trnoidung);
-            loadIDLenThe();
+            var tdcontent = $(".trAppend").html();
+            var trcontent = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdcontent + "<\tr>";
+            $(".tblInvoiceDetail").append(trcontent);
+            loadIDCard();
+            var newProductDropdown = $(".tblInvoiceDetail").find("tr:last-child").find(".ddlProductItemsId");
+            var newProductDropdown1 = $(".tblInvoiceDetail").find("tr:last-child").find(".ddlColors");
+            GetProductByColor(newProductDropdown);
+            GetProductBySize(newProductDropdown1);
         });
 
         $("body").delegate(".btnDelete", "click", function () {
             $(this).closest(".trAppended").remove();
-            CapNhapID();
+            UpdateID();
         });
 
-        $("#btnNhapHang").click(function () {
-            if (kiemTraPrice() == false) {
+        $("#btnConfirm").click(function () {
+            if (reviewPrice() == false) {
                 return false;
             }
 
-            if (kiemTraQuanity() == false) {
+            if (reviewQuanity() == false) {
                 return false;
             }
 
@@ -206,53 +189,53 @@
             });
 
             if (totalPrice <= 0 && totalQuanity <= 0) {
-                alert("Đơn giá nhập và số lượng nhập không hợp lệ. Vui lòng nhập lại ");
+                alert("Error input !");
                 return false;
             }
         });
 
-        function loadIDLenThe() {
+        function loadIDCard() {
             $(".trAppended").each(function () {
                 var id = $(this).attr("data-id");
 
-                var nameSize = "[" + id + "].SizeId";
-                var nameMaProduct = "[" + id + "].ProductVarId";
-                var namePriceNhap = "[" + id + "].Price";
-                var nameQuanityNhap = "[" + id + "].Quanity";
+               
+                var nameIdProduct = "[" + id + "].ProductItemsId";
+                var namePriceImport = "[" + id + "].Price";
+                var nameQuanityImport = "[" + id + "].Quanity";
 
-                $(this).find(".ddlSize").attr("name", nameSize);
-                $(this).find(".ddlProductItemsId").attr("name", nameMaProduct);
-                $(this).find(".txtPrice").attr("name", namePriceNhap);
-                $(this).find(".txtQuanity").attr("name", nameQuanityNhap);
+              
+                $(this).find(".ddlProductItemsId").attr("name", nameIdProduct);
+                $(this).find(".txtPrice").attr("name", namePriceImport);
+                $(this).find(".txtQuanity").attr("name", nameQuanityImport);
             })
         };
 
-        function CapNhapID() {
-            var id_cuoi = $(".tblInvoiceDetail").find("trFirstChild").attr("data-id");
-            i = parseInt(id_cuoi) + 1;
+        function UpdateID() {
+            var id_last = $(".tblInvoiceDetail").find("trFirstChild").attr("data-id");
+            i = parseInt(id_last) + 1;
 
             $(".trAppended").each(function () {
                 var id = i = $(this).attr("data-id");
 
                 var nameSize = "[" + id + "].SizeId";
-                var nameMaProduct = "[" + id + "].ProductVarId";
-                var namePriceNhap = "[" + id + "].Gia";
-                var nameQuanityNhap = "[" + id + "].Quanity";
+                var nameIdProduct = "[" + id + "].ProductItemsId";
+                var namePriceImport = "[" + id + "].Price";
+                var nameQuanityImport = "[" + id + "].Quanity";
 
                 $(this).find(".ddlSize").attr("name", nameSize);
-                $(this).find(".ddlProductItemsId").attr("name", nameMaProduct);
-                $(this).find(".txtPrice").attr("name", namePriceNhap);
-                $(this).find(".txtQuanity").attr("name", nameQuanityNhap);
+                $(this).find(".ddlProductItemsId").attr("name", nameIdProduct);
+                $(this).find(".txtPrice").attr("name", namePriceImport);
+                $(this).find(".txtQuanity").attr("name", nameQuanityImport);
             });
         }
 
-        function kiemTraPrice() {
+        function reviewPrice() {
             var bl = true;
 
             $(".txtPrice").each(function () {
-                var giatri = $(this).val();
-                if (isNaN(giatri) == true) {
-                    alert("Đơn giá ko hợp lệ!");
+                var value = $(this).val();
+                if (isNaN(value) == true) {
+                    alert("Invalid Price!");
                     bl = false;
                     return bl;
                 }
@@ -261,21 +244,6 @@
             return bl;
         }
 
-
-        function kiemTraQuanity() {
-            var bl = true;
-
-            $(".txtQuanity").each(function () {
-                var giatri = $(this).val();
-                if (isNaN(giatri) == true) {
-                    alert("Số lượng ko hợp lệ!");
-                    bl = false;
-                    return bl;
-                }
-            });
-
-            return bl;
-        }
   
 </script>
 }

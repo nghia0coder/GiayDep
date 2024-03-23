@@ -59,9 +59,8 @@ namespace GiayDep.Areas.Admin.Controllers
         {
             ViewBag.Supplier = new SelectList(_context.Suppliers, "SupplierId", "SupplierName");
             ViewBag.Product = new SelectList(_context.Products, "ProductId", "ProductName");
-            ViewBag.ListProduct = _context.ProductVariations
-                .Include(n =>n.ProductItems.Product)
-                .ToList();
+            ViewBag.ListProduct = _context.ProductItems.Include(n => n.Product).ToList();
+            ViewBag.Color = new SelectList(_context.Colors, "ColorId", "ColorName");
             ViewBag.ListSize = _context.ProductVariations.ToList();
             ViewBag.productItem = new SelectList(_context.ProductVariations, "ProductVarID", "ProductVarID");
             ViewBag.CreateDate = DateTime.Today;
@@ -231,15 +230,23 @@ namespace GiayDep.Areas.Admin.Controllers
         }
 
      
-        public JsonResult GetProductByColor (int id)
+        public async Task<JsonResult> GetProductByColorAsync (int id)
         {   
-               
-            return Json(_context.ProductItems.Where(n=>n.ProductId == id)
-                .ToList());    
+            var list = _context.ProductItems.Where(n => n.ProductId == id)
+                .Include(n => n.Color)
+                .ToList();
+            return Json(list);    
         }
-        public JsonResult GetProductBySize(int id)
-        {
-            return Json(_context.ProductVariations.Where(n => n.ProductItemsId == id).ToList());
+        public async Task<JsonResult> GetProductBySizeAsync(int id)
+        {   
+            if (id == null)
+            {
+                return Json("Error");
+            }    
+            var list = _context.ProductVariations.Where(n => n.ProductItemsId == id)
+                .Include(n => n.Size)
+                .ToList();
+            return Json(list);
         }
         private bool InvoiceExists(int id)
         {
