@@ -14,13 +14,13 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>Họ tên KH</th>
+                            <th>Email Khách Hàng</th>
                             <th>Ngày đặt</th>
                             <th>Tình trạng giao hàng</th>
-                            <th>Ngày giao</th>
                             <th>Đã thanh toán</th>
-                            <th>Ưu đãi</th>
-                            <th>Đã hủy</th>
+                            <th>Ngày giao</th>
+                            <th>Xác Nhận</th>
+                       
                             <th></th>
                         </tr>
                     </thead>
@@ -31,13 +31,14 @@
                                 <td>@item.Customer?.UserName</td>
                                 <td>@item.OrderDate</td>
                                 <td>@item.Delivered</td>
-                                <td>@item.DeliveryDate</td>
                                 <td>@item.Status</td>
+                                <td>@item.DeliveryDate</td>
+                                
                            
                                 <td>
                                     @if (item.OrderId != null)
                                     {
-                                        <a href="@Url.Action("DuyetDonHang", "Invoice", new { id = item.OrderId })" target="_blank">Duyệt đơn</a>
+                                        <a href="@Url.Action("ApproveOrders", "Order", new { id = item.OrderId })" target="_blank">Duyệt đơn</a>
                                     }
                                 </td>
                             </tr>

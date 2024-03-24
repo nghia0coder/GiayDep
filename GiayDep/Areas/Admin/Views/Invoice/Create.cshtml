@@ -51,7 +51,7 @@
                         <select name="" class="ddlColors colorId" id="colorId"></select>
                     </td>
                     <td>
-                        <select name="" class="ddlSize sizeId" id="sizeId">
+                        <select name="" class="ddlSizes sizeId" id="sizeId">
                         </select>
                     </td>
 
@@ -59,7 +59,7 @@
                         <input name="" class="txtPrice" value="0" />
                     </td>
                     <td>
-                        <input name="" class="txtQuanity" value="0"/>
+                        <input name="" class="txtQuantity" value="0"/>
                     </td>
                     <td>
                         <input type="button" class="btnDelete btn btn-danger" style="width: 2em; height:2em;" value="-" />
@@ -82,7 +82,7 @@
             <div class="form-group row">
                 <div class="col-md-offset-2 col-sm-6">
                     <input type="button" value="+" class="btn btn-sm btn-success font-weight-bold mr-2" style="width: 3em; height:2em;" id="btnAdd" />
-                    <input type="submit" value="Submit" class="btn btn-sm btn-primary font-weight-bold " id="btnNhapHang" />
+                    <input type="submit" value="Submit" class="btn btn-sm btn-primary font-weight-bold " id="btnConfirm" />
                 </div>
             </div>
         }
@@ -101,11 +101,11 @@
 
         $(document).on('change', '.ddlProductItemsId', function () {
             GetProductByColor($(this));
-          
+            GetProduct($(this));
         });
-       
 
-        function GetProductByColor(selectedProductDropdown) {
+
+        function GetProductByColor(selectedProductDropdown, callback) {
             var productId = $(selectedProductDropdown).val(); 
             var colorDropdown = $(selectedProductDropdown).closest('tr').find('select[id="colorId"]'); 
 
@@ -114,11 +114,30 @@
                 type: 'GET',
                 data: { id: productId },
                 success: function (data) {
-                    $(colorDropdown).empty(); // Xóa các lựa chọn hiện tại
+                    $(colorDropdown).empty(); 
                     $.each(data["$values"], function (index, item) {
-                        // Thêm các lựa chọn mới dựa trên dữ liệu trả về
                         
                         $(colorDropdown).append('<option value="' + item.productItemsId + '">' + item.color.colorName + '</option>');
+                    });
+                    if (callback && typeof (callback) === "function") {
+                        callback();
+                    }
+                }
+            });
+        }
+        function GetProduct(selectedProductDropdown) {
+            var productId = $(selectedProductDropdown).val();
+            var colorDropdown = $(selectedProductDropdown).closest('tr').find('select[id="sizeId"]');
+
+            $.ajax({
+                url: '@Url.Action("GetProduct", "Invoice")',
+                type: 'GET',
+                data: { id: productId },
+                success: function (data) {
+                    $(colorDropdown).empty();
+                    $.each(data["$values"], function (index, item) {
+
+                        $(colorDropdown).append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
                     });
                 }
             });
@@ -127,19 +146,19 @@
         $(document).on('change', '.ddlColors', function () {
             GetProductBySize($(this));
         });
-        function GetProductBySize(selectedColorDropdown) {
-            var productItemsId = $(selectedColorDropdown).val();
-            var sizeDropdown = $(selectedColorDropdown).closest('tr').find('select[id="sizeId"]');
+        function GetProductBySize(selectedSizeDropdown) {
+            var productItemsId = $(selectedSizeDropdown).val();
+            var sizeDropdown = $(selectedSizeDropdown).closest('tr').find('select[id="sizeId"]');
 
             $.ajax({
                 url: '@Url.Action("GetProductBySize", "Invoice")',
                 type: 'GET',
                 data: { id: productItemsId },
                 success: function (data) {
-                    $(sizeDropdown).empty(); // Xóa các lựa chọn hiện tại
+                    $(sizeDropdown).empty(); 
                     $.each(data["$values"], function (index, item) {
-                        // Thêm các lựa chọn mới dựa trên dữ liệu trả về
-                        $(sizeDropdown).append('<option value="' + item.productVarId + '">' + item.sizeId + '</option>');
+                       
+                        $(sizeDropdown).append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
                     });
                 }
             });
@@ -148,16 +167,19 @@
 <script>
         $('#btnAdd').click(function () {
             var id_last = $(".tblInvoiceDetail").find("tr:last-child").attr("data-id");
-            i = parseInt(id_last) + 1;
+            i = parseInt(id_last) + 1;     
 
             var tdcontent = $(".trAppend").html();
             var trcontent = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdcontent + "<\tr>";
             $(".tblInvoiceDetail").append(trcontent);
             loadIDCard();
+
             var newProductDropdown = $(".tblInvoiceDetail").find("tr:last-child").find(".ddlProductItemsId");
-            var newProductDropdown1 = $(".tblInvoiceDetail").find("tr:last-child").find(".ddlColors");
-            GetProductByColor(newProductDropdown);
-            GetProductBySize(newProductDropdown1);
+            GetProductByColor(newProductDropdown, function () {
+                var newProductDropdown1 = $(".tblInvoiceDetail").find("tr:last-child").find(".ddlColors");
+                GetProductBySize(newProductDropdown1);
+            });
+         
         });
 
         $("body").delegate(".btnDelete", "click", function () {
@@ -166,11 +188,11 @@
         });
 
         $("#btnConfirm").click(function () {
-            if (reviewPrice() == false) {
+            if (checkPrice() == false) {
                 return false;
             }
 
-            if (reviewQuanity() == false) {
+            if (checkQuantity() == false) {
                 return false;
             }
 
@@ -181,7 +203,7 @@
 
 
                 var Price = parseFloat($(this).find(".txtPrice").val()) || 0;
-                var Quanity = parseInt($(this).find(".txtQuanity").val()) || 0;
+                var Quanity = parseInt($(this).find(".txtQuantity").val()) || 0;
 
 
                 totalPrice += Price;
@@ -189,7 +211,7 @@
             });
 
             if (totalPrice <= 0 && totalQuanity <= 0) {
-                alert("Error input !");
+                alert("Vui lòng nhập số lượng và đơn giá !");
                 return false;
             }
         });
@@ -199,14 +221,14 @@
                 var id = $(this).attr("data-id");
 
                
-                var nameIdProduct = "[" + id + "].ProductItemsId";
+                var nameIdProduct = "[" + id + "].ProductVarId";
                 var namePriceImport = "[" + id + "].Price";
                 var nameQuanityImport = "[" + id + "].Quanity";
 
-              
-                $(this).find(".ddlProductItemsId").attr("name", nameIdProduct);
+
+                $(this).find(".ddlSizes").attr("name", nameIdProduct);
                 $(this).find(".txtPrice").attr("name", namePriceImport);
-                $(this).find(".txtQuanity").attr("name", nameQuanityImport);
+                $(this).find(".txtQuantity").attr("name", nameQuanityImport);
             })
         };
 
@@ -217,25 +239,40 @@
             $(".trAppended").each(function () {
                 var id = i = $(this).attr("data-id");
 
-                var nameSize = "[" + id + "].SizeId";
-                var nameIdProduct = "[" + id + "].ProductItemsId";
-                var namePriceImport = "[" + id + "].Price";
-                var nameQuanityImport = "[" + id + "].Quanity";
 
-                $(this).find(".ddlSize").attr("name", nameSize);
-                $(this).find(".ddlProductItemsId").attr("name", nameIdProduct);
+                var nameIdProduct = "[" + id + "].ProductVarId";
+                var namePriceImport = "[" + id + "].Price";
+                var nameQuanityImport = "[" + id + "].Quantity";
+
+
+                $(this).find(".ddlSizes").attr("name", nameIdProduct);
                 $(this).find(".txtPrice").attr("name", namePriceImport);
-                $(this).find(".txtQuanity").attr("name", nameQuanityImport);
+                $(this).find(".txtQuantity").attr("name", nameQuanityImport);
             });
         }
 
-        function reviewPrice() {
+        function checkPrice() {
             var bl = true;
 
             $(".txtPrice").each(function () {
-                var value = $(this).val();
-                if (isNaN(value) == true) {
-                    alert("Invalid Price!");
+                var giatri = $(this).val();
+                if (isNaN(giatri) == true) {
+                    alert("Đơn giá ko hợp lệ!");
+                    bl = false;
+                    return bl;
+                }
+            });
+
+            return bl;
+        }
+
+        function checkQuantity() {
+            var bl = true;
+
+            $(".txtQuantity").each(function () {
+                var giatri = $(this).val();
+                if (isNaN(giatri) == true) {
+                    alert("Số lượng ko hợp lệ!");
                     bl = false;
                     return bl;
                 }

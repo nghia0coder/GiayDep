@@ -78,7 +78,7 @@ namespace GiayDep.Models
 
                 entity.Property(e => e.InvoiceId).HasColumnName("InvoiceID");
 
-                entity.Property(e => e.CreateDate).HasColumnType("date");
+                entity.Property(e => e.CreateDate).HasColumnType("datetime2");
 
                 entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
 

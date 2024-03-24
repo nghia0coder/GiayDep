@@ -18,7 +18,7 @@ namespace GiayDep
             builder.Services.AddControllersWithViews().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-            }); ;
+            }); 
             builder.Services.AddDbContext<GiaydepContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Store"));

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Drawing;
 using System.Diagnostics;
 using System.Text;
+using GiayDep.ViewModels;
 
 namespace GiayDep.Areas.Admin.Controllers
 {   
@@ -30,6 +31,8 @@ namespace GiayDep.Areas.Admin.Controllers
             var details = _context.InvoiceDetails
                 .Include(n => n.ProductVar.ProductItems.Product)
                 .Include(n => n.Invoice)
+                .Include(n => n.ProductVar.ProductItems.Color)
+                .Include(n => n.ProductVar.Size)
                 .ToList();
             return View(details);
         }
@@ -81,10 +84,17 @@ namespace GiayDep.Areas.Admin.Controllers
             ProductVariation product;
             foreach (var item in lstModel)
             {
-                product = _context.ProductVariations.SingleOrDefault(n => n.ProductVarId == item.ProductVarId); 
-                product.QtyinStock += item.Quanity;
+                product = _context.ProductVariations.SingleOrDefault(n => n.ProductVarId == item.ProductVarId);
+                if (product.QtyinStock == 0 || product.QtyinStock == null)
+                {
+                    product.QtyinStock = item.Quanity;
+                }
+                else
+                {
+                    product.QtyinStock += item.Quanity;
+                }
                 item.InvoiceId = model.InvoiceId;
-            
+         
             }
             _context.InvoiceDetails.AddRange(lstModel);
             _context.SaveChanges();
@@ -186,47 +196,59 @@ namespace GiayDep.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult DSSPHetHang()
         {
-            //var lstSP = _context.Products.Where(n => n.Quanity <= 5).ToList();
-            return View();
+            var lstSP = _context.ProductVariations
+                .Where(n => n.QtyinStock <= 5)
+                .Include(n => n.ProductItems.Product)
+                .ToList();
+            return View(lstSP);
         }
 
         [HttpGet]
         public ActionResult NhapHangDon(int? id)
         {
-            ViewBag.Brand = new SelectList(_context.Suppliers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName");
+            ViewBag.Suppliers = new SelectList(_context.Suppliers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName");
 
             if (id == null)
             {
                 return NotFound();
             }
 
-            Product sp = _context.Products.SingleOrDefault(n => n.ProductId == id);
-            if (sp == null)
-            {
-                return NotFound();
-            }
+            ViewBag.Product = _context.ProductVariations
+                .Include(n => n.ProductItems.Product)
+                .Include (n => n.ProductItems.Color)
+                .Include(n => n.Size)
+                .SingleOrDefault(n => n.ProductVarId == id);
 
-            return View(sp);
+            return View();
         }
 
         [HttpPost]
-        public ActionResult NhapHangDon(Invoice model, InvoiceDetail ctpn)
+        public ActionResult NhapHangDon(InvoiceViewModel model)
         {
-            ViewBag.Brand = new SelectList(_context.Suppliers.OrderBy(n => n.SupplierName), "SupplierId", "SupplierName", model.SupplierId);
 
-            model.CreateDate = DateTime.Now;
 
-            _context.Invoices.Add(model);
+            Invoice invoice = new Invoice()
+            {
+                CreateDate = DateTime.Now,
+                SupplierId = model.SupplierId
+            };
+
+            _context.Invoices.Add(invoice);
             _context.SaveChanges();
 
-            ctpn.InvoiceId = model.InvoiceId;
-            Product sp = _context.Products.Single(n => n.ProductId == ctpn.ProductVarId);
-            //sp.Quanity += ctpn.Quanity;
 
-            _context.InvoiceDetails.Add(ctpn);
+            InvoiceDetail invoiceDetail = new InvoiceDetail()
+            {
+                ProductVarId = model.ProductVarId,
+                InvoiceId = invoice.InvoiceId,
+                Quanity = model.Quantity,
+                Price = model.Price,
+            };
+
+            _context.InvoiceDetails.Add(invoiceDetail);
             _context.SaveChanges();
 
-            return RedirectToAction("Index","Products");
+            return RedirectToAction("Index","Invoice");
         }
 
      
@@ -237,12 +259,19 @@ namespace GiayDep.Areas.Admin.Controllers
                 .ToList();
             return Json(list);    
         }
+        public async Task<JsonResult> GetProduct(int id)
+        {
+            var productVariations = await _context.ProductVariations
+                                .Where(pv => pv.ProductItems.ProductId == id)
+                                .Include(pv => pv.ProductItems) 
+                                .Include(p => p.Size)
+                                .ToListAsync();
+
+            return Json(productVariations);
+        }
         public async Task<JsonResult> GetProductBySizeAsync(int id)
         {   
-            if (id == null)
-            {
-                return Json("Error");
-            }    
+               
             var list = _context.ProductVariations.Where(n => n.ProductItemsId == id)
                 .Include(n => n.Size)
                 .ToList();
