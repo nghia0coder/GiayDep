@@ -3,31 +3,40 @@
 @{
     ViewData["Title"] = "DuyetDonHang";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    IEnumerable<OrdersDetail> lstChiTietDH = ViewBag.ListChiTietDH as IEnumerable<OrdersDetail>;
 }
 
 <h1>Duyệt đơn hàng </h1>
 <div class="card">
     <div class="card-body">
-        <h2 class="col-md-8">Thông tin đơn hàng @Model.Customer.UserName</h2>
-        <form asp-action="" method="post">
+        <h2 class="col-md-8">Thông tin đơn hàng</h2>
+        <form asp-action="ApproveOrders" method="post">
             <div class="ChiTietDonHang table">
-                @{
-                    IEnumerable<OrdersDetail> lstChiTietDH = (IEnumerable<OrdersDetail>)ViewBag.ListChiTietDH; 
-                }
                 <table class="table table-bordered" id="table">
                     @* Thông tin đơn hàng *@
                     <tr>
                         <td colspan="4">
-                            <table style="100%" class="table-borderless">
+                            <table style="width:100%" class="table-borderless">
                                 <tr>
+                                    <input type="hidden" asp-for="OrderId" />
                                     <td>Mã đơn hàng: <b>@Model.OrderId <input type="hidden" name="MaDDH" value="@Model.OrderId" /></b></td>
-                                    <td>Mã đơn hàng: <b>@Model.Customer.Id </b></td>
-                                    <td>Mã đơn hàng: <b>@Model.Customer.UserName </b></td>
-                                    <td>Ngày đặt: <b>@Model.OrderDate.Value.ToString("dd/MM/yyyy")</b></td>
-                                    <td>Đã thanh toán: <input asp-for="Status" /></td>
-                                    <td>Đã giao: <input asp-for="Delivered" /></td>
-                                </tr>
+                                    <td>Email Khách Hàng: <b>@Model.Customer.UserName </b></td>
+                                    <td>Ngày đặt: <b>@Model.OrderDate</b></td>
+                                    <td>
+                                        Đã thanh toán:
+                                        <input type="hidden" asp-for="Status" value="false" />
+                                        <input type="checkbox" asp-for="Status" onchange="updateCheckboxValue(this)" />
+                                    </td>
+                                    <td>
+                                        Đã giao:
+                                        <input type="hidden" asp-for="Delivered" value="false" />
+                                        <input type="checkbox" asp-for="Delivered" onchange="updateCheckboxValue(this)" />
+                                    </td>
+
+
+                                </tr>   
                             </table>
+
                         </td>
                     </tr>
                     @* Thông tin chi tiết đơn hàng *@
@@ -39,9 +48,10 @@
                     </tr>
                     @foreach (var item in lstChiTietDH)
                     {
+                        
                         <tr>
-                            <td>@item.ProductVar.ProductItemsId</td>
-                       @*      <td><img width="150" height="50" src="@Url.Content("~/Contents/"+item.Product.Hinhanh1)" /></td> *@
+                            <td>@item.ProductVar.ProductItems.Product.ProductName</td>
+                            <td><img width="100" height="100" src="@Url.Content("~/Contents/img/"+item.ProductVar.ProductItems.Image1)" /></td> 
                             <td>@item.Quanity</td>
                             <td>@item.Price.Value.ToString("#,##")</td>
                         </tr>
@@ -63,6 +73,8 @@
         </form>
     </div>
 </div>
+
+
 <script>
     $('#btnInDonHang').click(function () {
         var content = "<table>" + $("#table").html() + "</table>";
@@ -78,4 +90,14 @@
         printWindow.document.close();
         printWindow.print();
     }
+    <script>
+        function updateCheckboxValue(checkbox) {
+            if (checkbox.checked) {
+                checkbox.previousElementSibling.value = "true"; // Nếu được chọn, đặt giá trị của hidden input thành "true"
+            } else {
+                checkbox.previousElementSibling.value = "false"; // Nếu không được chọn, đặt giá trị của hidden input thành "false"
+            }
+        }
+</script>
+
 </script>

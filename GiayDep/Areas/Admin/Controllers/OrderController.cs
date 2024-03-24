@@ -19,26 +19,26 @@ namespace GiayDep.Areas.Admin.Controllers
             _context = context;
         }
 
-        public IActionResult ChuaThanhToan()
+        public IActionResult Unpaid()
         {
-            var lst = _context.Orders.Include(n => n.CustomerId).Where(n => !n.Status).OrderBy(n => n.OrderDate).ToList();
+            var lst = _context.Orders.Include(n => n.Customer).Where(n => !n.Status).OrderBy(n => n.OrderDate).ToList();
             return View(lst);
         }
-
-        public IActionResult ChuaGiao()
+        [HttpGet]
+        public IActionResult PaidUndelivered()
         {
             var lstDSDHCG = _context.Orders
-                .Include(n => n.CustomerId)
+                .Include(n => n.Customer)
                 .Where(n => !n.Delivered && n.Status)
                 .OrderBy(n => n.Delivered)
                 .ToList();
             return View(lstDSDHCG);
         }
-
-        public IActionResult DaGiaoStatus()
+        [HttpGet]
+        public IActionResult PaidDelivered()
         {
             var lstDSDHCG = _context.Orders
-                .Include(n => n.CustomerId)
+                .Include(n => n.Customer)
                 .Where(n => n.Delivered && n.Status)
                 .OrderBy(n => n.DeliveryDate)
                 .ToList();
@@ -46,7 +46,7 @@ namespace GiayDep.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult DuyetDonHang(int? id)
+        public IActionResult ApproveOrders(int? id)
         {
             if (id == null)
             {
@@ -54,7 +54,7 @@ namespace GiayDep.Areas.Admin.Controllers
             }
 
             Order model = _context.Orders
-                .Include(n => n.CustomerId)
+                .Include(n => n.Customer)
                 .SingleOrDefault(n => n.OrderId == id);
 
             if (model == null)
@@ -62,32 +62,38 @@ namespace GiayDep.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var lstChiTietDH = _context.OrdersDetails
-                .Where(n => n.OrderId == id)
-                .ToList();
 
-            ViewBag.ListChiTietDH = lstChiTietDH;
+            ViewBag.ListChiTietDH = _context.OrdersDetails
+                .Where(n => n.OrderId == id)
+                .Include(n => n.ProductVar.ProductItems.Product)
+                .ToList(); 
+
             ViewBag.TenKH = model.Customer.UserName;
 
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult DuyetDonHang(Order ddh)
+        public IActionResult ApproveOrders(Order ddh)
         {
-            Order ddhUpdate = _context.Orders.Single(n => n.OrderId == ddh.OrderId);
+            Order ddhUpdate = _context.Orders.FirstOrDefault(n => n.OrderId == ddh.OrderId);
+            if (ddhUpdate == null)
+            {
+                return Content("Contet");
+            }
             ddhUpdate.Status = ddh.Status;
             ddhUpdate.Delivered = ddh.Delivered;
+            _context.Orders.Update(ddhUpdate);
             _context.SaveChanges();
 
-            var lstChiTietDH = _context.OrdersDetails
-                .Where(n => n.OrderId == ddh.OrderId)
-                .Include(n => n.ProductVar)
-                .ToList();
+            //var lstChiTietDH = _context.OrdersDetails
+            //    .Where(n => n.OrderId == ddh.OrderId)
+            //    .Include(n => n.ProductVar)
+            //    .ToList();
 
-            ViewBag.ListChiTietDH = lstChiTietDH;
+            //ViewBag.ListChiTietDH = lstChiTietDH;
 
-            return View(ddhUpdate);
+            return RedirectToAction("PaidUndelivered","Order");
         }
 
         // Dispose method
