@@ -1,7 +1,9 @@
-﻿@model GiayDep.Models.ProductItem
+﻿@using GiayDep.ViewModels
+@model InvoiceViewModel
 @{
     ViewData["Title"] = "NhapHangDon";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ProductVariation product = ViewBag.Product as ProductVariation;
 }
 
 <h1>Nhập hàng</h1>
@@ -11,14 +13,16 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="imgSP">
-@*                     <img src="@Url.Content("~/Contents/img/ "+Model.Hinhanh1)" style="height:150px;width:150px;" /> *@
+                    <img src="@Url.Content("~/Contents/img/"+ product.ProductItems.Image1)" style="height:150px;width:150px;" />
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="ttSP">
-                    <h3>Sản phẩm: @Model.Product.ProductName</h3>
-                    <h3>Hãng sản xuất: @Model.Product.Brand</h3>
-                    <h3>Loại sản phẩm: @Model.Product.Category</h3>
+                    <h3>Sản phẩm: @product.ProductItems.Product.ProductName</h3>
+                    <h3>Hãng sản xuất: @product.ProductItems.Product.Brand</h3>
+                    <h3>Loại sản phẩm: @product.ProductItems.Product.Category</h3>
+                    <h3>Size: @product.ProductItems.Color.ColorName</h3>
+                    <h3>Màu: @product.Size.Size1</h3>
             
                 </div>
             </div>
@@ -27,17 +31,20 @@
         <hr />
         <h3>Thông tin nhập hàng</h3>
         <br />
+    
+  
         <form asp-controller="Invoice" asp-action="NhapHangDon" method="post">
-            <input type="hidden" asp-for="ProductId" />
+            <input type="hidden" asp-for="ProductVarId" value="@product.ProductVarId"/>
             <div class="row">
+
                 <div class="col-md-4">
-                    Thương Hiệu: <select asp-for="Product.Brand" asp-items="ViewBag.Brand" class="Brand"></select>
+                    Thương Hiệu: <select asp-for="SupplierId" asp-items="ViewBag.Suppliers"></select>
                 </div>
-              @*   <div class="col-md-4">
-                    Số lượng nhập: <input asp-for="Product." />
-                </div> *@
+               <div class="col-md-4">
+                    Số lượng nhập: <input asp-for="Quantity" />
+                </div>
                 <div class="col-md-4">
-                    Đơn giá nhập: <input asp-for="Product.Price" />
+                    Đơn giá nhập: <input asp-for="Price" />
                 </div>
                 <div class="col-md-4">
                 </div>

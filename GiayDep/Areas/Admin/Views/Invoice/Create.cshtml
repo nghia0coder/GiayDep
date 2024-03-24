@@ -101,7 +101,7 @@
 
         $(document).on('change', '.ddlProductItemsId', function () {
             GetProductByColor($(this));
-            GetProductBySize($(this));
+            GetProduct($(this));
         });
 
 
@@ -125,13 +125,29 @@
                 }
             });
         }
+        function GetProduct(selectedProductDropdown) {
+            var productId = $(selectedProductDropdown).val();
+            var colorDropdown = $(selectedProductDropdown).closest('tr').find('select[id="sizeId"]');
+
+            $.ajax({
+                url: '@Url.Action("GetProduct", "Invoice")',
+                type: 'GET',
+                data: { id: productId },
+                success: function (data) {
+                    $(colorDropdown).empty();
+                    $.each(data["$values"], function (index, item) {
+
+                        $(colorDropdown).append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
+                    });
+                }
+            });
+        }
 
         $(document).on('change', '.ddlColors', function () {
             GetProductBySize($(this));
         });
         function GetProductBySize(selectedSizeDropdown) {
             var productItemsId = $(selectedSizeDropdown).val();
-            console.log(productItemsId)
             var sizeDropdown = $(selectedSizeDropdown).closest('tr').find('select[id="sizeId"]');
 
             $.ajax({
