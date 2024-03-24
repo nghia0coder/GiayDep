@@ -30,7 +30,7 @@
 								{
 									<div class="product" alt="">
 
-										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.ProductName)-@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault()">
+										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.ProductName)-@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductItemsId">
 											<div class="product-img">
 												<img src="~/Contents/img/@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().Image1" alt="">
 
@@ -58,7 +58,8 @@
 											</div>
 											<div class="add-to-cart">
 												<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductItemsId" asp-route-strURL="@currentUrl">
-													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart<button>
+
 												</a>
 											</div>
 									</div>

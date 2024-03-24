@@ -78,5 +78,22 @@ namespace GiayDep.Controllers
 			// Return the view with paginated products
 			return View(lstSP.OrderBy(n => n.ProductId));
 		}
+
+        public async Task<JsonResult> GetColorAsync (int id)
+        {
+            var list = await _context.ProductItems
+                .Where(n => n.ProductId == id)
+                .Include(n => n.Color)
+                .ToListAsync();
+            return Json(list);
+        }
+		public async Task<JsonResult> GetSizeAsync(int id)
+		{
+			var list = await _context.ProductVariations
+				.Where(n => n.ProductItems.Product.ProductId == id)
+				.Include(n => n.Size)
+				.ToListAsync();
+			return Json(list);
+		}
 	}
 }

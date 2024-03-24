@@ -61,6 +61,7 @@
 			<!-- Product details -->
 			<div class="col-md-5">
 				<div class="product-details">
+				
 					<h2 class="product-name">@Model.ProductItems.Product.ProductName.ToUpper()</h2>
 					<div>
 						<div class="product-rating">
@@ -81,8 +82,8 @@
 					<div class="product-options">
 						<label>
 							Color
-							<select class="input-select" onchange="redirectToSelectedOption(this)">
-						
+							<select id="colorId" class="input-select ">
+							
 						
 							</select>
 						</label>
@@ -402,13 +403,35 @@
 </div>
 <!-- /Section -->
 
-<script>
-	function redirectToSelectedOption(selectElement) {
-		var selectedOption = selectElement.options[selectElement.selectedIndex];
-		var url = selectedOption.getAttribute('data-url');
-		if (url) {
-			window.location.href = url;
+@section Scripts
+{
+	<script>
+		var productId = '@Model.ProductItems.Product.ProductId';
+		console.log("hello " + productId);
+
+		$(document).ready(function () {
+			GetColor(productId);
+		});
+
+		
+
+
+		function GetColor(productId) {
+			var product = productId;
+			$.ajax({
+				url: '@Url.Action("GetColor", "ProductView")',
+				type: 'GET',
+				data: { id: product },
+				success: function (data) {
+
+					$.each(data["$values"], function (index, item) {
+						$('#colorId').append('<option value="' + item.productItemsId + '">' + item.color.colorName + '</option>');
+					});
+				}
+			});
 		}
-	}
-</script>
+	</script>
+}
+	
+
 
