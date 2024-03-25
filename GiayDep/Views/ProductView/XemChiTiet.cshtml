@@ -20,19 +20,19 @@
 			<div class="col-md-5 col-md-push-2">
 				<div id="product-main-img">
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image1" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image1" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image2" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image2" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image3" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image3" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image4" alt="">
+						<img   src="~/Contents/img/@Model.ProductItems.Image4" alt="">
 					</div>
 				</div>
 			</div>
@@ -41,19 +41,19 @@
 			<div class="col-md-2  col-md-pull-5">
 				<div id="product-imgs">
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image1" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image1" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image2" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image2" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image3" alt="">
+						<img   src="~/Contents/img/@Model.ProductItems.Image3" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image4" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image4" alt="">
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,6 @@
 			<!-- Product details -->
 			<div class="col-md-5">
 				<div class="product-details">
-				
 					<h2 class="product-name">@Model.ProductItems.Product.ProductName.ToUpper()</h2>
 					<div>
 						<div class="product-rating">
@@ -418,6 +417,7 @@
 		$(document).on('change', '#colorId', function () {
 			var colorIds = $(this).val();
 			GetSizeByColor(colorIds);
+			GetImages(colorIds)
 		});
 
 		function GetColor(productId) {
@@ -431,8 +431,53 @@
 					$.each(data["$values"], function (index, item) {
 						$('#colorId').append('<option value="' + item.productItemsId + '">' + item.color.colorName + '</option>');
 					});
+			
 				}
 			});
+		}
+		function GetImages(productId) 
+		{
+			$.ajax({
+				url: '@Url.Action("GetImages","ProductView")',
+				type: 'GET',
+				data: { id : productId },
+				success: function (data) {
+
+					
+
+					var images = [
+						data.image1,
+						data.image2,
+						data.image3,
+						data.image4
+					];
+
+
+					var imageNodes = document.querySelectorAll('#product-main-img .product-preview img');
+					console.log("Hello" + imageNodes.length);
+
+					for (var i = 0; i < imageNodes.length; i++) {
+						if (images[i]) {
+							imageNodes[i].src = '/Contents/img/' + images[i].split('/').pop();
+						}
+					}
+					var imageNodes2 = document.querySelectorAll('.zoomImg');
+
+					for (var i = 0; i < imageNodes2.length; i++) {
+						if (images[i]) {
+							imageNodes2[i].src = 'https://localhost:7266/Contents/img/' + images[i];
+						}
+					}
+					var imageNodes3 = document.querySelectorAll('#product-imgs .product-preview img');
+
+					for (var i = 0; i < imageNodes3.length; i++) {
+						if (images[i]) {
+							imageNodes3[i].src = '/Contents/img/' + images[i].split('/').pop();
+						}
+					}
+
+				}
+			})
 		}
 		function GetSize(productId) {
 			var product = productId;
@@ -448,6 +493,8 @@
 				}
 			});
 		}
+
+		
 
 		function GetSizeByColor(colorIds) {
 			var color = colorIds

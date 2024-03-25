@@ -85,6 +85,12 @@ namespace GiayDep.Controllers
                 .ToListAsync();
             return Json(list);
         }
+        public async Task<JsonResult> GetImages (int id)
+        {
+            var img = await _context.ProductItems.Where(n => n.ProductItemsId == id).FirstOrDefaultAsync();
+
+            return Json(img);
+        }
 		public async Task<JsonResult> GetSizeAsync(int id)
 		{
 			var list = await _context.ProductVariations
