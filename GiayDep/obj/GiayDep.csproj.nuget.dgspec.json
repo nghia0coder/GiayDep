@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\newg\\GiayDep\\GiayDep.csproj": {}
+    "D:\\GDMOI\\GiayDep\\GiayDep.csproj": {}
   },
   "projects": {
-    "D:\\newg\\GiayDep\\GiayDep.csproj": {
+    "D:\\GDMOI\\GiayDep\\GiayDep.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\newg\\GiayDep\\GiayDep.csproj",
+        "projectUniqueName": "D:\\GDMOI\\GiayDep\\GiayDep.csproj",
         "projectName": "GiayDep",
-        "projectPath": "D:\\newg\\GiayDep\\GiayDep.csproj",
+        "projectPath": "D:\\GDMOI\\GiayDep\\GiayDep.csproj",
         "packagesPath": "C:\\Users\\Hanh\\.nuget\\packages\\",
-        "outputPath": "D:\\newg\\GiayDep\\obj\\",
+        "outputPath": "D:\\GDMOI\\GiayDep\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
