@@ -34,7 +34,7 @@
 								@foreach (var item in Model.Take(6))
 								{
 									<div class="product" alt="">
-										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.ProductName)-@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductItemsId"/>
+										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.ProductName)-@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductVariations.FirstOrDefault().ProductVarId"/>
 											<div class="product-img">
 											<img src="~/Contents/img/@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().Image1" alt="">
 
@@ -61,7 +61,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductItemsId" asp-route-strURL="@currentUrl">
+											<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductVariations.FirstOrDefault().ProductVarId" asp-route-strURL="@currentUrl">
 													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart<button>
 												
 												</a>

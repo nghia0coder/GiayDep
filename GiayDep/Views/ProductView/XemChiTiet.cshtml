@@ -74,7 +74,7 @@
 						<a class="review-link" href="#">10 Review(s) | Add your review</a>
 					</div>
 					<div>
-						<h3 class="product-price">$@Model.ProductItems.Product.Price <del class="product-old-price">$@(Model.ProductItems.Product.Price + 200)</del></h3>
+						<h3 class="product-price">@Model.ProductItems.Product.Price <del class="product-old-price">$@(Model.ProductItems.Product.Price + 200)</del></h3>
 						<span class="product-available">In Stock</span>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -83,14 +83,13 @@
 						<label>
 							Color
 							<select id="colorId" class="input-select ">
-							
 						
 							</select>
 						</label>
 
 						<label>
 							Size
-							<select class="input-select" onchange="redirectToSelectedOption(this)">
+							<select id="sizeId" class="input-select" ">
 							
 							</select>
 
@@ -108,9 +107,8 @@
 							</div>
 						</div>
 						<div class="add-to-cart">
-							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.ProductItemsId" asp-route-size="@Model.SizeId" asp-route-strURL="@currentUrl">
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-							</a>
+							
 						</div>
 					</div>
 
@@ -407,14 +405,20 @@
 {
 	<script>
 		var productId = '@Model.ProductItems.Product.ProductId';
-		console.log("hello " + productId);
 
 		$(document).ready(function () {
 			GetColor(productId);
+			GetSize(productId);
 		});
+		// $('#colorId').change(function () {
+		// 	var url = "/post/name-" + $(this).val();
+		// 	window.location.href = url;
+		// });
 
-		
-
+		$(document).on('change', '#colorId', function () {
+			var colorIds = $(this).val();
+			GetSizeByColor(colorIds);
+		});
 
 		function GetColor(productId) {
 			var product = productId;
@@ -430,6 +434,60 @@
 				}
 			});
 		}
+		function GetSize(productId) {
+			var product = productId;
+			$.ajax({
+				url: '@Url.Action("GetSize", "ProductView")',
+				type: 'GET',
+				data: { id: product },
+				success: function (data) {
+
+					$.each(data["$values"], function (index, item) {
+						$('#sizeId').append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
+					});
+				}
+			});
+		}
+
+		function GetSizeByColor(colorIds) {
+			var color = colorIds
+			$.ajax({
+				url: '@Url.Action("GetSizeByColor", "ProductView")',
+				type: 'GET',
+				data: { id:  color },
+				success: function (data) {
+					$("#sizeId").empty();
+					$.each(data["$values"], function (index, item) {
+						$('#sizeId').append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
+					});
+				}
+			});
+		}
+
+		$('.add-to-cart-btn').click(function (e) {
+			e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+			var productId = $('#sizeId').val();
+			var returnUrl = "@currentUrl";
+
+			$.ajax({
+				url: '@Url.Action("ThemGioHang","ShoppingCart")',
+				type: "GET", // Hoặc "POST", tuỳ vào cấu hình của controller
+				data: {
+					masp: productId,
+					strURL: returnUrl
+				},
+				success: function (response) {
+					// Xử lý sau khi gửi thành công
+					alert("Product added to cart successfully!");
+				},
+				error: function () {
+					// Xử lý lỗi
+					alert("Error adding product to cart.");
+				}
+			});
+		});
+		
+
 	</script>
 }
 	

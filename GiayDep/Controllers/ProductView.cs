@@ -36,9 +36,7 @@ namespace GiayDep.Controllers
             var sp = await _context.ProductVariations
                 .Include(n => n.ProductItems.Product)
                 .FirstOrDefaultAsync(n => n.ProductItemsId == id);
-                
-
-
+          
             ViewBag.ListSP = _context.ProductItems
                 .Include(n => n.Product.Category)
 				.Where(n => n.Product.CategoryId == sp.ProductItems.Product.CategoryId);
@@ -91,6 +89,14 @@ namespace GiayDep.Controllers
 		{
 			var list = await _context.ProductVariations
 				.Where(n => n.ProductItems.Product.ProductId == id)
+				.Include(n => n.Size)
+				.ToListAsync();
+			return Json(list);
+		}
+		public async Task<JsonResult> GetSizeByColorAsync(int id)
+		{
+			var list = await _context.ProductVariations
+				.Where(n => n.ProductItemsId == id)
 				.Include(n => n.Size)
 				.ToListAsync();
 			return Json(list);
