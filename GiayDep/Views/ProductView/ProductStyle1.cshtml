@@ -34,7 +34,7 @@
 								@foreach (var item in Model.Take(6))
 								{
 									<div class="product" alt="">
-										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.ProductName)-@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductVariations.FirstOrDefault().ProductVarId"/>
+										<a href="/post/@SlugGenerator.SlugGenerator.GenerateSlug(item.ProductName)-@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().ProductItemsId"/>
 											<div class="product-img">
 											<img src="~/Contents/img/@item.ProductItems.Where(n=>n.ProductId == item.ProductId).FirstOrDefault().Image1" alt="">
 

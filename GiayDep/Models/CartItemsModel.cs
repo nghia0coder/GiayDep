@@ -10,7 +10,10 @@
         {
             get { return Price * Quanity; }
         }
-        public int Size { get; set; }
+        public int? Size { get; set; }
+
+        public string Color { get; set; }
+
         public string HinhAnh { get; set; }
 
         public string Hang { get; set; }
@@ -24,7 +27,8 @@
             ProductName = Product.ProductItems.Product.ProductName;
             Quanity = Product.QtyinStock;
             HinhAnh = Product.ProductItems.Image1;
-            Size = Product.SizeId;
+            Size = Product.Size.Size1;
+            Color = Product.ProductItems.Color.ColorName;
             Price = Product.ProductItems.Product.Price;
             Quanity = 1;
             //HinhAnh = Product.Hinhanh1;
