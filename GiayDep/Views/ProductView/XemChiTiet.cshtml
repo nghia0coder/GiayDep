@@ -101,7 +101,7 @@
 						<div class="qty-label">
 							Qty
 							<div class="input-number">
-								<input type="number">
+								<input type="number" id="quantityInput" value="1"> 
 								<span class="qty-up">+</span>
 								<span class="qty-down">-</span>
 							</div>
@@ -465,8 +465,9 @@
 		}
 
 		$('.add-to-cart-btn').click(function (e) {
-			e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
 			var productId = $('#sizeId').val();
+			var quanTity = $('#quantityInput').val();
+			console.log(quanTity);
 			var returnUrl = "@currentUrl";
 
 			$.ajax({
@@ -474,6 +475,7 @@
 				type: "GET", // Hoặc "POST", tuỳ vào cấu hình của controller
 				data: {
 					masp: productId,
+					quantity: quanTity,
 					strURL: returnUrl
 				},
 				success: function (response) {
@@ -486,6 +488,20 @@
 				}
 			});
 		});
+
+		$('.qty-up').click(function () {
+
+			var currentValue = parseInt($("#quantityInput").val());
+			var newValue = currentValue++;
+			$('#quantityInput').val(newValue);
+		});
+		$('.qty-down').click(function () {
+
+			var currentValue = parseInt($("#quantityInput").val());
+			var newValue = currentValue--;
+			$('#quantityInput').val(newValue);
+		});
+		
 		
 
 	</script>

@@ -21,7 +21,7 @@
         public CartItemsModel() { }
 
         // Constructor theo id (dùng cho trường hợp chỉ có sl=1)
-        public CartItemsModel(ProductVariation Product)
+        public CartItemsModel(ProductVariation Product, int quantity)
         {
             ProductID = Product.ProductVarId;
             ProductName = Product.ProductItems.Product.ProductName;
@@ -30,10 +30,8 @@
             Size = Product.Size.Size1;
             Color = Product.ProductItems.Color.ColorName;
             Price = Product.ProductItems.Product.Price;
-            Quanity = 1;
-            //HinhAnh = Product.Hinhanh1;
-   
-   
-        }
+            Quanity = quantity;
+			//HinhAnh = Product.Hinhanh1;
+		}
     }
 }

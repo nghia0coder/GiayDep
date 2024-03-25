@@ -35,7 +35,7 @@ namespace GiayDep.Controllers
             return View(cart);
         }
      
-        public async Task<IActionResult> ThemGioHang(int masp, string strURL)
+        public async Task<IActionResult> ThemGioHang(int masp,int quantity, string strURL)
         {
 
             ProductVariation productVariation = await _context.ProductVariations
@@ -45,12 +45,16 @@ namespace GiayDep.Controllers
                 .Where(n => n.ProductVarId == masp).FirstOrDefaultAsync();
 
            
-            
+            if (quantity == null)
+            {
+                quantity = 1;
+            }  
 			List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
             CartItemsModel cartItems = cart.Where(c => c.ProductID == masp).FirstOrDefault();
-            if (cartItems == null)
+			if (cartItems == null)
             {
-                cart.Add(new CartItemsModel(productVariation));
+				
+				cart.Add(new CartItemsModel(productVariation, quantity));
             }
             else
             {
