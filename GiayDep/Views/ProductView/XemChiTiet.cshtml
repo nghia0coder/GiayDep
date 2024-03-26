@@ -20,19 +20,19 @@
 			<div class="col-md-5 col-md-push-2">
 				<div id="product-main-img">
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image1" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image1" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image2" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image2" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image3" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image3" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image4" alt="">
+						<img   src="~/Contents/img/@Model.ProductItems.Image4" alt="">
 					</div>
 				</div>
 			</div>
@@ -41,19 +41,19 @@
 			<div class="col-md-2  col-md-pull-5">
 				<div id="product-imgs">
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image1" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image1" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image2" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image2" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image3" alt="">
+						<img   src="~/Contents/img/@Model.ProductItems.Image3" alt="">
 					</div>
 
 					<div class="product-preview">
-						<img src="~/Contents/img/@Model.ProductItems.Image4" alt="">
+						<img  src="~/Contents/img/@Model.ProductItems.Image4" alt="">
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 						<a class="review-link" href="#">10 Review(s) | Add your review</a>
 					</div>
 					<div>
-						<h3 class="product-price">$@Model.ProductItems.Product.Price <del class="product-old-price">$@(Model.ProductItems.Product.Price + 200)</del></h3>
+						<h3 class="product-price">@Model.ProductItems.Product.Price <del class="product-old-price">$@(Model.ProductItems.Product.Price + 200)</del></h3>
 						<span class="product-available">In Stock</span>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -81,15 +81,14 @@
 					<div class="product-options">
 						<label>
 							Color
-							<select class="input-select" onchange="redirectToSelectedOption(this)">
-						
+							<select id="colorId" class="input-select ">
 						
 							</select>
 						</label>
 
 						<label>
 							Size
-							<select class="input-select" onchange="redirectToSelectedOption(this)">
+							<select id="sizeId" class="input-select" ">
 							
 							</select>
 
@@ -101,15 +100,14 @@
 						<div class="qty-label">
 							Qty
 							<div class="input-number">
-								<input type="number">
+								<input type="number" id="quantityInput" value="1"> 
 								<span class="qty-up">+</span>
 								<span class="qty-down">-</span>
 							</div>
 						</div>
 						<div class="add-to-cart">
-							<a asp-action="ThemGioHang" asp-controller="ShoppingCart" asp-route-masp="@Model.ProductItemsId" asp-route-size="@Model.SizeId" asp-route-strURL="@currentUrl">
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-							</a>
+							
 						</div>
 					</div>
 
@@ -402,13 +400,159 @@
 </div>
 <!-- /Section -->
 
-<script>
-	function redirectToSelectedOption(selectElement) {
-		var selectedOption = selectElement.options[selectElement.selectedIndex];
-		var url = selectedOption.getAttribute('data-url');
-		if (url) {
-			window.location.href = url;
+@section Scripts
+{
+	<script>
+		var productId = '@Model.ProductItems.Product.ProductId';
+
+		$(document).ready(function () {
+			GetColor(productId);
+			GetSize(productId);
+		});
+		// $('#colorId').change(function () {
+		// 	var url = "/post/name-" + $(this).val();
+		// 	window.location.href = url;
+		// });
+
+		$(document).on('change', '#colorId', function () {
+			var colorIds = $(this).val();
+			GetSizeByColor(colorIds);
+			GetImages(colorIds)
+		});
+
+		function GetColor(productId) {
+			var product = productId;
+			$.ajax({
+				url: '@Url.Action("GetColor", "ProductView")',
+				type: 'GET',
+				data: { id: product },
+				success: function (data) {
+
+					$.each(data["$values"], function (index, item) {
+						$('#colorId').append('<option value="' + item.productItemsId + '">' + item.color.colorName + '</option>');
+					});
+			
+				}
+			});
 		}
-	}
-</script>
+		function GetImages(productId) 
+		{
+			$.ajax({
+				url: '@Url.Action("GetImages","ProductView")',
+				type: 'GET',
+				data: { id : productId },
+				success: function (data) {
+
+					
+
+					var images = [
+						data.image1,
+						data.image2,
+						data.image3,
+						data.image4
+					];
+
+
+					var imageNodes = document.querySelectorAll('#product-main-img .product-preview img');
+					console.log("Hello" + imageNodes.length);
+
+					for (var i = 0; i < imageNodes.length; i++) {
+						if (images[i]) {
+							imageNodes[i].src = '/Contents/img/' + images[i].split('/').pop();
+						}
+					}
+					var imageNodes2 = document.querySelectorAll('.zoomImg');
+
+					for (var i = 0; i < imageNodes2.length; i++) {
+						if (images[i]) {
+							imageNodes2[i].src = 'https://localhost:7266/Contents/img/' + images[i];
+						}
+					}
+					var imageNodes3 = document.querySelectorAll('#product-imgs .product-preview img');
+
+					for (var i = 0; i < imageNodes3.length; i++) {
+						if (images[i]) {
+							imageNodes3[i].src = '/Contents/img/' + images[i].split('/').pop();
+						}
+					}
+
+				}
+			})
+		}
+		function GetSize(productId) {
+			var product = productId;
+			$.ajax({
+				url: '@Url.Action("GetSize", "ProductView")',
+				type: 'GET',
+				data: { id: product },
+				success: function (data) {
+
+					$.each(data["$values"], function (index, item) {
+						$('#sizeId').append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
+					});
+				}
+			});
+		}
+
+		
+
+		function GetSizeByColor(colorIds) {
+			var color = colorIds
+			$.ajax({
+				url: '@Url.Action("GetSizeByColor", "ProductView")',
+				type: 'GET',
+				data: { id:  color },
+				success: function (data) {
+					$("#sizeId").empty();
+					$.each(data["$values"], function (index, item) {
+						$('#sizeId').append('<option value="' + item.productVarId + '">' + item.size.size1 + '</option>');
+					});
+				}
+			});
+		}
+
+		$('.add-to-cart-btn').click(function (e) {
+			var productId = $('#sizeId').val();
+			var quanTity = $('#quantityInput').val();
+			console.log(quanTity);
+			var returnUrl = "@currentUrl";
+
+			$.ajax({
+				url: '@Url.Action("ThemGioHang","ShoppingCart")',
+				type: "GET", // Hoặc "POST", tuỳ vào cấu hình của controller
+				data: {
+					masp: productId,
+					quantity: quanTity,
+					strURL: returnUrl
+				},
+				success: function (response) {
+					// Xử lý sau khi gửi thành công
+					alert("Product added to cart successfully!");
+				},
+				error: function () {
+					// Xử lý lỗi
+					alert("Error adding product to cart.");
+				}
+			});
+		});
+
+		$('.qty-up').click(function () {
+
+			var currentValue = parseInt($("#quantityInput").val());
+			var newValue = currentValue++;
+			$('#quantityInput').val(newValue);
+		});
+		$('.qty-down').click(function () {
+
+			var currentValue = parseInt($("#quantityInput").val());
+			var newValue = currentValue--;
+			$('#quantityInput').val(newValue);
+		});
+		
+		
+
+	</script>
+}
+	
+
 

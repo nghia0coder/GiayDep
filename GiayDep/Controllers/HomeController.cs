@@ -27,6 +27,7 @@ namespace GiayDep.Controllers
 			var lstLTM = _context.Products
 				.Where(n => n.ProductId == 5)
 				.Include (n => n.ProductItems)
+				.ThenInclude(n => n.ProductVariations)
                 .ToList();
 			//Gán vào viewbag
 			ViewBag.ListLTM = lstLTM;

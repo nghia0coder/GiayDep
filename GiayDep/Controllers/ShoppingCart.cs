@@ -34,22 +34,27 @@ namespace GiayDep.Controllers
             ViewBag.TongQuanity = cart.Quanity;
             return View(cart);
         }
-        public async Task<IActionResult> ThemGioHang(int MaSP,int? size, string strURL)
+     
+        public async Task<IActionResult> ThemGioHang(int masp,int quantity, string strURL)
         {
-			 IQueryable<ProductVariation> query = _context.ProductVariations
-	           .Include(n => n.ProductItems.Product)
-	           .Where(s => s.ProductItemsId == MaSP);
-			        if (size.HasValue)
-			        {
-				        query = query.Where(s => s.SizeId == size);
-			        }
 
-			ProductVariation Product = await query.FirstOrDefaultAsync();
-			List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
-            CartItemsModel cartItems = cart.Where(c => c.ProductID == MaSP).FirstOrDefault();
-            if (cartItems == null)
+            ProductVariation productVariation = await _context.ProductVariations
+                .Include(n => n.Size)
+                .Include(n => n.ProductItems.Color)
+                .Include(n => n.ProductItems.Product)
+                .Where(n => n.ProductVarId == masp).FirstOrDefaultAsync();
+
+           
+            if (quantity == null)
             {
-                cart.Add(new CartItemsModel(Product));
+                quantity = 1;
+            }  
+			List<CartItemsModel> cart = HttpContext.Session.GetJson<List<CartItemsModel>>("Cart") ?? new List<CartItemsModel>();
+            CartItemsModel cartItems = cart.Where(c => c.ProductID == masp).FirstOrDefault();
+			if (cartItems == null)
+            {
+				
+				cart.Add(new CartItemsModel(productVariation, quantity));
             }
             else
             {

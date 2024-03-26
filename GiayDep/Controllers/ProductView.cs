@@ -36,9 +36,7 @@ namespace GiayDep.Controllers
             var sp = await _context.ProductVariations
                 .Include(n => n.ProductItems.Product)
                 .FirstOrDefaultAsync(n => n.ProductItemsId == id);
-                
-
-
+          
             ViewBag.ListSP = _context.ProductItems
                 .Include(n => n.Product.Category)
 				.Where(n => n.Product.CategoryId == sp.ProductItems.Product.CategoryId);
@@ -77,6 +75,37 @@ namespace GiayDep.Controllers
 
 			// Return the view with paginated products
 			return View(lstSP.OrderBy(n => n.ProductId));
+		}
+
+        public async Task<JsonResult> GetColorAsync (int id)
+        {
+            var list = await _context.ProductItems
+                .Where(n => n.ProductId == id)
+                .Include(n => n.Color)
+                .ToListAsync();
+            return Json(list);
+        }
+        public async Task<JsonResult> GetImages (int id)
+        {
+            var img = await _context.ProductItems.Where(n => n.ProductItemsId == id).FirstOrDefaultAsync();
+
+            return Json(img);
+        }
+		public async Task<JsonResult> GetSizeAsync(int id)
+		{
+			var list = await _context.ProductVariations
+				.Where(n => n.ProductItems.Product.ProductId == id)
+				.Include(n => n.Size)
+				.ToListAsync();
+			return Json(list);
+		}
+		public async Task<JsonResult> GetSizeByColorAsync(int id)
+		{
+			var list = await _context.ProductVariations
+				.Where(n => n.ProductItemsId == id)
+				.Include(n => n.Size)
+				.ToListAsync();
+			return Json(list);
 		}
 	}
 }

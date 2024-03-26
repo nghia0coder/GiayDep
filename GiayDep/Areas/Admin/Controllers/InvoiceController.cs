@@ -255,6 +255,7 @@ namespace GiayDep.Areas.Admin.Controllers
         public async Task<JsonResult> GetProductByColorAsync (int id)
         {   
             var list = _context.ProductItems.Where(n => n.ProductId == id)
+           
                 .Include(n => n.Color)
                 .ToList();
             return Json(list);    
