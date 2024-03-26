@@ -264,7 +264,6 @@ namespace GiayDep.Areas.Admin.Controllers
         {
             var productVariations = await _context.ProductVariations
                                 .Where(pv => pv.ProductItems.ProductId == id)
-                                .Include(pv => pv.ProductItems) 
                                 .Include(p => p.Size)
                                 .ToListAsync();
 
