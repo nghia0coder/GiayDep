@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Brand>
+﻿@model IEnumerable<Category>
 
 <!-- NAVIGATION -->
 <nav id="navigation">
@@ -11,7 +11,7 @@
 				<li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
 				@foreach (var item in Model)
 				{
-					<li><a href="/Product/@SlugGenerator.SlugGenerator.GenerateSlug(item.BrandName)-@item.BrandId">@item.BrandName.ToUpper()</a></li>
+					<li><a href="/Product/@SlugGenerator.SlugGenerator.GenerateSlug(item.CategoryName)-@item.CategoryId">@item.CategoryName.ToUpper()</a></li>
 				}
 			</ul>
 			<!-- /NAV -->

@@ -13,7 +13,7 @@ namespace GiayDep.Components
         }
 		public IViewComponentResult Invoke()
 		{
-			var listCategory = _context.Brands
+			var listCategory = _context.Categories
 				.ToList();
 			return View(listCategory);
 		}
