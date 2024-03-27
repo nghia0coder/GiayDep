@@ -4,6 +4,7 @@ using GiayDep.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,17 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GiayDep.Migrations
 {
     [DbContext(typeof(GiaydepContext))]
-    partial class GiaydepContextModelSnapshot : ModelSnapshot
+    [Migration("20240221032710_IdentityMigration")]
+    partial class IdentityMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-<<<<<<< Updated upstream
-                .HasAnnotation("ProductVersion", "6.0.28")
-=======
                 .HasAnnotation("ProductVersion", "6.0.27")
->>>>>>> Stashed changes
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -95,317 +93,6 @@ namespace GiayDep.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-<<<<<<< Updated upstream
-            modelBuilder.Entity("GiayDep.Models.Brand", b =>
-                {
-                    b.Property<int>("BrandId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("BrandID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BrandId"), 1L, 1);
-
-                    b.Property<string>("BrandName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("BrandId");
-
-                    b.ToTable("Brand", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Category", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("CategoryID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
-
-                    b.Property<string>("CategoryName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("CategoryId");
-
-                    b.ToTable("Category", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Color", b =>
-                {
-                    b.Property<int>("ColorId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ColorID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColorId"), 1L, 1);
-
-                    b.Property<string>("ColorHex")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("ColorName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("ColorId");
-
-                    b.ToTable("Color", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Invoice", b =>
-                {
-                    b.Property<int>("InvoiceId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("InvoiceID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InvoiceId"), 1L, 1);
-
-                    b.Property<DateTime?>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("SupplierId")
-                        .HasColumnType("int")
-                        .HasColumnName("SupplierID");
-
-                    b.HasKey("InvoiceId");
-
-                    b.HasIndex("SupplierId");
-
-                    b.ToTable("Invoice", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.InvoiceDetail", b =>
-                {
-                    b.Property<int>("ProductVarId")
-                        .HasColumnType("int")
-                        .HasColumnName("ProductVarID");
-
-                    b.Property<int>("InvoiceId")
-                        .HasColumnType("int")
-                        .HasColumnName("InvoiceID");
-
-                    b.Property<int?>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Quanity")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProductVarId", "InvoiceId");
-
-                    b.HasIndex("InvoiceId");
-
-                    b.HasIndex("ProductVarId")
-                        .IsUnique();
-
-                    b.ToTable("InvoiceDetails");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Order", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("OrderID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"), 1L, 1);
-
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasMaxLength(450)
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("CustomerID");
-
-                    b.Property<bool>("Delivered")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("DeliveryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("Discount")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.HasKey("OrderId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.OrdersDetail", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int")
-                        .HasColumnName("OrderID");
-
-                    b.Property<int>("ProductVarId")
-                        .HasColumnType("int")
-                        .HasColumnName("ProductVarID");
-
-                    b.Property<int?>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Quanity")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderId", "ProductVarId")
-                        .HasName("PK_OrdersDetails_1");
-
-                    b.HasIndex("ProductVarId");
-
-                    b.ToTable("OrdersDetails");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Product", b =>
-                {
-                    b.Property<int>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ProductID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
-
-                    b.Property<int?>("Brand")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int")
-                        .HasColumnName("CategoryID");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProductName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("ProductId");
-
-                    b.HasIndex("Brand");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Product", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.ProductItem", b =>
-                {
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int")
-                        .HasColumnName("ProductID");
-
-                    b.Property<int>("ColorId")
-                        .HasColumnType("int")
-                        .HasColumnName("ColorID");
-
-                    b.Property<string>("Image1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductCode")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("ProductItemsId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ProductItemsID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductItemsId"), 1L, 1);
-
-                    b.HasKey("ProductId", "ColorId")
-                        .HasName("PK_ProductItems_1");
-
-                    b.HasIndex("ColorId");
-
-                    b.HasIndex(new[] { "ProductItemsId" }, "IX_ProductItems")
-                        .IsUnique();
-
-                    b.HasIndex(new[] { "ProductCode" }, "ProductCode")
-                        .IsUnique()
-                        .HasFilter("[ProductCode] IS NOT NULL");
-
-                    b.ToTable("ProductItems");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.ProductVariation", b =>
-                {
-                    b.Property<int>("ProductItemsId")
-                        .HasColumnType("int")
-                        .HasColumnName("ProductItemsID");
-
-                    b.Property<int>("SizeId")
-                        .HasColumnType("int")
-                        .HasColumnName("SizeID");
-
-                    b.Property<int>("ProductVarId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ProductVarID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductVarId"), 1L, 1);
-
-                    b.Property<int?>("QtyinStock")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProductItemsId", "SizeId");
-
-                    b.HasIndex("SizeId");
-
-                    b.HasIndex(new[] { "ProductVarId" }, "IX_ProductVariation")
-                        .IsUnique();
-
-                    b.ToTable("ProductVariation", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Size", b =>
-                {
-                    b.Property<int>("SizeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("SizeID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SizeId"), 1L, 1);
-
-                    b.Property<int?>("Size1")
-                        .HasColumnType("int")
-                        .HasColumnName("Size");
-
-                    b.HasKey("SizeId");
-
-                    b.ToTable("Size", (string)null);
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Supplier", b =>
-                {
-                    b.Property<int>("SupplierId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("SupplierID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierId"), 1L, 1);
-
-                    b.Property<string>("Address")
-=======
             modelBuilder.Entity("GiayDep.Models.CtHoaDon", b =>
                 {
                     b.Property<int>("IdchitietDdh")
@@ -529,7 +216,6 @@ namespace GiayDep.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Idkhachhang"), 1L, 1);
 
                     b.Property<string>("Diachi")
->>>>>>> Stashed changes
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -537,13 +223,6 @@ namespace GiayDep.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-<<<<<<< Updated upstream
-                    b.Property<string>("Phone")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("SupplierName")
-=======
                     b.Property<string>("Gioitinh")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -557,16 +236,10 @@ namespace GiayDep.Migrations
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Tenkh")
->>>>>>> Stashed changes
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-<<<<<<< Updated upstream
-                    b.HasKey("SupplierId");
-
-                    b.ToTable("Supplier", (string)null);
-=======
                     b.HasKey("Idkhachhang");
 
                     b.HasIndex("Idtv");
@@ -870,7 +543,6 @@ namespace GiayDep.Migrations
                     b.HasIndex("Manhacc");
 
                     b.ToTable("SAN_PHAM", (string)null);
->>>>>>> Stashed changes
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1006,124 +678,6 @@ namespace GiayDep.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-<<<<<<< Updated upstream
-            modelBuilder.Entity("GiayDep.Models.Invoice", b =>
-                {
-                    b.HasOne("GiayDep.Models.Supplier", "Supplier")
-                        .WithMany("Invoices")
-                        .HasForeignKey("SupplierId")
-                        .IsRequired()
-                        .HasConstraintName("FK_Import_Note_Suppiler");
-
-                    b.Navigation("Supplier");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.InvoiceDetail", b =>
-                {
-                    b.HasOne("GiayDep.Models.Invoice", "Invoice")
-                        .WithMany("InvoiceDetails")
-                        .HasForeignKey("InvoiceId")
-                        .IsRequired()
-                        .HasConstraintName("FK_InvoiceDetails_Invoice1");
-
-                    b.HasOne("GiayDep.Models.ProductVariation", "ProductVar")
-                        .WithOne("InvoiceDetail")
-                        .HasForeignKey("GiayDep.Models.InvoiceDetail", "ProductVarId")
-                        .HasPrincipalKey("GiayDep.Models.ProductVariation", "ProductVarId")
-                        .IsRequired()
-                        .HasConstraintName("FK_InvoiceDetails_ProductVariation");
-
-                    b.Navigation("Invoice");
-
-                    b.Navigation("ProductVar");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Order", b =>
-                {
-                    b.HasOne("GiayDep.Models.AppUserModel", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
-                        .IsRequired()
-                        .HasConstraintName("FK_Invoice_AspNetUsers");
-
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.OrdersDetail", b =>
-                {
-                    b.HasOne("GiayDep.Models.Order", "Order")
-                        .WithMany("OrdersDetails")
-                        .HasForeignKey("OrderId")
-                        .IsRequired()
-                        .HasConstraintName("FK_Invoice_Details_Invoice");
-
-                    b.HasOne("GiayDep.Models.ProductVariation", "ProductVar")
-                        .WithMany("OrdersDetails")
-                        .HasForeignKey("ProductVarId")
-                        .HasPrincipalKey("ProductVarId")
-                        .IsRequired()
-                        .HasConstraintName("FK_OrdersDetails_ProductVariation");
-
-                    b.Navigation("Order");
-
-                    b.Navigation("ProductVar");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Product", b =>
-                {
-                    b.HasOne("GiayDep.Models.Brand", "BrandNavigation")
-                        .WithMany("Products")
-                        .HasForeignKey("Brand")
-                        .HasConstraintName("FK_Product_Brand");
-
-                    b.HasOne("GiayDep.Models.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .HasConstraintName("FK_Product_Category");
-
-                    b.Navigation("BrandNavigation");
-
-                    b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.ProductItem", b =>
-                {
-                    b.HasOne("GiayDep.Models.Color", "Color")
-                        .WithMany("ProductItems")
-                        .HasForeignKey("ColorId")
-                        .IsRequired()
-                        .HasConstraintName("FK_ProductItems_Color");
-
-                    b.HasOne("GiayDep.Models.Product", "Product")
-                        .WithMany("ProductItems")
-                        .HasForeignKey("ProductId")
-                        .IsRequired()
-                        .HasConstraintName("FK_ProductItems_Product");
-
-                    b.Navigation("Color");
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.ProductVariation", b =>
-                {
-                    b.HasOne("GiayDep.Models.ProductItem", "ProductItems")
-                        .WithMany("ProductVariations")
-                        .HasForeignKey("ProductItemsId")
-                        .HasPrincipalKey("ProductItemsId")
-                        .IsRequired()
-                        .HasConstraintName("FK_ProductVariation_ProductItems");
-
-                    b.HasOne("GiayDep.Models.Size", "Size")
-                        .WithMany("ProductVariations")
-                        .HasForeignKey("SizeId")
-                        .IsRequired()
-                        .HasConstraintName("FK_ProductVariation_Size");
-
-                    b.Navigation("ProductItems");
-
-                    b.Navigation("Size");
-=======
             modelBuilder.Entity("GiayDep.Models.CtHoaDon", b =>
                 {
                     b.HasOne("GiayDep.Models.HoaDon", "IdhoadonNavigation")
@@ -1250,7 +804,6 @@ namespace GiayDep.Migrations
                     b.Navigation("MaloaispNavigation");
 
                     b.Navigation("ManhaccNavigation");
->>>>>>> Stashed changes
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1304,63 +857,6 @@ namespace GiayDep.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< Updated upstream
-            modelBuilder.Entity("GiayDep.Models.AppUserModel", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Brand", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Category", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Color", b =>
-                {
-                    b.Navigation("ProductItems");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Invoice", b =>
-                {
-                    b.Navigation("InvoiceDetails");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Order", b =>
-                {
-                    b.Navigation("OrdersDetails");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Product", b =>
-                {
-                    b.Navigation("ProductItems");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.ProductItem", b =>
-                {
-                    b.Navigation("ProductVariations");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.ProductVariation", b =>
-                {
-                    b.Navigation("InvoiceDetail");
-
-                    b.Navigation("OrdersDetails");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Size", b =>
-                {
-                    b.Navigation("ProductVariations");
-                });
-
-            modelBuilder.Entity("GiayDep.Models.Supplier", b =>
-                {
-                    b.Navigation("Invoices");
-=======
             modelBuilder.Entity("GiayDep.Models.HoaDon", b =>
                 {
                     b.Navigation("CtHoaDons");
@@ -1415,7 +911,6 @@ namespace GiayDep.Migrations
                     b.Navigation("CtHoaDons");
 
                     b.Navigation("CtPhieuNhaps");
->>>>>>> Stashed changes
                 });
 #pragma warning restore 612, 618
         }

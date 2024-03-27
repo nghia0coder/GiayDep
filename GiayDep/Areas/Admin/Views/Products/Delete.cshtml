@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿@model GiayDep.Models.Product
+=======
+﻿@model GiayDep.Models.SanPham
+>>>>>>> Stashed changes
 
 @{
     ViewData["Title"] = "Delete";
@@ -9,6 +13,7 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
+<<<<<<< Updated upstream
     <h4>Product</h4>
     <hr />
     <dl class="row">
@@ -25,11 +30,51 @@
             @Html.DisplayFor(model => model.Price)
         </dd>
        @*  <dt class = "col-sm-2">
+=======
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tensp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tensp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dongia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dongia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Baohanh)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Baohanh)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Khuyenmai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Khuyenmai)
+        </dd>
+        <dt class = "col-sm-2">
+>>>>>>> Stashed changes
             @Html.DisplayNameFor(model => model.Hinhanh1)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Hinhanh1)
+<<<<<<< Updated upstream
         </dd> *@
+=======
+        </dd>
+>>>>>>> Stashed changes
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
@@ -38,6 +83,7 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
+<<<<<<< Updated upstream
             @Html.DisplayNameFor(model => model.CategoryId)
         </dt>
         <dd class = "col-sm-10">
@@ -48,11 +94,27 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.BrandNavigation.BrandName)
+=======
+            @Html.DisplayNameFor(model => model.MaloaispNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaloaispNavigation.Idloai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ManhaccNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ManhaccNavigation.Idnhacc)
+>>>>>>> Stashed changes
         </dd>
     </dl>
     
     <form asp-action="Delete">
+<<<<<<< Updated upstream
         <input type="hidden" asp-for="ProductId" />
+=======
+        <input type="hidden" asp-for="Idsp" />
+>>>>>>> Stashed changes
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

@@ -20,6 +20,7 @@ namespace GiayDep.Components
             {
                 CartItems = cartItems,
                 Quanity = cartItems.Count(),
+<<<<<<< Updated upstream
                 Total = cartItems.Sum(x => (x.Quanity ?? 0) * (x.Price ?? 0))
             };
             ViewBag.TongTien = cart.Total;
@@ -27,6 +28,15 @@ namespace GiayDep.Components
             return View();
         }
         public double TinhTongQuanity()
+=======
+                Total = cartItems.Sum(x => (x.SoLuong ?? 0) * (x.DonGia ?? 0))
+            };
+            ViewBag.TongTien = cart.Total;
+            ViewBag.TongSoLuong = cart.Quanity;
+            return View();
+        }
+        public double TinhTongSoLuong()
+>>>>>>> Stashed changes
         {
       
             List<Item> lstGioHang = LayGioHang();

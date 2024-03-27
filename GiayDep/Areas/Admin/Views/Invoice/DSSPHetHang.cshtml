@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream:GiayDep/Areas/Admin/Views/Invoice/DSSPHetHang.cshtml
 ﻿@model IEnumerable<ProductVariation>
+=======
+﻿@model IEnumerable<GiayDep.Models.SanPham>
+>>>>>>> Stashed changes:GiayDep/Areas/Admin/Views/PhieuNhap/DSSPHetHang.cshtml
 @{
     ViewData["Title"] = "Sản phẩm gần hết hàng";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -22,11 +26,19 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+<<<<<<< Updated upstream:GiayDep/Areas/Admin/Views/Invoice/DSSPHetHang.cshtml
                                 <td>@item.ProductItems.Product.ProductName</td>
                                 <td>@item.ProductItems.Product.Brand</td>
                                 <td><img width="100" height="100" src="~/Contents/img/@item.ProductItems.Image1" /></td> 
                                 <td>
                                     <a asp-action="NhapHangDon" asp-route-id="@item.ProductVarId">Nhập hàng</a>
+=======
+                                <td>@item.Idsp</td>
+                                <td>@item.Tensp</td>
+                                <td><img width="100" height="100" src="~/Contents/img/@item.Hinhanh1" /></td>
+                                <td>
+                                    <a asp-action="NhapHangDon" asp-route-id="@item.Idsp">Nhập hàng</a>
+>>>>>>> Stashed changes:GiayDep/Areas/Admin/Views/PhieuNhap/DSSPHetHang.cshtml
                                 </td>
                             </tr>
                         }

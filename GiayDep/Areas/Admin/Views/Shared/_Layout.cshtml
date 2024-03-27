@@ -13,8 +13,11 @@
     <link href="/Assets/admin/css/styles.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+<<<<<<< Updated upstream
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+=======
+>>>>>>> Stashed changes
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -54,7 +57,11 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Admin</div>
+<<<<<<< Updated upstream
                         <a asp-controller="Memberships" asp-action="Index" class="nav-link"> <i class="fas fa-user-shield"></i>Thành Viên</a>
+=======
+                        <a asp-controller="Memberships" asp-action="Index" class="nav-link"> <i class="fas fa-user-shield"></i>  Thành Viên</a>
+>>>>>>> Stashed changes
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -63,9 +70,15 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+<<<<<<< Updated upstream
                                 <a asp-controller="Order" asp-action="Unpaid" class="nav-link">Chưa Thanh Toán</a>
                                 <a asp-controller="Order" asp-action="PaidUndelivered" class="nav-link">Đã Thanh Toán & Chưa Giao</a>
                                 <a asp-controller="Order" asp-action="PaidDelivered" class="nav-link">Đã Thanh Toán & Đã Giao</a>
+=======
+                                <a asp-controller="HoaDon" asp-action="ChuaThanhToan" class="nav-link">Chưa Thanh Toán</a>
+                                <a asp-controller ="HoaDon" asp-action="ChuaGiao" class="nav-link">Đã Thanh Toán & Chưa Giao</a>
+                                <a asp-controller="HoaDon" asp-action="DaGiaoDaThanhToan" class="nav-link">Đã Thanh Toán & Đã Giao</a>
+>>>>>>> Stashed changes
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -109,6 +122,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tables
                         </a>
+<<<<<<< Updated upstream
                         <a asp-area="Admin" asp-controller="Brand" asp-action="Index" class="nav-link">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Thương Hiệu
@@ -148,6 +162,36 @@
 
 
             
+=======
+                        <a asp-area="Admin" asp-controller="NhaSX" asp-action="Index" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Quản Lý Nhà Sản Xuất
+                        </a>
+                        <a asp-area="Admin" asp-controller="NhaCC" asp-action="Index" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Quản Lý Nhà Cung Cấp 
+                        </a>
+                        <a asp-area="Admin" asp-controller="LoaiSP" asp-action="Index" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Loại Sản Phẩm
+                        </a>
+                        <a asp-area="Admin" asp-controller="Products" asp-action="Index" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Quản Lý Sản Phẩm
+                        </a>
+                        <a asp-area="Admin" asp-controller="PhieuNhap" asp-action="Create" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Nhập Hàng
+                        </a>
+                        <a asp-area="Admin" asp-controller="PhieuNhap" asp-action="Index" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Lịch Sử Nhập Hàng
+                        </a>
+                        <a asp-area="Admin" asp-controller="PhieuNhap" asp-action="DSSPHetHang" class="nav-link">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Sản phầm gần hết
+                        </a>
+>>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -157,7 +201,11 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
+<<<<<<< Updated upstream
             @RenderBody()
+=======
+            @RenderBody();
+>>>>>>> Stashed changes
             @RenderSection("Scripts", required: false)
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿@model IEnumerable<Product>
+=======
+﻿@model IEnumerable<SanPham>
+>>>>>>> Stashed changes
 
 
 <div class="h_menu4">
@@ -11,22 +15,38 @@
         </li>
         
         <!-- Url.action trả về kiểu đường dẫn url tương ứng với controller và action : ~/Controllers/Home/Index-->
+<<<<<<< Updated upstream
         @foreach (var groupItem in Model.GroupBy(n => n.Category))
+=======
+        @foreach (var groupItem in Model.GroupBy(n => n.MaloaispNavigation))
+>>>>>>> Stashed changes
         {
             if (groupItem.Key != null)
             {
                 <li style="display:inline;">
+<<<<<<< Updated upstream
                     <a class="color1" href="@Url.Action("ProductCate", "ProductView", new { @CategoryId = groupItem.Key.CategoryId })">@groupItem.Key.CategoryName</a>
+=======
+                    <a class="color1" href="@Url.Action("ProductCate", "ProductView", new { @MaLoaiSP = groupItem.Key.Idloai })">@groupItem.Key.Tenloai</a>
+>>>>>>> Stashed changes
                     <div class="mepanel">
                         <div class="row">
                             <div class="col1">
                                 <div class="h_nav">
                                     <ul>
+<<<<<<< Updated upstream
                                         @foreach (var item in groupItem.GroupBy(n => n.BrandNavigation))
                                         {
                                             if (item.Key != null)
                                             {
                                                 <li><a href="@Url.Action("Product", "ProductView", new { @CategoryId = groupItem.Key.CategoryId, @MaNSX = item.Key.BrandId })">@item.Key.BrandName</a></li>
+=======
+                                        @foreach (var item in groupItem.GroupBy(n => n.ManhaccNavigation))
+                                        {
+                                            if (item.Key != null)
+                                            {
+                                                <li><a href="@Url.Action("SanPham", "ProductView", new { @MaLoaiSP = groupItem.Key.Idloai, @MaNSX = item.Key.Idnhacc })">@item.Key.Tennhacc</a></li>
+>>>>>>> Stashed changes
                                             }
                                         }
                                     </ul>
@@ -42,17 +62,29 @@
             <a class="color2" href="#">Thương Hiệu</a>
             <div class="mepanel">
                 <div class="row">
+<<<<<<< Updated upstream
                     @foreach (var groupItem in Model.GroupBy(n => n.Category))
+=======
+                    @foreach (var groupItem in Model.GroupBy(n => n.MaloaispNavigation))
+>>>>>>> Stashed changes
                     {
                         if (groupItem.Key != null)
                         {
                             <div class="col1">
                                 <div class="h_nav">
+<<<<<<< Updated upstream
                                     <h4>@groupItem.Key.CategoryName</h4>
                                     <ul>
                                         @foreach (var item in groupItem.GroupBy(n => n.BrandNavigation))
                                         {
                                             <li><a href="@Url.Action("Product", "ProductView", new { CategoryId = groupItem.Key.CategoryId, MaNSX = item.Key.BrandId })">@item.Key.BrandName</a></li>
+=======
+                                    <h4>@groupItem.Key.Tenloai</h4>
+                                    <ul>
+                                        @foreach (var item in groupItem.GroupBy(n => n.ManhaccNavigation))
+                                        {
+                                            <li><a href="@Url.Action("SanPham", "ProductView", new { MaLoaiSP = groupItem.Key.Idloai, MaNSX = item.Key.IdnhasxNavigation })">@item.Key.Tennhacc</a></li>
+>>>>>>> Stashed changes
                                         }
                                     </ul>
                                 </div>
