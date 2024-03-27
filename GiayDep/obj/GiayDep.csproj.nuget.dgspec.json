@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj": {}
+    "D:\\giaydep\\GiayDep\\GiayDep.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj": {
+    "D:\\giaydep\\GiayDep\\GiayDep.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj",
+        "projectUniqueName": "D:\\giaydep\\GiayDep\\GiayDep.csproj",
         "projectName": "GiayDep",
-        "projectPath": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\GiayDep.csproj",
-        "packagesPath": "C:\\Users\\nghia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nghia\\source\\repos\\GiayDep\\GiayDep\\GiayDep\\obj\\",
+        "projectPath": "D:\\giaydep\\GiayDep\\GiayDep.csproj",
+        "packagesPath": "C:\\Users\\Hanh\\.nuget\\packages\\",
+        "outputPath": "D:\\giaydep\\GiayDep\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nghia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,6 +105,18 @@
             "SlugGenerator": {
               "target": "Package",
               "version": "[2.0.2, )"
+            },
+            "X.PagedList": {
+              "target": "Package",
+              "version": "[9.1.2, )"
+            },
+            "X.PagedList.Mvc.Bootstrap4": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[9.1.2, )"
             }
           },
           "imports": [
@@ -126,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

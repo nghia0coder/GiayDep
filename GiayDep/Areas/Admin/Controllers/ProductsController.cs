@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GiayDep.Models;
 using Microsoft.AspNetCore.Hosting;
+using X.PagedList;
+using X.PagedList.Mvc.Core;
+using X.PagedList.Mvc.Bootstrap4;
+
 
 
 namespace GiayDep.Areas.Admin.Controllers
@@ -23,12 +27,14 @@ namespace GiayDep.Areas.Admin.Controllers
             _webHost = webHost;
         }
         // GET: Admin/Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
+            page = page < 1 ? 1 : page;
+            int pagesize = 10;
             var GiaydepContext = _context.Products
                 .Include(n => n.Category)
                 .Include(n => n.BrandNavigation)
-                .ToList();
+                .ToList().ToPagedList(page, pagesize); 
             return View(GiaydepContext);
         }
 

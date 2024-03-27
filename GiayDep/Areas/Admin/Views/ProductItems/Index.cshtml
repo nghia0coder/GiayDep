@@ -1,4 +1,7 @@
-﻿@model IEnumerable<GiayDep.Models.ProductItem>
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Bootstrap4;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<GiayDep.Models.ProductItem>
 
 @{
     ViewData["Title"] = "Index";
@@ -12,13 +15,13 @@
         <thead class="thead-dark">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.ProductCode)
+                    ProductCode
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Color)
+                    Color
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Product)
+                   Product
                 </th>
                 <th></th>
             </tr>
@@ -45,4 +48,24 @@
             }
         </tbody>
     </table>
+</div>
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", "ProductItems", new { page = page }), new PagedListRenderOptions()
+{
+    DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+    DisplayLinkToLastPage = PagedListDisplayMode.Always,
+    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+    DisplayLinkToNextPage = PagedListDisplayMode.Always,
+    DisplayLinkToIndividualPages = true,
+    MaximumPageNumbersToDisplay = 5,
+    DisplayEllipsesWhenNotShowingAllPageNumbers = true,
+    LinkToFirstPageFormat = "<<",
+    LinkToPreviousPageFormat = "<",
+    LinkToNextPageFormat = ">",
+    LinkToLastPageFormat = ">>",
+    PageClasses = new string[] { "page-item", "page-link" },
+    ContainerDivClasses = new string[] { "pagination-container" },
+    UlElementClasses = new string[] { "pagination" },
+    LiElementClasses = new string[] { "page-item" }
+})
 </div>

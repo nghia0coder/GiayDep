@@ -9,327 +9,327 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GiayDep
 build_property.RootNamespace = GiayDep
-build_property.ProjectDir = C:\Users\nghia\source\repos\GiayDep\GiayDep\GiayDep\
+build_property.ProjectDir = D:\giaydep\GiayDep\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nghia\source\repos\GiayDep\GiayDep\GiayDep
+build_property.MSBuildProjectDirectory = D:\giaydep\GiayDep
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Admin/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Admin/Login.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Admin/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Brand/Create.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Brand/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Brand/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Brand/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Brand/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Brand/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Brand/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Categories/Create.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Categories/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Categories/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Categories/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Categories/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/Create.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/DSSPHetHang.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/DSSPHetHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxEU1NQSGV0SGFuZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Invoice/NhapHangDon.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Invoice/NhapHangDon.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW52b2ljZVxOaGFwSGFuZ0Rvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/ApproveOrders.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/ApproveOrders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcQXBwcm92ZU9yZGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/PaidDelivered.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/PaidDelivered.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcUGFpZERlbGl2ZXJlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/PaidUndelivered.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/PaidUndelivered.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcUGFpZFVuZGVsaXZlcmVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Order/Unpaid.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Order/Unpaid.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcVW5wYWlkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/ProductItems/Create.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/ProductItems/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEl0ZW1zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/ProductItems/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/ProductItems/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEl0ZW1zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/ProductItems/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/ProductItems/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEl0ZW1zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/ProductItems/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/ProductItems/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEl0ZW1zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/ProductItems/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/ProductItems/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEl0ZW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Products/Create.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Products/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Products/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Products/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Products/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Shared/_Layout.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Suppilers/Create.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Suppilers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGlsZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Suppilers/Delete.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Suppilers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGlsZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Suppilers/Details.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Suppilers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGlsZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Suppilers/Edit.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Suppilers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGlsZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/Suppilers/Index.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/Suppilers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGlsZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/giaydep/GiayDep/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Account/Login.cshtml]
+[D:/giaydep/GiayDep/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Account/Register.cshtml]
+[D:/giaydep/GiayDep/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Home/Index.cshtml]
+[D:/giaydep/GiayDep/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Home/Menu.cshtml]
+[D:/giaydep/GiayDep/Views/Home/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Home/MenuPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Home/MenuPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Home/Privacy.cshtml]
+[D:/giaydep/GiayDep/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Layout/HeaderTopPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Layout/HeaderTopPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0XEhlYWRlclRvcFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Layout/HomeLayout.cshtml]
+[D:/giaydep/GiayDep/Views/Layout/HomeLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0XEhvbWVMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Layout/ProductLayout.cshtml]
+[D:/giaydep/GiayDep/Views/Layout/ProductLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0XFByb2R1Y3RMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Layout/_CategoryLayout.cshtml]
+[D:/giaydep/GiayDep/Views/Layout/_CategoryLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0XF9DYXRlZ29yeUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Layout/_RegisterLayout.cshtml]
+[D:/giaydep/GiayDep/Views/Layout/_RegisterLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0XF9SZWdpc3RlckxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Login/DangNhap.cshtml]
+[D:/giaydep/GiayDep/Views/Login/DangNhap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRGFuZ05oYXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ProductView/ProductCate.cshtml]
+[D:/giaydep/GiayDep/Views/ProductView/ProductCate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcUHJvZHVjdENhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ProductView/ProductStyle1.cshtml]
+[D:/giaydep/GiayDep/Views/ProductView/ProductStyle1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcUHJvZHVjdFN0eWxlMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ProductView/ProductStyle2.cshtml]
+[D:/giaydep/GiayDep/Views/ProductView/ProductStyle2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcUHJvZHVjdFN0eWxlMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ProductView/XemChiTiet.cshtml]
+[D:/giaydep/GiayDep/Views/ProductView/XemChiTiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFZpZXdcWGVtQ2hpVGlldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Components/Cart/Default.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Components/Cart/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Components/Menu/Default.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Components/Menu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Components/Nav/Default.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Components/Nav/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Error.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Partial/_FooterPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Partial/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcX0Zvb3RlclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Partial/_HeaderTopPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Partial/_HeaderTopPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcX0hlYWRlclRvcFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Partial/_NavbarHeader.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Partial/_NavbarHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcX05hdmJhckhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/Partial/_TopBarPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/Partial/_TopBarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcX1RvcEJhclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/_NotificationPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/_NotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ShoppingCart/Index.cshtml]
+[D:/giaydep/GiayDep/Views/ShoppingCart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ShoppingCart/Notification.cshtml]
+[D:/giaydep/GiayDep/Views/ShoppingCart/Notification.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XE5vdGlmaWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ShoppingCart/Success.cshtml]
+[D:/giaydep/GiayDep/Views/ShoppingCart/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ShoppingCart/_CartPartial.cshtml]
+[D:/giaydep/GiayDep/Views/ShoppingCart/_CartPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XF9DYXJ0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/ShoppingCart/_ShoppingCartPartial.cshtml]
+[D:/giaydep/GiayDep/Views/ShoppingCart/_ShoppingCartPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XF9TaG9wcGluZ0NhcnRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/_ViewImports.cshtml]
+[D:/giaydep/GiayDep/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/_ViewStart.cshtml]
+[D:/giaydep/GiayDep/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghia/source/repos/GiayDep/GiayDep/GiayDep/Views/Shared/_Layout.cshtml]
+[D:/giaydep/GiayDep/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k1qcfaek5i

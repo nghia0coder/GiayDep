@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using GiayDep.Areas.Admin.InterfacesRepositories;
 using GiayDep.Models;
 using Microsoft.AspNetCore.Authorization;
+using X.PagedList;
+using X.PagedList.Mvc.Core;
+using X.PagedList.Mvc.Bootstrap4;
 
 namespace GiayDep.Areas.Admin.Controllers
 {
@@ -22,6 +25,7 @@ namespace GiayDep.Areas.Admin.Controllers
         [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Index()
         {
+           
             var Brands = await _nhaSXRepository.GetAll();
             return View(Brands);
         }

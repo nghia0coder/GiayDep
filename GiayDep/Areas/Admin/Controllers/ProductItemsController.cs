@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using GiayDep.Models;
 using Microsoft.AspNetCore;
 using GiayDep.ViewModels;
+using X.PagedList;
+using X.PagedList.Mvc.Core;
+using X.PagedList.Mvc.Bootstrap4;
 
 namespace GiayDep.Areas.Admin.Controllers
 {
@@ -24,10 +27,13 @@ namespace GiayDep.Areas.Admin.Controllers
         }
 
         // GET: Admin/ProductItems
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
-            var giaydepContext = _context.ProductItems.Include(p => p.Color).Include(p => p.Product);
-            return View(await giaydepContext.ToListAsync());
+            page = page < 1? 1 : page;
+            int pagesize = 10;
+
+            var giaydepContext = _context.ProductItems.Include(p => p.Color).Include(p => p.Product).ToPagedList(page,pagesize);
+            return View(giaydepContext);
         }
 
         // GET: Admin/ProductItems/Details/5

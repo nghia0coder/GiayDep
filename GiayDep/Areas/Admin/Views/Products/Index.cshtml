@@ -1,4 +1,7 @@
-﻿@model IEnumerable<GiayDep.Models.Product>
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Bootstrap4;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<GiayDep.Models.Product>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,19 +18,19 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.ProductName)
+                    ProductName
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Price)
+                    Price
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Description)
+                    Description
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                    Category.CategoryName
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Brand)
+                    Brand
                 </th>
                 <th></th>
             </tr>
@@ -61,5 +64,25 @@
             }
         </tbody>
     </table>
+</div>
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", "Products", new { page = page }), new PagedListRenderOptions()
+{
+    DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+    DisplayLinkToLastPage = PagedListDisplayMode.Always,
+    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+    DisplayLinkToNextPage = PagedListDisplayMode.Always,
+    DisplayLinkToIndividualPages = true,
+    MaximumPageNumbersToDisplay = 5,
+    DisplayEllipsesWhenNotShowingAllPageNumbers = true,
+    LinkToFirstPageFormat = "<<",
+    LinkToPreviousPageFormat = "<",
+    LinkToNextPageFormat = ">",
+    LinkToLastPageFormat = ">>",
+    PageClasses = new string[] { "page-item", "page-link" },
+    ContainerDivClasses = new string[] { "pagination-container" },
+    UlElementClasses = new string[] { "pagination" },
+    LiElementClasses = new string[] { "page-item" }
+})
 </div>
 
