@@ -2,7 +2,7 @@
 @using Microsoft.AspNetCore.Http.Extensions
 @{
 	string currentUrl = Context.Request.GetDisplayUrl();
-	IEnumerable<ProductItem> ListSP = ViewBag.ListSP ;
+	IEnumerable<ProductItem> ListSP = ViewBag.ListSP as IEnumerable<ProductItem>;
 	IEnumerable<Product> ListSize = ViewBag.ListSizes;
 }
 
@@ -37,6 +37,8 @@
 				</div>
 			</div>
 			<!-- /Product main img -->
+
+
 			<!-- Product thumb imgs -->
 			<div class="col-md-2  col-md-pull-5">
 				<div id="product-imgs">
@@ -347,13 +349,17 @@
 	</div>
 	<!-- /container -->
 </div>
-<!-- /SECTION -->
-<!-- Section -->
+
+
+
+
+
 <div class="section">
 	<!-- container -->
 	<div class="container">
 		<!-- row -->
 		<div class="row">
+
 			<div class="col-md-12">
 				<div class="section-title text-center">
 					<h3 class="title">Related Products</h3>
@@ -364,17 +370,17 @@
 			@foreach (var item in ListSP.Take(4))
 			{
 				<div class="col-md-3 col-xs-6">
-					<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductItemsId} )">
+					<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductItemsId })">
 						<div class="product">
 							<div class="product-img">
-@* 								<img src="~/Contents/img/@item.Hinhanh1" alt=""> *@
+								<img src="/Contents/img/@item.Image1" alt="">
 								<div class="product-label">
 									<span class="sale">-30%</span>
 								</div>
 							</div>
 							<div class="product-body">
 								<p class="product-category">@item.Product.Category.CategoryName.ToUpper()</p>
-								<h3 class="product-name"><a href="#">@item.Product.ProductName.ToUpper()</a></h3>
+								<h3 class="product-name">@item.Product.ProductName.ToUpper()</h3>
 								<h4 class="product-price">$@item.Product.Price <del class="product-old-price">$@(item.Product.Price + 200)</del></h4>
 								<div class="product-rating">
 								</div>
@@ -388,17 +394,17 @@
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 						</div>
-				</div>
+					</a>
+				</div> 
 			}
-
 			<!-- /product -->
-
 		</div>
 		<!-- /row -->
 	</div>
 	<!-- /container -->
 </div>
-<!-- /Section -->
+	<!-- Section -->
+
 
 @section Scripts
 {
