@@ -59,11 +59,9 @@ namespace GiayDep.Controllers
 			}
 
 			// Load products based on the specified criteria
-			var lstSP = _context.Products
-				.Where(n => n.BrandNavigation.BrandId == Id)
-				.Include(n => n.Category)
-                .GroupBy(n => n.ProductName)
-                .Select(n => n.FirstOrDefault())
+			var lstSP = _context.ProductItems
+				.Where(n => n.Product.Category.CategoryId == Id)
+                .Include(n => n.Product.Category)
                 .ToList();
 
 			// Check if there are any products

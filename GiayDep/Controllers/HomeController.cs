@@ -24,25 +24,27 @@ namespace GiayDep.Controllers
 		{
 			//Lần lượt tạo các viewbag để lấy list sp từ csdl
 			//List CategoryId bằng 1
-			var lstLTM = _context.Products
-				.Where(n => n.ProductId == 5)
-				.Include (n => n.ProductItems)
-				.ThenInclude(n => n.ProductVariations)
-                .ToList();
+			var lstLTM = _context.ProductItems
+				.Where(n => n.ProductId == 1)
+				.Include(n => n.Product.Category)
+				.Include(n => n.ProductVariations)
+				.ToList();
 			//Gán vào viewbag
 			ViewBag.ListLTM = lstLTM;
 
-			var lstSelling = _context.Products
-				.Where(n => n.ProductId == 5)
-				.Include(n => n.ProductItems)
+			var lstSelling = _context.ProductItems
+				.Where(n => n.ProductId == 2)
+				.Include(n => n.Product.Category)
+				.Include(n => n.ProductVariations)
 				.ToList();
 			//Gán vào viewbag
 			ViewBag.ListSelling = lstSelling;
 
 			//List CategoryId bằng 3
-			var lstDTM = _context.Products
-				.Where(n => n.ProductId == 5)
-				.Include(n => n.ProductItems)
+			var lstDTM = _context.ProductItems
+				.Where(n => n.ProductId == 3)
+				.Include(n => n.Product.Category)
+				.Include(n => n.ProductVariations)
 				.ToList();
 			//Gán vào viewbag
 			ViewBag.ListDTM = lstDTM;
