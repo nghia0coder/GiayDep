@@ -135,12 +135,12 @@
 				<div class="products-widget-slick" data-nav="#slick-nav-3">
 					<div>
 						<!-- product widget -->
-					@* 	@foreach (var item in lstDTM.Take(3))
+						@foreach (var item in lstDTM.Take(3))
 						{
 							<div class="product-widget">
 								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
 									<div class="product-img">
-									<img src="~/Contents/img/@item.ProductItems.Image1" alt=""> 
+									<img src="~/Contents/img/@item.Image1" alt=""> 
 									</div>
 									<div class="product-body">
 										<p class="product-category">@item.Product.BrandNavigation.BrandName.ToUpper()</p>
@@ -148,7 +148,7 @@
 										<h4 class="product-price">$@item.Product.Price <del class="product-old-price">$@(item.Product.Price + 200)</del></h4>
 									</div>
 							</div>
-						} *@
+						}
 						<!-- /product widget -->
 					</div>
 				</div>
@@ -165,7 +165,7 @@
 				<div class="products-widget-slick" data-nav="#slick-nav-4">
 					<div>
 						<!-- product widget -->
-					@* 	@foreach (var item in lstSelling.Take(3))
+						@foreach (var item in lstSelling.Take(3))
 						{
 							<div class="product-widget">
 								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
@@ -178,7 +178,7 @@
 										<h4 class="product-price">$@item.Product.Price <del class="product-old-price">$@(item.Product.Price + 200)</del></h4>
 									</div>
 							</div>
-						} *@
+						}
 						<!-- /product widget -->
 					</div>
 				</div>
@@ -197,7 +197,7 @@
 				<div class="products-widget-slick" data-nav="#slick-nav-5">
 					<div>
 						<!-- product widget -->
-						@* @foreach (var item in lstLTM.Take(3))
+						@foreach (var item in lstLTM.Take(3))
 						{
 							<div class="product-widget">
 								<a href="@Url.Action("XemChiTiet", "ProductView", new { id = item.ProductId })">
@@ -210,7 +210,7 @@
 										<h4 class="product-price">$@item.Product.Price <del class="product-old-price">$@(item.Product.Price + 200)</del></h4>
 									</div>
 							</div>
-						} *@
+						} 
 
 						<!-- /product widget -->
 					</div>

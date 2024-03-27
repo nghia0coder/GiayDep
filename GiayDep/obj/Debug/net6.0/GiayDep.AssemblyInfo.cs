@@ -15,7 +15,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GiayDep")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85978c03ae458f3e58979e4f3a35a4ddd388dccd")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f491406f6a1ee071d1275f605003f9d1b4f9af83")]
+>>>>>>> origin/nghia8
 [assembly: System.Reflection.AssemblyProductAttribute("GiayDep")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GiayDep")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

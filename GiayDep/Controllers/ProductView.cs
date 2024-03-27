@@ -39,7 +39,8 @@ namespace GiayDep.Controllers
           
             ViewBag.ListSP = _context.ProductItems
                 .Include(n => n.Product.Category)
-				.Where(n => n.Product.CategoryId == sp.ProductItems.Product.CategoryId);
+				.Where(n => n.Product.CategoryId == sp.ProductItems.Product.CategoryId)
+                .ToList();
 
             if (sp == null)
             {
